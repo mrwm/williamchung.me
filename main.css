@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Colors:
+
+  Tanish
+  #786344 - Olive Wood
+  #ceae6a - Putty
+  #cfcb93 - Martini Olive
+
+  Bluish
+  #acdabc - Mountain Mint
+  #8ce1db - Island Oasis
+  #accdd6 - Sonata
+
+  Yellows:
+  #ffffff
+  #fff1e0 - Background Color
+  #fff3e0
+  #ffe7c0
+  #ffdba1
+  #ffd082
+  #ffc462
+  #ffb93f
+  #ffae00
+  
+  Blacks:
+  #ffffff
+  #d6d6d6
+  #afafaf
+  #898989
+  #656565
+  #434343
+  #242424
+  #000000
+
+*/
+
+#sub-title {
+  /* Nothing yet */
+  display: inline-block;
+}
+.sub-title a, h1 {
+  margin-bottom: -0.1em;
+  color: #242424;
+  text-decoration: none;
+}
+#sub-title span {
+  margin-top: -2em;
+}
+#myName{
+  font-weight: 100;
+}
+
+/*effects a lot of stuff*/
+body {
+  margin: 0px;
+  color: #242424;
+  font-size: calc(12px + 1vh);
+  font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  background-color: #fff1e0;
+  overflow-x: hidden;
+  width:100%;
+}
+
+taco {
+  width: 75%;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+wrap {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Just for the paragraphs*/
+p {
+  text-indent: 1em;
+  padding: 0px 12px;
+}
+
+/*Horizontal Nav*/
+#mainnav{
+  height: 1em;
+  background-color: #fff1e0;
+  margin-top: 0.5em; /*adds distance from header*/
+  width: 100%;
+  display: table; /*makes the nav act like a table</table>*/
+  border-collapse: collapse;
+  border: none;
+  line-height: 50px;
+  border-collapse: separate; border-spacing: 0.2em;
+}
+#mainnav ul {
+  list-style-type: none;
+  display: table-row; /*makes the ul act like a table-row <tr>*/
+  text-align: center;
+  background-color: #fff3e0;
+}
+#mainnav a{
+  transition: 0.3s;
+  margin: 0;
+  border-radius: 1em;
+  background-color: #ffd082; /*will take precedence over the background-color*/
+  display: table-cell; /*makes the li act like a table-cell<td>*/
+  color: #242424;
+  text-decoration: none;
+}
+#mainnav a:link{
+  color: #242424;
+  text-decoration: none;
+}
+#mainnav a:hover{
+  background: #ffae00; /*#ffd082;*/
+  text-decoration: underline;
+}
+#mainnav .currentNav {
+  background-color: #ffe7c0;
+  margin: 0;
+  border-radius: 1em;
+}/*
+#mainnav .currentNav:hover {
+  background-color: #43A6CB;
+}*/
+
