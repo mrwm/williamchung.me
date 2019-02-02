@@ -141,7 +141,7 @@ nav ul {
   background-color: #fff3e0;
 }
 nav a{
-  border: none;
+  border: 1.5px solid black;
   transition: 0.3s;
   margin: 0;
   border-radius: 1em;
