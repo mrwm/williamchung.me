@@ -44,12 +44,17 @@
   margin-bottom: -0.1em;
   color: #242424;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 50;
 }
-#sub-title span {
-  margin-top: -2em;
+.section-title {
+  text-align: center;
+  border-bottom: 3px solid #242424;
+  letter-spacing: 0.5em;
 }
 #myName{
-  font-weight: 100;
+  font-weight: 800;
+  letter-spacing: 0.2em;
 }
 
 /*effects a lot of stuff*/
@@ -61,6 +66,22 @@ body {
   background-color: #fff1e0;
   overflow-x: hidden;
   width:100%;
+}
+
+header{
+  width: 75%;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+footer{
+  width: 45%;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 taco {
@@ -85,8 +106,23 @@ p {
   padding: 0px 12px;
 }
 
+a {
+  color: #242424;
+  text-decoration: none;
+  border-bottom: 3px dotted black
+}
+
+img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+img:hover {
+  opacity: 0.9;
+}
+
 /*Horizontal Nav*/
-#mainnav{
+nav{
   height: 1em;
   background-color: #fff1e0;
   margin-top: 0.5em; /*adds distance from header*/
@@ -96,32 +132,34 @@ p {
   border: none;
   line-height: 50px;
   border-collapse: separate; border-spacing: 0.2em;
+  text-transform: uppercase;
 }
-#mainnav ul {
+nav ul {
   list-style-type: none;
   display: table-row; /*makes the ul act like a table-row <tr>*/
   text-align: center;
   background-color: #fff3e0;
 }
-#mainnav a{
+nav a{
+  border: none;
   transition: 0.3s;
   margin: 0;
   border-radius: 1em;
-  background-color: #ffd082; /*will take precedence over the background-color*/
+  background-color: #fff1e0; /*will take precedence over the background-color*/
   display: table-cell; /*makes the li act like a table-cell<td>*/
   color: #242424;
   text-decoration: none;
 }
-#mainnav a:link{
+nav a:link{
   color: #242424;
   text-decoration: none;
 }
-#mainnav a:hover{
+nav a:hover{
   background: #ffae00; /*#ffd082;*/
   text-decoration: underline;
 }
-#mainnav .currentNav {
-  background-color: #ffe7c0;
+nav .currentNav {
+  background-color: #ffd082;
   margin: 0;
   border-radius: 1em;
 }/*

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="image.css" rel="stylesheet" type="text/css">
+
+    <!-- Preloading pictures -->
+    <link rel="prefetch" href="img/P_20170422_075442_HDR.webp">
+
+
+    <title>William Chung | Photography</title>
+
+    <script type="text/javascript">
+    function derp(){
+      alert("There's nothing there yet... :P")
+    }
+    </script>
+
+    <style>
+      .image-table {
+        display: table;
+        border-collapse: separate; border-spacing: 0.2em;
+        width: 100%;
+      }/*
+      .image-row {
+        display: table-row;
+      }*/
+      .image-table a {
+        display: table-cell;
+        border: none;
+      }
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    </style>
+
+    <header>
+      <div class="sub-title">
+        <a href="index.html"><h1 id="myName">William Chung</h1></a>
+        <span>Animator | Programmer</span>
+      </div>
+      <nav id="mainnav">
+        <ul>
+          <a id="nav0" class="" href="index.html"><li>Home</li></a>
+          <a id="nav1" class="" href="animations.html"><li>Animations</li></a>
+          <a id="nav2" class="currentNav" href="photography.html"><li>Photography</li></a>
+          <a id="nav3" class="" href="contact.html"><li>Contact</li></a>
+          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
+          <!--<li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>-->
+        </ul>
+      </nav>
+    </header>
+  </head>
+  <body>
+    <taco>
+      <wrap>
+        <p>
+          <div class="section-title">
+            <a href="index.html"><h1>Photography</h1></a>
+            <span> </span>
+          </div>
+            <div class="image-table">
+              <a><img alt="Flowery hill" title="Flowery hill" onclick="imageThis(this)" src="img/P_20180420_162810.webp"></a>
+              <a><img alt="Poppy flower" title="Poppy flower" onclick="imageThis(this)" src="img/P_20170422_075442_HDR.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="Flowery hillside" title="Flowery hillside" onclick="imageThis(this)" src="img/P_20180420_162347.webp"></a>
+              <a><img alt="Poppy flower" title="Poppy flower" onclick="imageThis(this)" src="img/P_20170422_074535_HDR.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="Monument peak" title="Monument peak" onclick="imageThis(this)" src="img/P_20170422_073805_HDR.webp"></a>
+              <a><img alt="360 Photo with Grass" title="360 Photo with Grass" onclick="imageThis(this)" src="img/20170422_070301.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="Flowery Tree" title="Flowery Tree" onclick="imageThis(this)" src="img/P_20170409_144117.webp"></a>
+              <a><img alt="Grassy Trail" title="Grassy Trail" onclick="imageThis(this)" src="img/P_20170420_164009.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="Joseph Clones" title="Joseph Clones" onclick="imageThis(this)" src="img/P_20170421_150055_PS.webp"></a>
+            </div>
+            <!--<div class="image-row">-->
+            <div class="image-table">
+              <a><img alt="SF Coastline" title="SF Coastline" onclick="imageThis(this)" src="img/P_20170421_135715_PN.webp"></a>
+            </div>
+<!--            <div class="image-table">-->
+<!--              <a><img alt="Amy C." title="Amy C." onclick="imageThis(this)" src="img/13669049_1750590115228846_8714559489714978981_n.webp"></a>-->
+<!--              <a><img alt="Joan and I" title="Joan and I" onclick="imageThis(this)" src="img/16681605_641804346011499_1500668127425355198_n.webp"></a>-->
+<!--            </div>-->
+            <div class="image-table">
+              <a><img alt="Snowy landscape" title="Snowy Landscape" onclick="imageThis(this)" src="img/20161218_144508-PANO.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="View of Lake Tahoe" title="View of Lake Tahoe" onclick="imageThis(this)" src="img/20161219_113115-PANO.webp"></a>
+            </div>
+            <div class="image-table">
+              <a><img alt="View of Lake Tahoe" title="View of Lake Tahoe" onclick="imageThis(this)" src="img/20161219_113553-PANO.webp"></a>
+            </div>
+        </p>
+      </wrap>
+    </taco>
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal">
+      <span id="closeBtn">&times;</span>
+      <span id="closeScreen"> </span>
+      <img class="modal-content" id="imgMod">
+      <div id="caption"></div>
+    </div>
+    <footer>
+      <nav>
+        <ul>
+          <a id="nav0" class="currentNav" href="photography0.html"><li>Page 1</li></a>
+          <a id="nav1" class="" href="photography1.html"><li>Page 2</li></a>
+          <!--<a id="nav2" class="" href="photography2.html"><li>Page 3</li></a>-->
+          <!--<a id="nav3" class="" href="#" onclick="derp()"><li>Page 4</li></a>-->
+          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
+          <!--<li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>-->
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script type="text/javascript" src="image.js"></script>
+
+</html>
+
+  
+
+
+
+
