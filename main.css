@@ -56,6 +56,12 @@
   font-weight: 800;
   letter-spacing: 0.2em;
 }
+#profile {
+  float:left;
+  width: 10em;
+  margin-right: 12px;
+}
+
 
 /*effects a lot of stuff*/
 body {
