@@ -173,3 +173,18 @@ nav .currentNav {
   background-color: #43A6CB;
 }*/
 
+details {
+  background-color: #fff1e0;
+  border: 1.5px solid black;
+  border-radius: 1em;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+details:hover {
+  cursor: pointer;
+  background-color: #ffd082;
+/*  border: 1.5px solid black;*/
+/*  border-radius: 1em;*/
+/*  margin: 0.5em;*/
+/*  padding: 0.5em;*/
+}
