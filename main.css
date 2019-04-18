@@ -178,7 +178,9 @@ details {
   border: 1.5px solid black;
   border-radius: 1em;
   margin: 0.5em;
+  margin-top: 1em;
   padding: 0.5em;
+  box-shadow: rgba(0,0,0,0.5) 0 0 10px;
 }
 details:hover {
   cursor: pointer;
