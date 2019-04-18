@@ -57,7 +57,10 @@
     </style>
 
     <header>
-      <img id="profile" src="img/DSC09275.webp" alt="Picture of William" title="Picture of William" onclick="imageThis(profile)">
+      <picture onclick="imageThis(profile)">
+        <source srcset="img/webp/DSC09275.webp" type="image/webp">
+        <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
+      </picture>
       <div class="sub-title">
         <a href="index.html"><h1 id="myName">William Chung</h1></a>
         <span>-</span>
