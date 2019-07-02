@@ -40,12 +40,13 @@
   /* Nothing yet */
   display: inline-block;
 }
-.sub-title a, h1 {
+.sub-title a, h1, h6 {
   margin-bottom: -0.1em;
   color: #242424;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 50;
+  /*text-align: center;*/
 }
 .section-title {
   text-align: center;
@@ -76,14 +77,6 @@ body {
 
 header{
   width: 75%;
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-}
-
-footer{
-  width: 45%;
   min-width: 300px;
   margin-right: auto;
   margin-left: auto;
@@ -129,14 +122,13 @@ img:hover {
 
 /*Horizontal Nav*/
 nav{
-  height: 1em;
   background-color: #fff1e0;
-  margin-top: 0.5em; /*adds distance from header*/
+  /*margin-top: 0.5em; /*adds distance from header*/
   width: 100%;
   display: table; /*makes the nav act like a table</table>*/
   border-collapse: collapse;
   border: none;
-  line-height: 50px;
+  line-height: 2em;
   border-collapse: separate; border-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -172,6 +164,28 @@ nav .currentNav {
 #mainnav .currentNav:hover {
   background-color: #43A6CB;
 }*/
+
+/*Footer*/
+footer{/*
+  position: absolute;
+  bottom: 0px;
+  left:50%;
+  transform: translate(-50%, 0);*/
+  width: 75%;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+footer > nav{
+  line-height: 1em;
+}
+
+.footText{
+  /*margin-bottom: -1.5em;*/
+  text-align: center;
+}
 
 details {
   background-color: #fff1e0;

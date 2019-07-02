@@ -11,13 +11,24 @@
     <link href="image.css" rel="stylesheet" type="text/css">
 
 
-    <title>William Chungs</title>
+    <title>William Chung</title>
 
     <script type="text/javascript">
     function derp(){
       alert("There's nothing there yet... :P")
     }
     </script>
+    <style>
+    picture *{
+      margin: 0.5em;
+    }
+    #stayBottom{
+      position: absolute;
+      bottom:0px;
+      left:50%;
+      transform: translate(-50%, 0);
+    }
+    </style>
 
     <header>
 <!--      <img src="" alt="null picture">-->
@@ -27,7 +38,7 @@
     <taco>
       <div class="sub-title">
         <a href="index.html"><h1 id="myName">William Chung</h1></a>
-        <span>-</span>
+        <!--<span>-</span>-->
       </div>
       <nav id="mainnav">
         <ul>
@@ -43,14 +54,14 @@
       <wrap>
         <div class="sub-title">
           <a href="index.html"><h1 class="section-title">About Me</h1></a>
-          <span> </span>
+          <!--<span> </span>-->
         </div>
         <!-- Learning another way to implement images -->
-        <picture onclick="imageThis(profile)">
+        <picture onclick="imageThisP(this)">
           <source srcset="img/webp/DSC09275.webp" type="image/webp">
           <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
         </picture>
-        <p>Hi, My name is William! I’m currently a second year student studying Graphic Design at San Jose State University. From time to time, I like to worke on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg"  target="_blank">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM"  target="_blank">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
+        <p>Hi, My name is William! I’m currently a second year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg"  target="_blank">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM"  target="_blank">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
       </wrap>
     </taco>
     <!-- Image Modal -->
@@ -60,7 +71,22 @@
       <img class="modal-content" id="imgMod">
       <div id="caption"></div>
     </div>
-    <footer>
+    <footer id="stayBottom">
+      <div class="sub-title footText">
+        <h6>Class Links</h6>
+        <!--<span> </span>-->
+      </div>
+      <nav>
+        <ul>
+          <!--<a id="nav0" class="currentNav" href="index.html"><li>Home</li></a>-->
+          <a id="nav1" class="" href="DSGD63/index.html"><li>DSGD63</li></a>
+          <a id="nav2" class="" href="GID56/index.html"><li>GID56</li></a>
+          <!--<a id="nav3" class="" href="contact.html"><li>Contact</li></a>-->
+          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
+          <!--<li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>-->
+        </ul>
+      </nav>
     </footer>
   </body>
   <script type="text/javascript" src="image.js"></script>

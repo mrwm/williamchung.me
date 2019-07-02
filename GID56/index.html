@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+
+    <link href="../main.css" rel="stylesheet" type="text/css">
+    <link href="../image.css" rel="stylesheet" type="text/css">
+
+
+    <title>William Chung</title>
+
+    <script type="text/javascript">
+    function derp(){
+      alert("There's nothing there yet... :P")
+    }
+    </script>
+    <style>
+      picture .picture {
+        float:right;
+        width: auto;
+        margin-left: 12px;
+        margin: 0.5em;
+      }
+      picture:nth-of-type(even) .picture {
+        float:left;
+        width: auto;
+        margin-right: 12px;
+      }
+
+      #contact_list{
+        text-align: center;
+        list-style-type: none;
+      }
+      #contact_list li {
+        border: 1.5px solid black;
+        margin: 1em;
+        border-radius: 1em;
+        background-color: #ffd082;
+        color: #242424;
+        padding: 1em;
+        list-style-type: none;
+      }
+      #contact_list li:hover {
+        text-decoration: underline;
+        background: #fff3e0; /*#ffd082;*/
+      }
+      #contact_list a{
+        border: none;
+        text-decoration: none;
+      }
+      #contact_list a:link{
+        color: #242424;
+        text-decoration: none;
+      }
+      #contact_list a:hover{
+        background: #ffd082; /*#ffd082;*/
+      }
+    </style>
+
+    <header>
+<!--      <img src="" alt="null picture">-->
+    </header>
+  </head>
+  <body>
+    <taco>
+      <div class="sub-title">
+        <a href="index.html"><h1 id="myName">William Chung</h1></a>
+        <span>GID 56</span>
+      </div>
+      <nav id="mainnav">
+        <ul>
+          <a id="nav0" class="" href="../index.html"><li>Home</li></a>
+          <a id="nav1" class="" href="../animations.html"><li>Animations</li></a>
+          <a id="nav2" class="" href="../photography0.html"><li>Photography</li></a>
+          <a id="nav3" class="" href="../contact.html"><li>Contact</li></a>
+          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
+          <!--<li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>-->
+        </ul>
+      </nav>
+      <wrap>
+        <div class="sub-title">
+          <a href="#"><h1 class="section-title">About Me</h1></a>
+          <!--<span> </span>-->
+        </div>
+        <!-- Learning another way to implement images -->
+        <picture onclick="imageThisP(this)">
+          <source srcset="../img/webp/DSC09275.webp" type="image/webp">
+          <img class="picture" src="../img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
+        </picture>
+        <p>Hi, My name is William! I am currently a second year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg"  target="_blank">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM"  target="_blank">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank">Woof</a> are among the many projects I have created! Besides side projects, I also like to go running and hiking while taking <a href="../photography0.html" target="_blank">pictures</a>.  What I like the most about hiking and running around is the part where I get to view the nature around me. On the other hand, I cannot stand running on treadmills. It is not the same as running outside.</p>
+        <picture onclick="imageThisP(this)">
+          <source srcset="Pikaboo.gif" type="image/gif">
+          <img class="picture" src="Pikaboo.gif" alt="Dog poking head out" title="Pikaboo" >
+        </picture>
+        <p>I am taking the GID 56 course to learn more about web design and the practices that go along with it. I learned a bit of HTML, CSS, and JS awhile back in a high school course, and I thought that the course did not teach me everything that I wanted to know. I also hope that this course will teach me more about what not to do along with some things that are recommended when designing websites as well. Another reason why I'm taking this course is because I felt that I still have more to learn that I could not learn by myself.</p>
+        <picture onclick="imageThisP(this)">
+          <source srcset="../img/webp/P_20170409_144117.webp" type="image/webp">
+          <img class="picture" src="../img/jpg/P_20170409_144117.jpg" alt="Flowery Tree" title="Flowery Tree" >
+        </picture>
+        <picture onclick="imageThisP(this)">
+          <source srcset="../img/webp/IMG_20160704_172417040_HDR.webp" type="image/webp">
+          <img class="picture" src="../img/jpg/IMG_20160704_172417040_HDR.jpg" alt="Alviso Park" title="Alviso Park" >
+        </picture>
+      </wrap>
+    </taco>
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal">
+      <span id="closeBtn">&times;</span>
+      <span id="closeScreen"> </span>
+      <img class="modal-content" id="imgMod">
+      <div id="caption"></div>
+    </div>
+    <footer>
+    </footer>
+  </body>
+  <script type="text/javascript" src="../image.js"></script>
+
+</html>
+
+  
+
+
+
+
