@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <meta name="description" content="William's Web Portfolio" />
     <meta name="keywords" content="portfolio, web, job" />
     <meta name="author" content="William Chung" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="main.css" rel="stylesheet" type="text/css">
 
     <title>William Chung | Animations</title>
-
-    <script type="text/javascript">
-    function derp(){
-      alert("There's nothing there yet... :P")
-    }
-    </script>
 
     <style>
       #profile {
@@ -25,73 +20,77 @@
       }
     </style>
 
+  </head>
+  <div class="taco">
     <header>
       <picture onclick="imageThis(profile)">
         <source srcset="img/webp/DSC09275.webp" type="image/webp">
         <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
       </picture>
-    </header>
-  </head>
-  <body>
-    <taco>
       <div class="sub-title">
         <a href="index.html"><h1 id="myName">William Chung</h1></a>
         <!--<span>-</span>-->
       </div>
-      <nav id="mainnav">
-        <ul>
-          <a id="nav0" class="" href="index.html"><li>Home</li></a>
-          <a id="nav1" class="currentNav" href="animations.html"><li>Animations</li></a>
-          <a id="nav2" class="" href="photography0.html"><li>Photography</li></a>
-          <a id="nav3" class="" href="contact.html"><li>Contact</li></a>
-          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
-          <!--<li><a href="#">text</a></li>
-          <li><a href="#">text</a></li>-->
-        </ul>
-      </nav>
+    </header>
+    <nav id="mainnav">
+      <a class="" href="index.html">Home</a>
+      <a class="currentNav" href="animations.html">Animations</a>
+      <a class="" href="photography0.html">Photography</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+    <body>
       <wrap>
-        <p>
-          <div class="section-title">
-            <h1>Animations</h1>
-            <!--<span> </span>-->
-          </div>
-          <div class="sub-title">
-            <h1>Pikaboo!</h1>
-            <span>A short welcome from a friend</span>
-          </div>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5KPq_6nXDu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-        <p>
-          <div class="sub-title">
-            <h1>Pin Drop!</h1>
-            <span>What would happen if maps came to life?</span>
-          </div>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KnuCyCK4L5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-        <p>
-          <div class="sub-title">
-            <h1>Beluga!</h1>
-            <span>Camera tracking is sure fun</span>
-          </div>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-Q2aOfKdMvM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-        <p>
-          <div class="sub-title">
-            <h1>Merry Christmas!</h1>
-            <span>A celebratory video of a wonderful day</span>
-          </div>
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JNC11RvdM2A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
+      <div class="gridify">
+          <p>
+            <div class="section-title">
+              <h1>Animations</h1>
+              <!--<span> </span>-->
+            </div>
+            <div class="sub-title">
+              <h1>Pikaboo!</h1>
+              <span>A short welcome from a friend</span>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5KPq_6nXDu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+          <p>
+            <div class="sub-title">
+              <h1>Pin Drop!</h1>
+              <span>What would happen if maps came to life?</span>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KnuCyCK4L5E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+          <p>
+            <div class="sub-title">
+              <h1>Beluga!</h1>
+              <span>Camera tracking is sure fun</span>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-Q2aOfKdMvM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+          <p>
+            <div class="sub-title">
+              <h1>Merry Christmas!</h1>
+              <span>A celebratory video of a wonderful day</span>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JNC11RvdM2A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+        </div>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
+          <span id="closeBtn">&times;</span>
+          <span id="closeScreen"> </span>
+          <img class="modal-content" id="imgMod">
+          <div id="caption"></div>
+        </div>
+        <footer>
+          <nav>
+            <a class="currentNav" href="https://www.youtube.com/channel/UCs1p8xBEkCDcGDR_-BCHGlA" rel="noopener">Find More On YouTube!</a>
+          </nav>
+        </footer>
       </wrap>
-    </taco>
-    <footer>
-      <nav>
-        <ul>
-          <a id="nav0" class="currentNav" href="https://www.youtube.com/channel/UCs1p8xBEkCDcGDR_-BCHGlA"><li>Find More On YouTube!</li></a>
-        </ul>
-      </nav>
-    </footer>
-  </body>
+    </body>
+  </div>
+  <script type="text/javascript" src="siteFunctions.js"></script>
+
 </html>
 
   

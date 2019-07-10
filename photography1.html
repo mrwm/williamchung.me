@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <meta name="description" content="William's Web Portfolio" />
     <meta name="keywords" content="portfolio, web, job" />
     <meta name="author" content="William Chung" />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="main.css" rel="stylesheet" type="text/css">
     <link href="image.css" rel="stylesheet" type="text/css">
 
-    <!-- Preloading pictures -->
-    <link rel="prefetch" href="img/P_20170422_075442_HDR.webp">
-
-
     <title>William Chung | Photography</title>
-
-    <script type="text/javascript">
-    function derp(){
-      alert("There's nothing there yet... :P")
-    }
-    </script>
 
     <style>
       #profile {
@@ -47,8 +38,10 @@
       }
     </style>
 
+  </head>
+  <div class="taco">
     <header>
-      <picture onclick="imageThisP(profile)">
+      <picture onclick="imageThis(profile)">
         <source srcset="img/webp/DSC09275.webp" type="image/webp">
         <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
       </picture>
@@ -56,21 +49,14 @@
         <a href="index.html"><h1 id="myName">William Chung</h1></a>
         <!--<span>-</span>-->
       </div>
-      <nav id="mainnav">
-        <ul>
-          <a id="nav0" class="" href="index.html"><li>Home</li></a>
-          <a id="nav1" class="" href="animations.html"><li>Animations</li></a>
-          <a id="nav2" class="currentNav" href="photography0.html"><li>Photography</li></a>
-          <a id="nav3" class="" href="contact.html"><li>Contact</li></a>
-          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
-          <!--<li><a href="#">text</a></li>
-          <li><a href="#">text</a></li>-->
-        </ul>
-      </nav>
     </header>
-  </head>
-  <body>
-    <taco>
+    <nav id="mainnav">
+      <a class="" href="index.html">Home</a>
+      <a class="" href="animations.html">Animations</a>
+      <a class="currentNav" href="photography0.html">Photography</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+    <body>
       <wrap>
         <p>
           <div class="section-title">
@@ -223,30 +209,23 @@
               </a>
             </div>
         </p>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
+          <span id="closeBtn">&times;</span>
+          <span id="closeScreen"> </span>
+          <img class="modal-content" id="imgMod">
+          <div id="caption"></div>
+        </div>
+        <footer>
+          <nav>
+            <a class="" href="photography0.html"><li>Page 1</li></a>
+            <a class="currentNav" href="photography1.html"><li>Page 2</li></a>
+          </nav>
+        </footer>
       </wrap>
-    </taco>
-    <!-- Image Modal -->
-    <div id="imgModal" class="modal">
-      <span id="closeBtn">&times;</span>
-      <span id="closeScreen"> </span>
-      <img class="modal-content" id="imgMod">
-      <div id="caption"></div>
-    </div>
-    <footer>
-      <nav>
-        <ul>
-          <a id="nav0" class="" href="photography0.html"><li>Page 1</li></a>
-          <a id="nav1" class="currentNav" href="photography1.html"><li>Page 2</li></a>
-          <!--<a id="nav2" class="" href="photography2.html"><li>Page 3</li></a>-->
-          <!--<a id="nav3" class="" href="#" onclick="derp()"><li>Page 4</li></a>-->
-          <!--<a id="nav4" class="" href="#"><li>Resume</li></a>-->
-          <!--<li><a href="#">text</a></li>
-          <li><a href="#">text</a></li>-->
-        </ul>
-      </nav>
-    </footer>
-  </body>
-  <script type="text/javascript" src="image.js"></script>
+    </body>
+  </div>
+  <script type="text/javascript" src="siteFunctions.js"></script>
 
 </html>
 
