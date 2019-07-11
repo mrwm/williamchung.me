@@ -47,6 +47,10 @@
   font-weight: 50;
   /*text-align: center;*/
 }
+.sub-title{
+  padding-bottom: 1em;
+
+}
 .section-title {
   text-align: center;
   border-bottom: 3px solid #242424;
@@ -67,7 +71,7 @@
 body {
   margin: 0px;
   color: #242424;
-  font-size: calc(12px + 1vh);
+  font-size: calc(8px + 1vh);
   font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
   background-color: #fff1e0;
 /*  overflow-x: hidden;*/
@@ -102,55 +106,80 @@ wrap {
 
 /* Just for the paragraphs*/
 p {
+  clear: left;
   text-indent: 1em;
-  padding: 0px 12px;
+/*  padding: 12px 12px;*/
 }
 
 /* Grid! */
 .gridify{
   width: 100%;
-  display: grid;
-  justify-content: center;
+  display: inline-grid;
   align-items: center;
   align-content: space-evenly;
   grid-template-columns: 30% 30% 30%; /*Make the grid smaller than the container*/
-  grid-template-areas:
-    'one two three'
-    'four five six';
-  grid-gap: 10px;
-  padding: 10px;
+/*  grid-template-areas:*/
+/*    'one two three'*/
+/*    'four five six';*/
+  grid-gap: 1em;
+/*  padding: 10px;*/
+  align-items: center;
+  justify-content: center;
+  background: #ffe7c0;
+  padding: 0 1em 0 1em;
+  margin: .5em 0;
+  border-radius: 5px;
+}
+.gridify > * p{
+  position: relative;
+  margin: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  top: 5%;
+  padding: .5em .5em;
+}
+.gridify > *{
+  background: #fff1e0; /*ffdba1;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridify > *, .gridify > * *{
+  border-radius: 5px;
 }
 .photo{
-  text-align: center;
+/*  text-align: center;*/
   width: 100%;
 }
-.photo.two{
+.two{
     grid-column: span 2;
-/*  grid-column-start: 1;*/
-/*  grid-column-end: 3;*/
 }
-.photo.three{
+.three{
   grid-column: span 3;
 }
-.photo.four{
+.down{
   grid-row: span 2;
 }
 .photDescB{
+  position: relative;
+  bottom: 50%;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 4;
   font-size: small;
-  margin-top: -1.3em;
-  margin-bottom: 1em;
+/*  margin-top: -1.3em;*/
+  background: #00000000; /*Transparent background*/
 }
 .photDescT{
   text-align: center;
-  grid-column-start: 1;
-  grid-column-end: 4;
   font-size: small;
-  margin-bottom: -.7em;
+  padding-top: 1em;
+/*  margin-bottom: -.7em;*/
+  background: #00000000; /*Transparent background*/
 }
-
 
 a {
   color: #242424;
@@ -159,7 +188,6 @@ a {
 }
 
 img {
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
