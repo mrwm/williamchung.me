@@ -57,7 +57,7 @@
   letter-spacing: 0.5em;
 }
 #myName{
-  font-weight: 800;
+  font-weight: bold;
   letter-spacing: 0.2em;
 }
 #profile {
@@ -205,7 +205,7 @@ nav{
   border-collapse: separate; border-spacing: 0.2em;
   text-transform: uppercase;
 }
-nav a{
+nav *{
   border: 1.5px solid black;
   transition: 0.3s;
   margin: 0;
@@ -219,6 +219,7 @@ nav a{
   /*display: table-row; /*makes the ul act like a table-row <tr>*/
   text-align: center;
   background-color: #fff3e0;
+  cursor: pointer;
 }
 nav a:link{
   color: #242424;
@@ -226,13 +227,55 @@ nav a:link{
 }
 nav a:hover{
   background: #ffae00; /*#ffd082;*/
-  text-decoration: underline;
+/*  text-decoration: underline;*/
 }
 nav .currentNav {
   background-color: #ffd082;
   margin: 0;
   border-radius: 1em;
 }
+
+/* Dropdown menu */
+.dropbtn {
+  background-color: #00000000;
+  border: none;
+  text-align: center;
+  display: inline-block;
+}
+.dropDown button{
+  width: 100%;
+  font-size: inherit;
+}
+.dropContent{
+  display: none;
+  position: absolute; /* This makes other nav elements stay height-wise */
+  background-color: #00000000;
+  min-width: 160px;
+  z-index: 1;
+  margin: auto;
+  width: 100%;
+  border: none;
+}
+.dropContent a{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+.dropContent a:not(.currentNav){ background-color: #fff1e0; }
+.dropContent a:hover { background-color: #ffae00; }
+.dropDown:hover .dropContent{
+  display: block;
+  border: none;
+}
+.dropDown:hover .dropbtn{ background-color: #ffae0000; }
+.dropDown *{
+  padding: 0;
+  width: auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+.dropDown:hover{ background-color: #ffae00; }
 
 /*Footer*/
 footer{/*

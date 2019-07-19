@@ -39,8 +39,13 @@
       <a class="" href="./index.html">Home</a>
       <a class="" href="./gridTheory.html">Alum Rock Park</a>
       <a class="" href="./gridTheoryExtra.html">Photography</a>
-      <a class="currentNav" href="./colorTheory.html">3D Printer</a>
-      <a class="" href="#">...</a>
+      <div class="dropDown currentNav">
+        <button class="dropbtn" onclick="toggleMenu(this)">3D Printer</button>
+        <div class="dropContent">
+          <a class="currentNav" href="./colorTheory.html">3D Printer</a>
+          <a class="" href="#">...</a>
+        </div>
+      </div>
     </nav>
     <body>
       <wrap>
@@ -68,11 +73,13 @@
               <li>0.4mm nozzle installed</li>
               <li>Metal extruder gear</li>
               <li>No heated bed</li>
-              <li>&nbsp;<br><br></li>
+              <li>&nbsp;<br></li>
               <li class="listSpec">Misc included:</li>
-              <li>Spare 0.5/0.4/0.3mm nozzles</li>
-              <li>Hex wrench set</li>
               <li>Partially used black and white PLA</li>
+              <li>Small bag of spare screws and bolts</li>
+              <li>Hex wrench set</li>
+              <li>&times;4 spare 50cm long stepper cables</li>
+              <li>Spare 0.5/0.4/0.3mm nozzles</li>
               <li>Anything you'd like to have printed<sup>+</sup</li>
               <li><sup><sup>+</sup>Provided that it's reasonable and within the constraints of the print bed size</sup></li>
             </ul>
@@ -123,7 +130,6 @@
   <!-- end taco -->
   </div>
   <script type="text/javascript" src="../siteFunctions.js"></script>
-
 </html>
 
   
