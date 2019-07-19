@@ -44,11 +44,23 @@ for(var i=0; i<navs.length; i++) {
     var n = 100/navs[i].childElementCount;
     var nodes = navs[i].childNodes;
     for(var j=0; j<nodes.length; j++) {
-      if (nodes[j].nodeName.toLowerCase() == 'a') {
+      if ((nodes[j].nodeName.toLowerCase() == 'a') || (nodes[j].nodeName.toLowerCase() == 'div')) {
         nodes[j].style.width = n + '%';
       }
     }
 
+  }
+}
+
+/////////////////////////////////////////////
+// This section toggles the dropdown menus //
+/////////////////////////////////////////////
+function toggleMenu(_this) {
+  var x = _this.nextElementSibling;
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 

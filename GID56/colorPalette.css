@@ -33,20 +33,22 @@
   #434343
   #242424
   #000000
-
 */
 
-/* New colors  */
-/*
+/* New ish colors
 
-#ffae00 - Orange
-#99ae1e - A bit green
-#3b9e52 - More green
-#008472
-#006674
-#2f4858 - dark blue
+  #ffae00 - Orange
+  #99ae1e - A bit green
+  #3b9e52 - More green
+  #008472
+  #006674
+  #2f4858 - dark blue
 
-
+  Updated colors
+  #ffae00 - orange
+  #504538 - brownish
+  #b7a99a - dusty color
+  #00df98 - turquoise
 */
 
 #sub-title {
@@ -58,20 +60,39 @@
 
 /*effects a lot of stuff*/
 body {
-  background-color: #e3f194;
+  background-color: #fff1e0;
 }
 /* Grid! */
 .gridify{
   background: inherit;
 }
 .gridify > *{
-  background: #a2af5a;
+  background: #b7a99a;
 }
 .photDescB{
   background: inherit; /*#00000000; /*Transparent background*/
 }
+.photDescB span{
+  width: 25%;
+  height: 20px;
+  margin: 0.1em;
+  text-align: center;
+}
+.photDescB .cOne{
+  background: #ffae00;
+}
+.photDescB .cTwo{
+  color: #b7a99a;
+  background: #504538;
+}
+.photDescB .cThree{
+  background: #b7a99a;
+}
+.photDescB .cFour{
+  background: #00df98;
+}
 .photDescT{
-  background: inherit; /*#00000000; /*Transparent background*/
+  background: inherit;
 }
 .gridify > * p{
   position: static;
@@ -125,7 +146,7 @@ nav .currentNav {
   display: block;
 }
 
-.dropContent a:not(.currentNav){ background-color: #e3f194; }
+.dropContent a:not(.currentNav){ background-color: inherit; }
 .dropContent a:not(.currentNav):hover{ background-color: #ffae00; }
 .dropDown:hover .dropContent{
   display: block;
@@ -145,14 +166,14 @@ ul{
 }
 li{
   padding: 0.5em;
-  background: #00d4b7;
+  background: #00df98;
   list-style-type: none;
   margin-left: -1.5em;
-  border-radius: none;
-}
-li:nth-of-type(odd):not(.listSpec){
-  background: #e3f194;
 }
 li:nth-of-type(even):not(.listSpec){
-  background: #a2af5a;
+  background: #b7a99a;
+}
+li:nth-of-type(odd):not(.listSpec){
+  background: #504538;
+  color: #b7a99a;
 }
