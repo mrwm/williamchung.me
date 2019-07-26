@@ -128,7 +128,7 @@ p {
   background: #ffe7c0;
   padding: 0 1em 0 1em;
   margin: .5em 0;
-  border-radius: 5px;
+  border-radius: 1em;
 }
 .gridify > * p{
   position: relative;
@@ -148,7 +148,7 @@ p {
   align-items: center;*/
 }
 .gridify > *, .gridify > * *{
-  border-radius: 5px;
+  border-radius: 1em;
 }
 .photo{
 /*  text-align: center;*/
