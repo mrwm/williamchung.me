@@ -5,7 +5,6 @@
 @font-face {
   font-family: 'Blocked_';
   font-style: normal;
-  font-weight: 400;
   src: local('Blocked_'), local('Blocked_'), url('fonts/Blocked_.woff') format('woff');
   unicode-range: U+0020-007E;
 }
@@ -53,7 +52,7 @@ url("fonts/Blocked_.otf") format("opentype"),
 #sub-title {
   display: inline-block;
 }
-.sub-title a, h1, h6 {
+.sub-title a, h1 {
   margin-bottom: -0.1em;
   color: #242424;
   text-decoration: none;
@@ -63,12 +62,16 @@ url("fonts/Blocked_.otf") format("opentype"),
 }
 .sub-title{
   padding-bottom: 1em;
-
+  width: 100%;
 }
 .section-title {
   text-align: center;
   border-bottom: 3px solid #242424;
-  letter-spacing: 0.5em;
+  font-size: 1.5em;
+  text-transform: none;
+  display: table;
+  width: 100%;
+  margin: 0 auto;
 }
 #myName{
   font-weight: bold;
@@ -83,13 +86,16 @@ url("fonts/Blocked_.otf") format("opentype"),
 
 /*effects a lot of stuff*/
 html{
-  font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-family: "Blocked_", "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+button{
+  font-family: "Blocked_", "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 }
 body {
   margin: 0px;
   color: #242424;
-  font-size: calc(8px + 1vh);
-  background-color: #fff1e0;
+  font-size: calc(14px + 2vh);
+  background-color: #d6d6d6;
 /*  overflow-x: hidden;*/
   width:100%;
 }
@@ -103,12 +109,11 @@ header{
 }
 
 .taco {
-  width: 80%;
   min-width: 600px;
   max-width:960px;
   margin: 1em auto 1.5em auto;
   display: block;
-  padding: 0.5em;
+  /*padding: 0.5em;
 /*  box-shadow: 10px 5px 5px #ccc;*/
 }
 
@@ -141,7 +146,7 @@ p {
 /*  padding: 10px;*/
   align-items: center;
   justify-content: center;
-  background: #ffe7c0;
+  background: #898989;
   padding: 0 1em 0 1em;
   margin: .5em 0;
   border-radius: 1em;
@@ -156,7 +161,7 @@ p {
   padding: .5em .5em;
 }
 .gridify > *{
-  background: #fff1e0; /*ffdba1;*/
+  background: #d6d6d6; /*ffdba1;*/
   width: 100%;
   height: 100%;
   display: flex;
@@ -168,7 +173,9 @@ p {
 }
 .photo{
 /*  text-align: center;*/
+  object-fit: scale-down;
   width: 100%;
+  height: 100%;
 }
 .two{
     grid-column: span 2;
@@ -197,7 +204,7 @@ p {
 
 a {
   color: #242424;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 img {
@@ -211,7 +218,7 @@ img:hover {
 
 /*Horizontal Nav*/
 nav{
-  background-color: #fff1e0;
+  background-color: inherit;
   /*margin-top: 0.5em; /*adds distance from header*/
   width: 100%;
   display: table; /*makes the nav act like a table</table>*/
@@ -222,11 +229,11 @@ nav{
   text-transform: uppercase;
 }
 nav *{
-  border: 1.5px solid black;
+  border: 0.1em solid black;
   transition: 0.3s;
   margin: 0;
   border-radius: 1em;
-  background-color: #fff1e0; /*will take precedence over the background-color*/
+  background-color: inherit; /*will take precedence over the background-color*/
   display: table-cell; /*makes the li act like a table-cell<td>*/
   color: #242424;
   text-decoration: none;
@@ -234,7 +241,7 @@ nav *{
   list-style-type: none;
   /*display: table-row; /*makes the ul act like a table-row <tr>*/
   text-align: center;
-  background-color: #fff3e0;
+  background-color: #afafaf;
   cursor: pointer;
 }
 nav a:link{
@@ -242,13 +249,15 @@ nav a:link{
   text-decoration: none;
 }
 nav a:hover{
-  background: #ffae00; /*#ffd082;*/
+  background: #434343; /*#ffd082;*/
+  color: #fff;
 /*  text-decoration: underline;*/
 }
 nav .currentNav {
-  background-color: #ffd082;
+  background-color: #656565;
   margin: 0;
   border-radius: 1em;
+  color: #fff;
 }
 
 /* Dropdown menu */
@@ -261,6 +270,8 @@ nav .currentNav {
 .dropDown button{
   width: 100%;
   font-size: inherit;
+}
+.dropDown button:hover{ color: #fff;
 }
 .dropContent{
   display: none;
@@ -279,20 +290,24 @@ nav .currentNav {
   text-decoration: none;
   display: block;
 }
-.dropContent a:not(.currentNav){ background-color: #fff1e0; }
-.dropContent a:hover { background-color: #ffae00; }
+.dropContent a:not(.currentNav){ background-color: #656565; }
+.dropContent a:hover {
+  background-color: #434343; 
+  color: #fff;
+}
 .dropDown:hover .dropContent{
   display: block;
   border: none;
 }
-.dropDown:hover .dropbtn{ background-color: #ffae0000; }
 .dropDown *{
   padding: 0;
   width: auto;
   margin: 0;
   box-sizing: border-box;
 }
-.dropDown:hover{ background-color: #ffae00; }
+.dropDown:hover{
+  background-color: #434343;
+}
 
 /*Footer*/
 footer{/*
@@ -317,7 +332,7 @@ footer nav{
 }
 
 details {
-  background-color: #fff1e0;
+  background-color: inherit;
   border: 1.5px solid black;
   border-radius: 1em;
   margin: 0.5em;
