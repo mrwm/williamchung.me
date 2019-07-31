@@ -28,7 +28,7 @@ url("fonts/Blocked_.otf") format("opentype"),
 
   Yellows:
   #ffffff
-  #fff1e0 - Background Color
+  #fff1e0
   #fff3e0
   #ffe7c0
   #ffdba1
@@ -348,3 +348,26 @@ details:hover {
 /*  margin: 0.5em;*/
 /*  padding: 0.5em;*/
 }
+
+
+fieldset{
+  font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.5em;
+}
+fieldset span{
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.5em;
+}
+fieldset div{
+  font-style: normal;
+  font-weight: 300;/*
+  font-size: 0.5em;*/
+  background: #ffffffee;
+  padding: 0.5em;
+  font-family: "Courier New", Monospace;
+}
+
