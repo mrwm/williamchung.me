@@ -133,7 +133,7 @@ p {
   display: inline-grid;
   align-items: center;
   align-content: space-evenly;
-  grid-template-columns: 30% 30% 30%; /*Make the grid smaller than the container*/
+  grid-template-columns: repeat(auto-fill, 30%); /*30% 30% 30%; /*Make the grid smaller than the container*/
 /*  grid-template-areas:*/
 /*    'one two three'*/
 /*    'four five six';*/
@@ -147,12 +147,10 @@ p {
   border-radius: 1em;
 }
 .gridify > * p{
-  position: relative;
   margin: 0;
   height: 100%;
   display: inline-block;
   vertical-align: middle;
-  top: 5%;
   padding: .5em .5em;
 }
 .gridify > *{
@@ -178,6 +176,9 @@ p {
 }
 .down{
   grid-row: span 2;
+}
+.ddown{
+  grid-row: span 3;
 }
 .photDescB{
   position: relative;

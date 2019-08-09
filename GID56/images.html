@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./main.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../image.css" rel="stylesheet" type="text/css" media="screen">
+    <title>GID56 &ndash; Penitencia Creek Park</title>
+
+  </head>
+
+  <div class="taco">
+    <header>
+      <div class="sub-title">
+        <a href="index.html"><h1 id="myName">William Chung</h1></a>
+        <span>GID56 &ndash; Home</span>
+      </div>
+    </header>
+    <nav id="mainnav">
+      <a class="" href="./index.html">Home</a>
+      <a class="" href="./gridTheory.html" title="Alum Rock Park">Alum Rock</a>
+      <a class="currentNav" href="./images.html" title="Penitencia Creek Park">Penitencia</a>
+      <a class="" href="./gridTheoryExtra.html">Photography</a>
+      <div class="dropDown">
+        <button class="dropbtn" onclick="toggleMenu(this)">3D Printers</button>
+        <div class="dropContent">
+          <a class="" href="./colorTheory.html">Tronxy XY100</a>
+          <a class="" href="./colorPalette.html">Tronxy XY100 (recolored)</a>
+          <a class="" href="./linesShapesShadows.html">CR-10</a>
+        </div>
+      </div>
+      <a class="" href="./typography.html">Blocked_</a>
+    </nav>
+    <body>
+      <wrap>
+        <div class="sub-title">
+          <a href="#"><h1 class="section-title">Penitencia Creek Park</h1></a>
+          <!--<span> </span>-->
+        </div>
+        <div class="gridify">
+          <div class="photDescB three">
+            <span> </span>
+          </div>
+          <div class="two">
+            <iframe id="largeIMG" frameborder="0" scrolling="no" allowvr="yes" width="100%" height="100%" src="./aframe/index.html"></iframe>
+            <!--<button onClick='document.getElementById("largeIMG").src="./aframe/index.html";this.style.display="none"'>Click to load image</button>-->
+          </div>
+          <div class="ddown">
+            <p>Penitencia Creek Park is of the many Santa Clara County parks. With 38 acres of land, the park includes the Penitencia Creek and the Penitencia Pond.<br>
+            &nbsp;&nbsp;&nbsp; During my free time, I like to go running around my neighborhood and this is one of the many parks that I like to go running in. Whenever the weather is nice, park has a calming field of grass wrapping around a calm pond that is teeming with wildlife. In the past, there used to only be duckies and maybe a couple fishies here and there. But recently, I have been seeing some turtles appear here and there. After a bit of internet searching around, I found out that they were called red-eared sliders... Going off topic, red-eared sliders are considered to be a type of harmful invasive species. It's kinda vexing, but at the same time I don't really see the harm with the turtles in the pond. The only thing I can think of is the turtles competing for food with the fishies in the pond.</p>
+          </div>
+          <div class="photo">
+            <img alt="two swimming ducks"
+                    title="two swimming ducks"
+                    onclick="imageThis(this)"
+                    src="./img/webp/DSC_0663.webp"
+                    onerror="this.onerror=null; this.src='./img/DSC_0663.jpg'">
+          </div>
+          <div class="photo">
+            <img alt="Black duck"
+                    title="Black duck"
+                    onclick="imageThis(this)"
+                    src="./img/webp/DSC_0659.webp"
+                    onerror="this.onerror=null; this.src='./img/jpg/DSC_0659.jpg'">
+          </div>
+          <div class="photo two">
+            <img alt="Penitencia Creek Park sign"
+                    title="Penitencia Creek Park sign"
+                    onclick="imageThis(this)"
+                    src="./img/webp/IMG7_base_c.webp"
+                    onerror="this.onerror=null; this.src='./img/jpg/IMG7_base_c.jpg'">
+          </div>
+          <div class="photDescB three">
+            <span><a title="Penitencia Creek Park" href="./aframe/" target="_blank" rel="noopener">Click here to see the panoramic picture full screen</a></span>
+          </div>
+        <!-- end gridify -->
+        </div>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
+          <span id="closeBtn">&times;</span>
+          <span id="closeScreen"> </span>
+          <img class="modal-content" id="imgMod">
+          <div id="caption"></div>
+        </div>
+        <footer>
+        </footer>
+      </wrap>
+    </body>
+  <!-- end taco -->
+  </div>
+  <script type="text/javascript" src="../siteFunctions.js"></script>
+
+</html>
+
+  
+
+
+
+
