@@ -12,9 +12,9 @@
   }
   else {
     if (window.opener) {
+      document.querySelector('h1').innerHTML = 'you should go back to the last tab / window...';
       opener.location = 'https://williamchung.me/noopener.html#hax';
       // Just `opener.location.hash = '#hax'` only works on the same origin.
-      document.querySelector('h1').innerHTML = 'you should go back to the last tab / window...';
     }
     else {
       document.querySelector('h1').innerHTML = 'The previous tab is safe and intact. <code>window.opener</code> was <code>null</code>; mischief <em>not</em> managed!<br><br><br>Code taken from <a href="https://mathiasbynens.github.io/rel-noopener/malicious.html">here</a>';
