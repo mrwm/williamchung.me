@@ -1,0 +1,32 @@
+
+Color Palette:
+#fcf9ea - pastel yellow
+#badfdb - lighter teal
+#49beb7 - teal
+#ff8a5c - orange-ish brown.
+https://colorhunt.co/palette/154142
+https://refactoringui.com/previews/building-your-color-palette/
+
+1) home page: about/bio
+2) about/bio
+3) gallery w/thumb img
+4) project profile page linked from the gallery page (subdir of gallery item)
+5) contact
+
+Home/About     Gallery            Contact
+ |_Info/bio      |_item page        |_Form
+                 |_item page
+                 |_item page
+
+HTML layout:
+
+HTML________________
+|_Head___________| |
+|_Body___________| |
+| | _Div wrap_ | | |
+| | |_Header_| | | |
+| | |_Nav____| | | |
+| | |_Main___| | | |
+| | |_Footer_| | | |
+| |____________| | |
+|________________| |
