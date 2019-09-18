@@ -6,12 +6,50 @@
     <meta name="author" content="William Chung" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Me: William Chung</title>
+    <title>About Me | William Chung</title>
 
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" media="screen">
+
+    <style type="text/css" media="screen">
+@media only screen and (max-width: 640px){
+}
+    </style>
+
   </head>
   <body>
-    <!-- -->
+    <div id="taco">
+      <header>
+        <h1>About Me</h1>
+      </header>
+      <nav class="desktop">
+        <a class="currentNav" href="index.html">Home</a>
+        <a class="" href="#">Projects</a>
+        <a class="" href="#">Photography</a>
+        <a class="" href="contact.html">Contact</a>
+      </nav>
+      <details class="mobile"><summary>Menu</summary>
+        <nav>
+          <a class="currentNav" href="index.html">Home</a>
+          <a class="" href="#">Projects</a>
+          <a class="" href="#">Photography</a>
+          <a class="" href="contact.html">Contact</a>
+        </nav>
+      </details>
+      <main>
+        <picture onclick="window.open('img/jpg.profile')">
+          <source srcset="img/profile.webp" type="image/webp">
+          <img id="profile" src="img/profile.jpg" alt="Picture of William" title="Picture of William">
+        </picture>
+
+        <p>Hi, My name is William! I’m currently a third year student studying Graphic Design at San Jose State University. During my spare time to time, I like to read, go hiking, or work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank" rel="noopener">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.
+        </p>
+      </main>
+      <footer>
+        <br>Copyright &copy; 2019 William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
+      </footer>
+    </div>
   </body>
 </html>
 

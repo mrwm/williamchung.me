@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*
+  Colors:
+
+  #fcf9ea - pastel yellow
+  #badfdb - lighter teal
+  #49beb7 - teal
+  #ff8a5c - orange-ish brown.
+
+  https://colorhunt.co/palette/154142
+  https://refactoringui.com/previews/building-your-color-palette/
+
+  Tanish
+  #786344 - Olive Wood
+  #ceae6a - Putty
+  #cfcb93 - Martini Olive
+
+  Bluish
+  #acdabc - Mountain Mint
+  #8ce1db - Island Oasis
+  #accdd6 - Sonata
+
+  Blacks:
+  #ffffff
+  #d6d6d6
+  #afafaf
+  #898989
+  #656565
+  #434343
+  #242424
+  #000000
+
+  #16161d - Eigengrau
+
+*/
+
+:root{
+  /* Usage: var(--varName) */
+  --bg-color: #fcf9ea;
+  --tanish: #f8f2cb;
+  --accent: #fde75a;
+  --sky: #badfdb;
+  --water: #49beb7;
+  --coffe-cake: #ff8a5c;
+}
+
+*{
+  color: #16161d;
+}
+
+body{
+  background: var(--bg-color);
+}
+
+#taco{
+  background: var(--tanish);
+}
+
+nav *:hover{
+  background: var(--accent);
+}
+
+.currentNav{
+  background: var(--coffe-cake);
+}
+
+@media only screen and (max-width: 640px){
+  details:hover{
+    background-color: var(--accent);
+  }
+  details[open]:hover{
+    background-color: inherit;
+  }
+}
