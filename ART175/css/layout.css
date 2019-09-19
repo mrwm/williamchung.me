@@ -52,10 +52,16 @@ header h1{
   text-decoration: none;
   text-align: center;
 }
-.nav *:first-child, .nav *:last-child{
-  padding: 0;
+/*.nav *:first-child{
+  margin: 0 0.25rem 0 0;
 }
+.nav *:last-child{
+  margin: 0 0 0 0.25rem;
+}*/
 
+main{
+  padding: 0 0.25rem;
+}
 main p{
   text-indent: 1em;
 }
@@ -65,6 +71,7 @@ footer{
   line-height: 0.5em;
   position: absolute;
   bottom: 0;
+  padding: 0 0.25rem;
 }
 
 .mobile{
@@ -87,7 +94,7 @@ details[open] summary{
   margin: 0;
   border-bottom: 2px solid;
 }
-summary{ border: none;}
+summary{ border: none; }
 .nav details a{
   border: none;
   border-bottom: 2px solid;
@@ -202,5 +209,31 @@ textarea{
   img{
     height: 7em;
   }
-}
 
+
+/* Keep things narrow thru the resolutions */
+@media only screen and (min-width: 1080px){
+  #taco{
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1440px){
+  #taco{
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1920px){
+  #taco{
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 2500px){
+  #taco{
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 4320px){
+  #taco{
+    width: 20%;
+  }
+}
