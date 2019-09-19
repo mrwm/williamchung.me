@@ -18,18 +18,23 @@
       <header>
         <h1>Contact</h1>
       </header>
-      <nav class="desktop">
-        <a class="" href="index.html">Home</a>
-        <a class="" href="#">Projects</a>
+      <nav class="desktop nav">
+        <a class="currentNav" href="index.html">Home</a>
+        <details><summary>Projects</summary>
+          <a class="" href="#">Projects</a>
+          <a class="" href="#">Projects</a>
+          <a class="" href="#">Projects</a>
+          <a class="" href="#">Projects</a>
+        </details>
         <a class="" href="#">Photography</a>
-        <a class="currentNav" href="contact.html">Contact</a>
+        <a class="" href="contact.html">Contact</a>
       </nav>
       <details class="mobile"><summary>Menu</summary>
-        <nav>
-          <a class="" href="index.html">Home</a>
+        <nav class="nav">
+          <a class="currentNav" href="index.html">Home</a>
           <a class="" href="#">Projects</a>
           <a class="" href="#">Photography</a>
-          <a class="currentNav" href="contact.html">Contact</a>
+          <a class="" href="contact.html">Contact</a>
         </nav>
       </details>
       <main>
@@ -38,16 +43,19 @@
           <form method="GET" action="">
             <fieldset>
               <legend>Comment</legend>
-              <textarea name="comment" placeholder="Hi, I wish you a wonderful day!"></textarea><br>
+              <textarea name="comment" placeholder="Hi, I wish you a wonderful day!" required></textarea>
             </fieldset>
             <fieldset>
               <legend>Contact Information</legend>
-              <label>Name: 
-                <input type="text" name="name">
-              </label><br>
-              <label>Email: 
-                <input type="email" name="name">
-              </label><br>
+              <label>Name:
+                <input type="text" name="name" placeholder="John Doe" required>
+              </label>
+              <label>Phone Number: <span class="small">(Format: 123-456-7890)</span>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+              </label>
+              <label>Email:
+                <input type="email" name="name" placeholder="email@example.com" required>
+              </label>
               <input type="submit" value="Submit">
             </fieldset>
           </form>
