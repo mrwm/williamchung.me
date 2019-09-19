@@ -37,13 +37,13 @@ header h1{
   font-size: 3em;
 }
 
-nav{
+.nav{
   display: inline-flex;
   flex-wrap: nowrap;
   width: 100%;
 }
 
-nav a{
+.nav *:not(summary){
   border: solid 2px;
   border-radius: 1rem;
   padding: 0 1em;
@@ -52,7 +52,7 @@ nav a{
   text-decoration: none;
   text-align: center;
 }
-nav a:first-child, nav a:last-child{
+.nav *:first-child, .nav *:last-child{
   padding: 0;
 }
 
@@ -70,6 +70,54 @@ footer{
 .mobile{
   display: none;
 }
+
+
+/* This styles the dropdown menus */
+details{
+  text-align: center;
+  border: 2px solid;
+  border-radius: 1rem;
+  display: flex;
+}
+details:hover{
+  cursor: pointer;
+}
+details[open] summary{
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid;
+}
+summary{ border: none;}
+.nav details a{
+  border: none;
+  border-bottom: 2px solid;
+  border-radius: 0;
+}
+.nav details{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+/* CSS below hides the arrow on the details element */
+details summary::-webkit-details-marker {
+  display:none;
+}
+details > summary:first-of-type {
+    list-style-type: none;
+}
+
+.mobile nav{
+  flex-direction: column;
+}
+.mobile nav a{
+  width: 100%;
+  padding: 0;
+  margin: 0 -2px;
+  border-top: none;
+  border-radius: 0;
+}
+.mobile nav a:last-child{ border-bottom: none;}
+
 
 /*----------
  Index page
@@ -96,11 +144,28 @@ img{
 --------------*/
 fieldset{
   padding: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+label{
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: center; Basically useless with flex-direction column */
+  align-items: stretch;
+  width: 100%;
+  flex-direction: column;
 }
 textarea{
   width: 100%;
   height: 5em;
 }
+.small{
+  font-size: small;
+}
+
+
 /*-------------------------
  Base page layout (mobile)
 ---------------------------*/
@@ -119,54 +184,23 @@ textarea{
     display: none;
   }
 
-  /* This styles the dropdown menu */
-  details{
-    text-align: center;
-    border: 2px solid;
-    border-radius: 1rem;
+  /*----------
+   Index page
+  ------------*/
+  picture{
+    display: inline;
+    float: left;
+    padding: 0 1em 0 0;
   }
-  details:hover{
-    cursor: pointer;
+  #taco{
+    overflow: auto;
   }
-  details[open] summary{
-    padding: 0;
-    margin: 0;
-    border-bottom: 2px solid;
+  /* add spacing gap between picture and paragraph */
+  #taco p{
+    padding: 0 0 0 1em;
   }
-  details summary::-webkit-details-marker {
-    display:none;
+  img{
+    height: 7em;
   }
-  details > summary:first-of-type {
-      list-style-type: none;
-  }
- .mobile nav{
-    flex-direction: column;
-  }
-  .mobile nav a{
-    width: 100%;
-    padding: 0;
-    margin: 0 -2px;
-    border-top: none;
-    border-radius: 0;
-  }
-  .mobile nav a:last-child{ border-bottom: none;}
-
-
-picture{
-  display: inline;
-  float: left;
-  padding: 0 1em 0 0;
-}
-#taco{
-  overflow: auto;
-}
-/* add spacing gap between picture and paragraph */
-#taco p{
-  padding: 0 0 0 1em;
-}
-img{
-  height: 7em;
-}
-
 }
 
