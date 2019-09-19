@@ -40,8 +40,8 @@
   --bg-color: #fcf9ea;
   --tanish: #f8f2cb;
   --accent: #fde75a;
-  --sky: #badfdb;
-  --water: #49beb7;
+  --sky: #badfdb; /* not used */
+  --water: #49beb7; /* not used */
   --coffe-cake: #ff8a5c;
 }
 
@@ -66,10 +66,16 @@ nav *:hover{
 }
 
 @media only screen and (max-width: 640px){
+  details{
+    /*background-color: var(--coffe-cake);*/
+  }
   details:hover{
     background-color: var(--accent);
   }
+  details[open]{
+    background-color: var(--tanish);
+  }
   details[open]:hover{
-    background-color: inherit;
+    background-color: var(--tanish);
   }
 }

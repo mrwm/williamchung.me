@@ -1,4 +1,10 @@
 @charset "UTF-8";
+:root{
+  /* Usage: var(--varName) */
+  --border-radius: 1rem;
+}
+
+
 /*----------------
  Base page layout
 ------------------*/
@@ -19,12 +25,12 @@ body{
   margin: 1.5em auto;
   width: 80%;
   padding: 2em 1em;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   border: solid 2px;
 }
 
 header, nav, main, footer, details{
-  margin: 0 0 0.5em 0;
+  margin: 0.5em 0;
 }
 
 header{
@@ -45,7 +51,7 @@ header h1{
 
 .nav *:not(summary){
   border: solid 2px;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   padding: 0 1em;
   width: 25%;
   margin: 0.25rem;
@@ -79,12 +85,17 @@ footer{
 }
 
 
-/* This styles the dropdown menus */
+/* This styles the mobile dropdown menu */
 details{
+  margin: 0.25rem;
   text-align: center;
   border: 2px solid;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   display: flex;
+}
+details[open]{
+  border: 2px solid;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 details:hover{
   cursor: pointer;
@@ -115,15 +126,17 @@ details > summary:first-of-type {
 
 .mobile nav{
   flex-direction: column;
+  margin: 0;
 }
 .mobile nav a{
   width: 100%;
   padding: 0;
-  margin: 0 -2px;
-  border-top: none;
+  margin: 0 0;
+  border: none;
+  border-bottom: 2px solid;
   border-radius: 0;
 }
-.mobile nav a:last-child{ border-bottom: none;}
+.mobile nav a:last-child{ border: none; }
 
 
 /*----------
