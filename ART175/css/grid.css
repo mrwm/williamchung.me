@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/*------------
+ Contact Page
+--------------*/
+.gridify{
+  padding: 0;
+  width: 100%;
+  display: inline-grid;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: stretch;
+  grid-template-columns: repeat(3, 3fr); /*30% 30% 30%; /*Make the grid smaller than the container*/
+
+/*
+  grid-gap: 10px;
+*/
+}
+	
