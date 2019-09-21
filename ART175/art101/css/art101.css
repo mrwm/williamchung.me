@@ -52,26 +52,27 @@ input[type=radio]:checked + label{
 }
 
 /* Styles each fieldset to be readable instead of clumped together */
-section fieldset{
+.gridify{
   width: 100%;
-  display: inline-flex;
-  flex-flow: wrap row;
-  align-content: space-between;
+  display: inline-grid;
+  align-items: space-evenly;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-/* flex: grow shrink basis */
-h3{ flex: 1 100%; }
-p{ flex: 3 50%; }
+.grid-block{
+  width: 100%;
+}
 
 /* Limit the size of media */
 /* TODO: flexbox/grid media */
 img, video{
-  width: 10em;
+  max-width: 10em;
 }
 
 @media only screen and (max-width: 640px){
-  /*----------
-   Index page
-  ------------*/
-
+  /*--------------------
+   Index page of art101
+  ----------------------*/
+  .grid-block *{
+    font-size: 0.7rem;
+  }
 }
