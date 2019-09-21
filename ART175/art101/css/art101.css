@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/*----------
+ Index page
+------------*/
+
+.readings{
+  display: none;
+}
+.projects{
+  display: none;
+}
+
+label{
+  text-align: center;
+  width: 25%;
+  display: inline-block;
+  margin: 0 auto 1rem auto;
+  box-shadow: #cccccccc 0 5px 10px, #00000033 0 15px 40px;
+  background: var(--bg-color);
+  border: 2px solid var(--bg-color);
+}
+label:hover{
+  cursor: pointer;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+input[type=radio]{
+  display: none;
+}
+input[type=radio]:checked + label{
+  border-bottom: 2px solid;
+}
+
+#reading:checked ~ .readings{
+  display: block;
+}
+#project:checked ~ .projects{
+  display: block;
+}
+
+img, video{
+  width: 10em;
+}
+
+@media only screen and (max-width: 640px){
+  /*----------
+   Index page
+  ------------*/
+
+}
