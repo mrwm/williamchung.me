@@ -15,10 +15,11 @@
 }
 
 label{
+  box-sizing: border-box;
   display: inline-block;
   position: sticky;
   top: 1.80em;
-  width: 48%; /* not 50%, but close */
+  width: 50%;
   text-align: center;
   margin: 0 auto 1rem auto;
   border: 2px solid var(--bg-color);
@@ -31,12 +32,18 @@ label:hover{
   background: var(--accent);
   box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
 }
-/* Make the buttons appear 'centered' despite no containers to center in */
+/* Make the buttons appear 'centered' despite no containers to center in *
 #reading + label{ float:right; }
+#project + label{ float:left; }*/
 
 /* Hide the buttons and style what is selected */
 input[type=radio]{
-  display: none;
+  opacity: 0;
+  border: 1px solid red;
+  /*display: none;*/
+  z-index: -1;
+  position: absolute;
+  left: -9999999px;
 }
 input[type=radio]:checked + label{
   border-bottom: 2px solid;
@@ -53,13 +60,13 @@ input[type=radio]:checked + label{
 
 /* Styles each fieldset to be readable instead of clumped together */
 .gridify{
+  box-sizing: border-box;
   width: 100%;
   display: inline-grid;
-  align-items: space-evenly;
   grid-template-columns: repeat(2, 1fr);
 }
 .grid-block{
-  width: 100%;
+  /*width: 100%; Kinda useless w/ grid */
 }
 
 /* Limit the size of media */
@@ -68,8 +75,15 @@ img, video{
   width: calc(50em - 25rem);
   max-width: 476px;
 }
-
+@media only screen and (max-width: 960px){
+  img, video{
+    width: calc(50em - 35rem);
+  }
+}
 @media only screen and (max-width: 640px){
+  img, video{
+    width: calc(50em - 25rem);
+  }
   /*--------------------
    Index page of art101
   ----------------------*/
