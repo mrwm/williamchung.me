@@ -12,6 +12,7 @@
     <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
     <link href="./css/layout.css" rel="stylesheet" type="text/css" media="screen">
     <link href="./css/contact.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/imageModal.css" rel="stylesheet" type="text/css" media="screen">
 
   </head>
   <body>
@@ -38,7 +39,7 @@
       <main>
         <section>
           <!-- TODO: add action page for the form. -->
-          <form method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <form method="POST" netlify-honeypot="bot-field" data-netlify="true" action="contact.html#submitted">
             <fieldset>
               <legend>*Message</legend>
               <p class="hidden">
@@ -55,12 +56,18 @@
                 <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
               </label>
               <label>*Email:
-                <input type="email" name="name" placeholder="email@example.com" required>
+                <input type="email" name="email" placeholder="email@example.com" required>
               </label>
               <input type="submit" value="Submit">
             </fieldset>
           </form>
         </section>
+        <!-- The Modal -->
+        <div id="imgModal" class="modal">
+          <span class="close">&times;</span>
+          <div class="modal-content" id="img01">I've received your submission. Thank you.</div>
+          <div id="caption">I've received your submission. Thank you.</div>
+        </div>
       </main>
       <footer>
         <span class="small red">*Required</span><br>
@@ -68,6 +75,28 @@
       </footer>
     </div>
   </body>
+  <script type="text/javascript">
+    var modal = document.getElementById("imgModal");
+    var hash = location.hash.substr(1);
+    console.log(hash);
+    if (hash == "submitted"){
+      modal.style.display = "block";
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("modal")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function(){
+      modal.style.display = "none";
+    }
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if(evt.key === "Escape") {
+        modal.style.display = "none";
+      }
+      //console.log(evt);
+    };
+  </script>
 </html>
 
 
