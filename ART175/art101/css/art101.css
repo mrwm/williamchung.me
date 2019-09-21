@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
-/*----------
- Index page
-------------*/
+/*{border:0.5px solid red;}*/
 
+/*--------------------
+ Index page of art101
+----------------------*/
+
+/* Hide everything at first */
 .readings{
   display: none;
 }
@@ -12,27 +15,35 @@
 }
 
 label{
-  text-align: center;
-  width: 25%;
   display: inline-block;
+  position: sticky;
+  top: 1.80em;
+  width: 48%; /* not 50%, but close */
+  text-align: center;
   margin: 0 auto 1rem auto;
-  box-shadow: #cccccccc 0 5px 10px, #00000033 0 15px 40px;
-  background: var(--bg-color);
   border: 2px solid var(--bg-color);
+  box-shadow: #999999cc 0 5px 10px 1px, #00000033 0 15px 40px 1px;
+  background: var(--bg-color);
 }
 label:hover{
   cursor: pointer;
-  background: var(--accent);
   border: 2px solid var(--accent);
+  background: var(--accent);
+  box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
 }
+/* Make the buttons appear 'centered' despite no containers to center in */
+#reading + label{ float:right; }
 
+/* Hide the buttons and style what is selected */
 input[type=radio]{
   display: none;
 }
 input[type=radio]:checked + label{
   border-bottom: 2px solid;
+  z-index: 1;
 }
 
+/* Show what was selected */
 #reading:checked ~ .readings{
   display: block;
 }
@@ -40,6 +51,20 @@ input[type=radio]:checked + label{
   display: block;
 }
 
+/* Styles each fieldset to be readable instead of clumped together */
+section fieldset{
+  width: 100%;
+  display: inline-flex;
+  flex-flow: wrap row;
+  align-content: space-between;
+}
+
+/* flex: grow shrink basis */
+h3{ flex: 1 100%; }
+p{ flex: 3 50%; }
+
+/* Limit the size of media */
+/* TODO: flexbox/grid media */
 img, video{
   width: 10em;
 }

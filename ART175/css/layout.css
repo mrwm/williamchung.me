@@ -85,7 +85,7 @@ details[open] summary{
   top: 0;
   /*border-bottom: 2px solid;*/
   margin: 0 0.25rem;
-  z-index: 1; /* prevent popups covering the sticky */
+  z-index: 2; /* prevent popups covering the sticky */
 }
 
 /* CSS below hides the arrow on the details element */

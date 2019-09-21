@@ -70,7 +70,7 @@ nav *:hover{
 
 .stickMeTop{
   background: var(--bg-color);
-  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+  box-shadow: #999999cc 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
 }
 
 @media only screen and (max-width: 640px){
