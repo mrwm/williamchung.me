@@ -19,37 +19,42 @@
       <header>
         <h1>Contact</h1>
       </header>
-      <nav class="desktop nav">
-        <a class="" href="index.html">Home</a>
-        <a class="" href="#">Projects</a>
-        <a class="" href="photography.html">Photography</a>
-        <a class="currentNav" href="contact.html">Contact</a>
-      </nav>
-      <details class="mobile"><summary>Menu</summary>
-        <nav class="nav">
+      <section class="stickMeTop">
+        <nav class="desktop">
           <a class="" href="index.html">Home</a>
-          <a class="" href="#">Projects</a>
+          <a class="" href="./art101/">ART 101</a>
           <a class="" href="photography.html">Photography</a>
           <a class="currentNav" href="contact.html">Contact</a>
         </nav>
-      </details>
+        <details class="mobile"><summary>Menu</summary>
+          <nav class="">
+            <a class="" href="index.html">Home</a>
+            <a class="" href="./art101/">ART 101</a>
+            <a class="" href="photography.html">Photography</a>
+            <a class="currentNav" href="contact.html">Contact</a>
+          </nav>
+        </details>
+      </section>
       <main>
         <section>
-          <!-- Should be POST, but this will do for now... -->
-          <form netlify>
+          <!-- TODO: add action page for the form. -->
+          <form method="POST" netlify-honeypot="bot-field" data-netlify="true">
             <fieldset>
-              <legend>Comment</legend>
+              <legend>*Message</legend>
+              <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
               <textarea name="comment" placeholder="Hi, I wish you a wonderful day!" required></textarea>
             </fieldset>
             <fieldset>
               <legend>Contact Information</legend>
-              <label>Name:
+              <label>*Name:
                 <input type="text" name="name" placeholder="John Doe" required>
               </label>
               <label>Phone Number: <span class="small">(Format: 123-456-7890)</span>
                 <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
               </label>
-              <label>Email:
+              <label>*Email:
                 <input type="email" name="name" placeholder="email@example.com" required>
               </label>
               <input type="submit" value="Submit">
@@ -58,7 +63,8 @@
         </section>
       </main>
       <footer>
-        <br>Copyright &copy; 2019 William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
+        <span class="small red">*Required</span><br>
+        <br>Copyright &copy; <script>document.write(new Date().getFullYear());</script> William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
       </footer>
     </div>
   </body>

@@ -16,11 +16,11 @@
   margin: 0;
   padding: 0;
   transition: ease-in 0.1s;
-  /*border: 0.5px solid red;*/
 }
 
 body{
   min-width: 360px;
+  display: grid;
 }
 
 /* div wrapper */
@@ -28,15 +28,11 @@ body{
   position: relative;
   margin: 1.5em auto;
   width: 80%;
+  max-width: 960px;
   padding: 2em 1em;
-  border-radius: var(--border-radius);
-  border: solid 2px;
 }
 
-header, nav, main, footer, details{
-  margin: 0.5em 0;
-}
-
+/* Header stuff at the top of the page */
 header{
   text-align: center;
 }
@@ -47,75 +43,78 @@ header h1{
   font-size: 3em;
 }
 
-.nav{
+/* Site navigation */
+nav{
   display: inline-flex;
   flex-wrap: nowrap;
   width: 100%;
 }
-
-.nav *:not(summary){
-  border: solid 2px;
-  border-radius: var(--border-radius);
-  padding: 0 1em;
+nav *:not(summary){
+  padding: 0.25rem;
   width: 25%;
-  margin: 0.25rem;
   text-decoration: none;
   text-align: center;
 }
+nav *:not(summary):first-child, nav *:not(summary):last-child{
+  padding: 0.25rem 0;
+}
+nav details a{ border: none; }
+nav details{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
+/* This styles the mobile dropdown menu */
+details{
+  text-align: center;
+  display: flex;
+}
+details:hover{ cursor: pointer; }
+details[open] summary{
+  padding: 0;
+  margin: 0;/*
+  border-bottom: 2px solid;*/
+}
+
+.currentNav{ border-bottom: 2px solid; }
+
+/* Stick the navigation at the top */
+.stickMeTop{
+  position: sticky;
+  top: 0;
+  /*border-bottom: 2px solid;*/
+  margin: 0 0.25rem;
+  z-index: 1; /* prevent popups covering the sticky */
+}
+
+/* CSS below hides the arrow on the details element */
+details summary::-webkit-details-marker { display:none; }
+details > summary:first-of-type { list-style-type: none; }
+summary{ border: none; }
+
+/* The meat of the site */
 main{
-  padding: 0 0.25rem;
+  padding: 1rem 0.25rem;
 }
 main p{
   text-indent: 1em;
 }
 
+/* Supposed to be the last portion of the site */
 footer{
   font-size: 0.7em;
-  line-height: 0.5em;
+  line-height: 1em;
   position: absolute;
   bottom: 0;
   padding: 0 0.25rem;
 }
 
+/* Hide this for mobile screens later */
 .mobile{
   display: none;
 }
-
-
-/* This styles the mobile dropdown menu */
-details{
-  margin: 0.25rem;
-  text-align: center;
-  border: 2px solid;
-  border-radius: var(--border-radius);
-  display: flex;
-}
-details[open]{
-  border: 2px solid;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-details:hover{ cursor: pointer; }
-details[open] summary{
-  padding: 0;
-  margin: 0;
-  border-bottom: 2px solid;
-}
-summary{ border: none; }
-.nav details a{
-  border: none;
-  border-bottom: 2px solid;
-  border-radius: 0;
-}
-.nav details{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-/* CSS below hides the arrow on the details element */
-details summary::-webkit-details-marker { display:none; }
-details > summary:first-of-type { list-style-type: none; }
-
+/* Styling for mobile navigation */
 .mobile nav{
   flex-direction: column;
   margin: 0;
@@ -125,10 +124,14 @@ details > summary:first-of-type { list-style-type: none; }
   padding: 0;
   margin: 0 0;
   border: none;
-  border-bottom: 2px solid;
-  border-radius: 0;
 }
 .mobile nav a:last-child{ border: none; }
+
+
+/* Hide stuff that is supposed to be hidden */
+.hidden{
+  display: none;
+}
 
 /*-------------------------
  Base page layout (mobile)
@@ -141,6 +144,9 @@ details > summary:first-of-type { list-style-type: none; }
     font-weight: 400;
     font-size: 2em;
   }
+  .stickMeTop{
+    border: 2px solid;
+  }
   footer{
     font-size: 0.7em;
     line-height: 1em;
@@ -150,32 +156,5 @@ details > summary:first-of-type { list-style-type: none; }
   .mobile{ display: block; }
   .desktop{ display: none; }
 
-}
-
-/* Keep things narrow thru the resolutions */
-@media only screen and (min-width: 1080px){
-  #taco{
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 1440px){
-  #taco{
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 1920px){
-  #taco{
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 2500px){
-  #taco{
-    width: 30%;
-  }
-}
-@media only screen and (min-width: 4320px){
-  #taco{
-    width: 20%;
-  }
 }
 

@@ -42,7 +42,9 @@
   --accent: #fde75a;
   --sky: #badfdb; /* not used */
   --water: #49beb7; /* not used */
-  --coffe-cake: #ff8a5c;
+  --coffee-cake: #ff8a5c; /* not used */
+
+  --white: #fff;
 }
 
 *{
@@ -54,29 +56,35 @@ body{
 }
 
 #taco{
-  background: var(--tanish);
+  background: inherit /*var(--tanish)*/;
 }
 
 nav *:hover{
   background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
 }
 
 .currentNav{
-  background: var(--coffe-cake);
+  background: var(--bg-color);
+}
+
+.stickMeTop{
+  background: var(--bg-color);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
 }
 
 @media only screen and (max-width: 640px){
   details{
-    /*background-color: var(--coffe-cake);*/
+    /*background-color: var(--coffee-cake);*/
   }
   details:hover{
     background-color: var(--accent);
   }
   details[open]{
-    background-color: var(--tanish);
+    background-color: var(--bg-color);
   }
   details[open]:hover{
-    background-color: var(--tanish);
+    background-color: var(--bg-color);
   }
 }
 

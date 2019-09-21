@@ -8,8 +8,8 @@ picture{
   float: left;
   padding: 0 1em 0 0;
 }
-/* clearfix hack lol */
-#taco{ overflow: auto; }
+/* clearfix hack lol *
+#taco{ overflow: auto; }*/
 /* add spacing gap between picture and paragraph */
 #taco p{ padding: 0 0 0 1em; }
 img{ height: 15em; }
