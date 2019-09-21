@@ -22,5 +22,9 @@ textarea{
   width: 100%;
   height: 5em;
 }
+*:not(a):not(summary):focus{
+  background: #fff;
+  border: 2px outset grey;
+}
 .small{ font-size: small; }
 .red{ color: red; }

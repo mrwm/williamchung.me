@@ -63,6 +63,14 @@ nav *:hover{
   background: var(--accent);
   box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
 }
+*:focus{
+  background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
+.currentNav:focus{
+  background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
 
 .currentNav{
   background: var(--bg-color);

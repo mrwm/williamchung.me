@@ -49,6 +49,12 @@ input[type=radio]:checked + label{
   border-bottom: 2px solid;
   z-index: 1;
 }
+input[type=radio]:focus + label{
+  border: 2px solid var(--accent);
+  border-bottom: 2px solid;
+  background: var(--accent);
+  z-index: 1;
+}
 
 /* Show what was selected */
 #reading:checked ~ .readings{
