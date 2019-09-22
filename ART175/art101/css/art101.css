@@ -1,10 +1,19 @@
 @charset "UTF-8";
 
 /*{border:0.5px solid red;}*/
-
 /*--------------------
  Index page of art101
 ----------------------*/
+
+body{
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "aside taco none";
+}
+#taco{
+  width: 100%;
+  padding: 2em 0;
+  grid-area: taco;
+}
 
 /* Hide everything at first */
 .readings{
@@ -21,7 +30,6 @@ label{
   top: 1.80em;
   width: 50%;
   text-align: center;
-  margin: 0 auto 1rem auto;
   border: 2px solid var(--bg-color);
   box-shadow: #999999cc 0 5px 10px 1px, #00000033 0 15px 40px 1px;
   background: var(--bg-color);
@@ -32,14 +40,77 @@ label:hover{
   background: var(--accent);
   box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
 }
-/* Make the buttons appear 'centered' despite no containers to center in *
-#reading + label{ float:right; }
-#project + label{ float:left; }*/
 
-/* Hide the buttons and style what is selected */
+/*---------------------------------------------------------
+ Make the checkbox + labels pretty under the main nav bar.
+ Also show/hide what is (not) selected.?
+-----------------------------------------------------------*/
+aside{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  grid-area: aside;
+}
+.sticky-spacer{
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin: 0 0 8.95rem 0;
+  visibility: hidden;
+}
+.sticky-container{
+  position: sticky;
+  top: 1.8em;
+}
+.sticky-container .currentNav{
+  border-bottom: 2px solid;
+}
+
+.sticky-container a::before{
+  content: "Project "
+}
+.sticky-container a{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--bg-color);
+  box-shadow: #999999cc 0 5px 10px 1px, #00000033 0 15px 40px 1px;
+  background: var(--bg-color);
+}
+.sticky-container a:hover{
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
+}
+/*
+input[type=checkbox]{
+  opacity: 0;
+  /*display: none;*
+  z-index: -1;
+  position: absolute;
+  left: -9999999px;
+}
+input[type=checkbox]:checked + label{
+  border-bottom: 2px solid;
+  z-index: 1;
+}
+input[type=checkbox]:focus + label{
+  border: 2px solid var(--accent);
+  border-bottom: 2px solid;
+  background: var(--accent);
+  z-index: 1;
+}
+*/
+
+/*-----------------------------------------------------
+ Make the radio buttons pretty under the main nav bar.
+ Also show/hide what is (not) selected.
+-------------------------------------------------------*/
 input[type=radio]{
   opacity: 0;
-  border: 1px solid red;
   /*display: none;*/
   z-index: -1;
   position: absolute;
@@ -75,8 +146,12 @@ input[type=radio]:focus + label{
   /*width: 100%; Kinda useless w/ grid */
 }
 
+fieldset legend{
+  font-size: 2em;
+  padding: 0.5rem;
+}
+
 /* Limit the size of media */
-/* TODO: flexbox/grid media */
 img, video{
   width: calc(50em - 25rem);
   max-width: 476px;
@@ -85,15 +160,24 @@ img, video{
   img, video{
     width: calc(50em - 35rem);
   }
+  .sticky-container a::before{
+    content: "Proj. "
+  }
 }
 @media only screen and (max-width: 640px){
   img, video{
     width: calc(50em - 25rem);
   }
-  /*--------------------
-   Index page of art101
-  ----------------------*/
   .grid-block *{
     font-size: 0.7rem;
+  }
+  .sticky-spacer{
+    margin: 0 0 7.3rem 0;
+  }
+  .sticky-container a{
+    font-size: 0.7em;
+  }
+  .sticky-container a::before{
+    content: "P "
   }
 }
