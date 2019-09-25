@@ -8,18 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ART101 | William Chung</title>
 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link href="../css/colors.css" rel="stylesheet" type="text/css" media="screen">
     <link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen">
     <link href="./css/art101.css" rel="stylesheet" type="text/css" media="screen">
 
+    <script type="text/javascript">
+      function projectPage(_this){
+        var e =  document.getElementsByClassName("sticky-container");
+        for (var i = 0; i < e.length; i++) { //Traverse thru the list of sticky containers
+          var childList = e[i].children;
+          for (var j = 0; j < childList.length; j++) { //Traverse thru the list of elements in the container
+            if ((childList[j].tagName == "a") || (childList[j].tagName == "A")){
+              //remove all other links with the currentNav class
+              childList[j].classList.remove("currentNav");
+            }
+          }
+        }
+        document.getElementById("project").checked = true;
+        _this.classList.add("currentNav");
+      }
+    </script>
   </head>
   <body>
+    <!-- TODO: make side nav for readings -->
     <aside>
       <div class="sticky-spacer">&nbsp;</div>
       <div class="sticky-container">
-        <a class="currentNav" href="#" onclick="alert('Can this page count as 2...?')">1</a>
-        <a class="" href="#" onclick="alert('If this page only counts as one, then can my submission confirmation page count as the 5th? (after the form submisison in the contact page)')">2</a>
+        <a class="currentNav" href="#P1" onclick="projectPage(this)">1</a>
+        <a class="" href="#P2" onclick="projectPage(this)">2</a>
       </div>
     </aside>
     <div id="taco">
@@ -30,7 +47,7 @@
         <nav class="desktop">
           <a class="" href="../index.html">Home</a>
           <a class="currentNav" href="./index.html">ART 101</a>
-          <a class="" href="../photography.html">Photography</a>
+          <a class="" href="../photography/">Photography</a>
           <a class="" href="../contact.html">Contact</a>
         </nav>
         <details class="mobile"><summary>Menu</summary>
@@ -49,7 +66,8 @@
         --><label for="project">Projects</label><!--
         --><input id="reading" type="radio" name="projects"><!--
         --><label for="reading">Readings</label>
-        <article class="projects">
+        <!-- Articles are going to have ID's going be P# where # is the Project number -->
+        <article class="projects" id="P1">
           <fieldset class="gridify">
             <legend>Project 1</legend>
               <p class="grid-block">
@@ -83,7 +101,7 @@
               </div>
           </fieldset>
         </article>
-        <article class="projects">
+        <article class="projects" id="P2">
           <fieldset>
             <legend>Project 2</legend>
             <p>Nothing here</p>

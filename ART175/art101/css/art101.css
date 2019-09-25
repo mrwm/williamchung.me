@@ -165,6 +165,9 @@ img, video{
   }
 }
 @media only screen and (max-width: 640px){
+  label{
+    top: 1.45em;
+  }
   img, video{
     width: calc(50em - 25rem);
   }
@@ -173,6 +176,9 @@ img, video{
   }
   .sticky-spacer{
     margin: 0 0 7.3rem 0;
+  }
+  .sticky-container{
+    top: 1.45em;
   }
   .sticky-container a{
     font-size: 0.7em;
