@@ -45,27 +45,13 @@ void setup() {
   text("r : use rectangle", 24, height - 24*6);
   text("w : toggle frame recording", 24, height - 24*7);
   text("i : draw with smiles", 24, height - 24*8);
-  text("b : erase the screen", 24, height - 24*9);
 
 }
-
-int limitThingy = height;
-int limitThingx = width;
 void draw() {
-  wcThisFunction(limitThingx, limitThingy);
+  wcThisFunction(mouseX, mouseY);
   if(recToggle){
     saveFrame("frames/line-######.png");
   }
-  //limitThingy++;
-  //limitThingx++;
-  if (limitThingy > height)
-    limitThingy = 0;
-  else if (limitThingy < 0)
-    limitThingy = height;
-  if (limitThingx > width)
-    limitThingx = 0;
-  else if (limitThingx < 0)
-    limitThingx = width;
 } 
 
 void mouseMoved() {
@@ -110,27 +96,14 @@ void keyPressed() {
   if ( key == 'i' || key == 'I' ) {
     wcShapeChange("img");
   }
-  if ( keyCode == UP ) {
-    limitThingy -= size;
-  }
-  if ( keyCode == DOWN ) {
-    limitThingy += size;
-  }
-  if ( keyCode == LEFT ) {
-    limitThingx -=size;
-  }
-  if ( keyCode == RIGHT ) {
-    limitThingx += size;
-  }
 }
 
 void wcThisFunction(int x, int y ) {
   fill(value);
-  //if (mousePressed){
+  if (mousePressed){
     wcDrawThis(x, y);
-  //}
-  //else 
-  if (brushToggle){
+  }
+  else if (brushToggle){
     wcDrawThis(x, y);
   }
 }
