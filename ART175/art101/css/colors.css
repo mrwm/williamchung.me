@@ -45,8 +45,6 @@
   --coffee-cake: #ff8a5c; /* not used */
 
   --white: #fff;
-
-  --gradient: radial-gradient( circle 300px at 8.9% 50%,  rgba(201,221,162,1) 0%, rgba(249,223,130,1) 90.2% );
 }
 
 *{
