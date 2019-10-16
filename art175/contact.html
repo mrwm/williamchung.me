@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | William Chung</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/contact.css" rel="stylesheet" type="text/css" media="screen">
+
+  </head>
+  <body>
+    <div id="taco">
+      <header>
+        <h1>Contact</h1>
+      </header>
+      <section class="stickMeTop">
+        <nav class="desktop">
+          <a class="" href="./index.html">Home</a>
+          <a class="" href="site2/">Site 2</a>
+          <a class="" href="http://dma.sjsu.edu/art101/w_chung/">ART 101</a>
+          <a class="" href="./photography/">Photography</a>
+          <a class="currentNav" href="./contact.html">Contact</a>
+        </nav>
+        <details class="mobile"><summary>Menu</summary>
+          <nav class="">
+            <a class="" href="./index.html">Home</a>
+            <a class="" href="http://dma.sjsu.edu/art101/w_chung/">ART 101</a>
+            <a class="" href="./photography/">Photography</a>
+            <a class="currentNav" href="./contact.html">Contact</a>
+          </nav>
+        </details>
+      </section>
+      <main>
+        <section>
+          <!-- TODO: add action page for the form. -->
+          <form method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/ART175/success.html">
+            <fieldset>
+              <legend>*Message</legend>
+              <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <textarea name="message" placeholder="Hi, I wish you a wonderful day!" required></textarea>
+            </fieldset>
+            <fieldset>
+              <legend>Contact Information</legend>
+              <label>*Name:
+                <input type="text" name="name" placeholder="John Doe" required>
+              </label>
+              <label>Phone Number: <span class="small">(Format: 123-456-7890)</span>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+              </label>
+              <label>*Email:
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </label>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <span class="small red">*Required</span><br>
+        <br>Copyright &copy; <script>document.write(new Date().getFullYear());</script> William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

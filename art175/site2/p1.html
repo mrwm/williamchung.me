@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photography | William Chung</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link href="../css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen">
+
+
+<!--
+Horizontal layout
+https://codepen.io/profhobbs/pen/rReMqr
+-->
+
+<!--
+Horizontal Scrolling
+https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+-->
+<style type="text/css" media="screen">
+body {
+  background-color: #374046;
+  margin: 2vh;
+  font-family: 'Roboto Slab', serif;
+  font-size: 4vh;
+  line-height: 5.5vh;
+  color: #ffffff;
+}
+img {
+  height: 100%;
+}
+#grid {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  writing-mode: vertical-lr;
+  display: grid;
+  grid-gap: 2vh; 
+  grid-auto-rows: 1.52vh;
+  grid-template-columns: repeat(5, 17.6vh);
+  grid-auto-flow: row;
+  text-align: center;
+}
+
+#grid > div {
+    overflow: hidden;
+}
+.span1{
+  background-color: #ff9800;
+  grid-row-end: span 3; 
+}
+.span2{
+  background-color: #ff9800;
+  grid-row-end: span 4; 
+}
+.span3{
+  background-color: #ff9800;
+  grid-row-end: span 5; 
+}
+.span4{
+  background-color: #ff9800;
+  grid-row-end: span 6; 
+}
+.span5{
+  background-color: #ff9800;
+  grid-row-end: span 7; 
+}
+.span6{
+  background-color: #ff9800;
+  grid-row-end: span 8; 
+}
+.span7{
+  background-color: #ff9800;
+  grid-row-end: span 9; 
+}
+.span8{
+  background-color: #ff9800;
+  grid-row-end: span 10; 
+}
+.span9{
+  background-color: #ff9800;
+  grid-row-end: span 11; 
+}
+.span10{
+  background-color: #ff9800;
+  grid-row-end: span 12; 
+}
+
+</style>
+
+
+
+  </head>
+  <body>
+    <div id="taco">
+      <header>
+        <h1>Photography</h1>
+      </header>
+      <section class="stickMeTop">
+        <nav class="desktop">
+          <a class="" href="../index.html">Home</a>
+          <a class="currentNav" href="../site2/">Site 2</a>
+          <a class="" href="http://dma.sjsu.edu/art101/w_chung/">ART 101</a>
+          <a class="" href="./index.html">Photography</a>
+          <a class="" href="../contact.html">Contact</a>
+        </nav>
+        <details class="mobile"><summary>Menu</summary>
+          <nav class="">
+            <a class="" href="index.html">Home</a>
+            <a class="" href="http://dma.sjsu.edu/art101/w_chung/">ART 101</a>
+            <a class="currentNav" href="photography.html">Photography</a>
+            <a class="" href="contact.html">Contact</a>
+          </nav>
+        </details>
+      </section>
+      <main>
+<div id="grid">
+<div class="span7">1<img src="https://images.unsplash.com/photo-1499242165110-131f6ccd0c9a?fit=crop&w=350&h=250&q=60"></div>
+<div class="span6">2<img src="https://images.unsplash.com/photo-1489475989721-cb4f3a043603?fit=crop&w=300&h=250&q=60"></div>
+<div class="span9">3<img src="https://images.unsplash.com/photo-1491904995072-ac32b8bac24a?fit=crop&w=450&h=250&q=60"></div>
+<div class="span9">4<img src="https://images.unsplash.com/photo-1482785454045-608bc09be6e5?fit=crop&w=450&h=250&q=60"></div>
+<div class="span8">5<img src="https://images.unsplash.com/photo-1475918177735-62a0e957bf56?fit=crop&w=400&h=250&q=60"></div>
+<div class="span9">6<img src="https://images.unsplash.com/photo-1480095650405-33c576fadde5?fit=crop&w=450&h=250&q=60"></div>
+<div class="span7">7<img src="https://images.unsplash.com/photo-1472428983217-df888182e1f6?fit=crop&w=350&h=250&q=60"></div>
+<div class="span8">8<img src="https://images.unsplash.com/photo-1495218128687-72d990041786?fit=crop&w=400&h=250&q=60"></div>
+<div class="span5">9<img src="https://images.unsplash.com/photo-1486551937199-baf066858de7?fit=crop&w=250&h=250&q=60"></div>
+<div class="span9">10<img src="https://images.unsplash.com/photo-1486640969945-74866ba1d8ad?fit=crop&w=450&h=250&q=60"></div>
+<div class="span9">11<img src="https://images.unsplash.com/photo-1481540554572-3e7d2f08a967?fit=crop&w=450&h=250&q=60"></div>
+<div class="span9">12<img src="https://images.unsplash.com/photo-1481386642130-4a31ef3bf00d?fit=crop&w=450&h=250&q=60"></div>
+<div class="span6">13<img src="https://images.unsplash.com/photo-1421934820922-e25770cf62f1?fit=crop&w=300&h=250&q=60"></div>
+<div class="span5">14<img src="https://images.unsplash.com/photo-1446434420730-5fcc864f5ca3?fit=crop&w=250&h=250&q=60"></div>
+<div class="span10">15<img src="https://images.unsplash.com/photo-1482256285789-4b3babc070de?fit=crop&w=500&h=250&q=60"></div>
+<div class="span9">16<img src="https://images.unsplash.com/photo-1484042841246-5eeeda80b537?fit=crop&w=450&h=250&q=60"></div>
+<div class="span9">17<img src="https://images.unsplash.com/photo-1491806681671-442bbeaca93b?fit=crop&w=450&h=250&q=60"></div>
+<div class="span9">18<img src="https://images.unsplash.com/photo-1481888192739-22a607728f98?fit=crop&w=450&h=250&q=60"></div>
+<div class="span8">19<img src="https://images.unsplash.com/photo-1481761289552-381112059e05?fit=crop&w=400&h=250&q=60"></div>
+<div class="span3">20<img src="https://images.unsplash.com/photo-1480619360446-63fb535fd154?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">21<img src="https://images.unsplash.com/photo-1476445704028-a36e0c798192?fit=crop&w=400&h=250&q=60"></div>
+<div class="span8">22<img src="https://images.unsplash.com/photo-1478323057113-8272728e9e4e?fit=crop&w=400&h=250&q=60"></div>
+<div class="span8">23<img src="https://images.unsplash.com/photo-1466104086050-e57f750fe984?fit=crop&w=400&h=250&q=60"></div>
+<div class="span5">24<img src="https://images.unsplash.com/photo-1463919393185-d9655c5b91bf?fit=crop&w=250&h=250&q=60"></div>
+<div class="span9">25<img src="https://images.unsplash.com/photo-1478809956569-c7ce9654a947?fit=crop&w=450&h=250&q=60"></div>
+<div class="span6">26<img src="https://images.unsplash.com/photo-1478059580815-2f2782c2aedb?fit=crop&w=300&h=250&q=60"></div>
+<div class="span8">27<img src="https://images.unsplash.com/photo-1476789668825-c16c51c46ac3?fit=crop&w=400&h=250&q=60"></div>
+<div class="span5">28<img src="https://images.unsplash.com/photo-1441646535935-492452535d79?fit=crop&w=250&h=250&q=60"></div>
+<div class="span3">29<img src="https://images.unsplash.com/photo-1477415657650-2a16a7c0afae?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">30<img src="https://images.unsplash.com/photo-1476522350271-3cfa24a36d42?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">31<img src="https://images.unsplash.com/photo-1466104213702-80b180031730?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">32<img src="https://images.unsplash.com/photo-1467134281682-e9e2957ba621?fit=crop&w=300&h=250&q=60"></div>
+<div class="span5">33<img src="https://images.unsplash.com/photo-1450995938230-ca990ea33a5d?fit=crop&w=250&h=250&q=60"></div>
+<div class="span3">34<img src="https://images.unsplash.com/photo-1464166083828-a4ba8af65ada?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">35<img src="https://images.unsplash.com/photo-1428765048792-aa4bdde46fea?fit=crop&w=400&h=250&q=60"></div>
+<div class="span8">36<img src="https://images.unsplash.com/photo-1475002453634-002af7bf4188?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">37<img src="https://images.unsplash.com/photo-1474779716587-744e00d77a4e?fit=crop&w=300&h=250&q=60"></div>
+<div class="span7">38<img src="https://images.unsplash.com/photo-1471572107741-4b4ced5597af?fit=crop&w=350&h=250&q=60"></div>
+<div class="span3">39<img src="https://images.unsplash.com/photo-1475586036352-6a29507e6683?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">40<img src="https://images.unsplash.com/photo-1474319702687-4f79b6d95a86?fit=crop&w=400&h=250&q=60"></div>
+<div class="span8">41<img src="https://images.unsplash.com/photo-1474249949617-ca9a962c876a?fit=crop&w=400&h=250&q=60"></div>
+<div class="span3">42<img src="https://images.unsplash.com/photo-1471506429576-b61518d0c8e5?fit=crop&w=150&h=250&q=60"></div>
+<div class="span7">43<img src="https://images.unsplash.com/photo-1473514483695-024f62e674ea?fit=crop&w=350&h=250&q=60"></div>
+<div class="span3">44<img src="https://images.unsplash.com/photo-1472214256757-88a1da140429?fit=crop&w=150&h=250&q=60"></div>
+<div class="span7">45<img src="https://images.unsplash.com/photo-1473777785975-efb668f9ea99?fit=crop&w=350&h=250&q=60"></div>
+<div class="span5">46<img src="https://images.unsplash.com/photo-1439407162612-42c1819cd3a7?fit=crop&w=250&h=250&q=60"></div>
+<div class="span8">47<img src="https://images.unsplash.com/photo-1474405557284-77a0205a1332?fit=crop&w=400&h=250&q=60"></div>
+<div class="span7">48<img src="https://images.unsplash.com/photo-1474015833661-686ed67f9485?fit=crop&w=350&h=250&q=60"></div>
+<div class="span7">49<img src="https://images.unsplash.com/photo-1471004975175-a42141336e36?fit=crop&w=350&h=250&q=60"></div>
+<div class="span5">50<img src="https://images.unsplash.com/photo-1458396805817-331af9684d3d?fit=crop&w=250&h=250&q=60"></div>
+<div class="span3">51<img src="https://images.unsplash.com/photo-1473455811944-fdd1b0f282f3?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">52<img src="https://images.unsplash.com/photo-1472849861029-789f64abdcb4?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">53<img src="https://images.unsplash.com/photo-1457867403637-28e285c6fdc0?fit=crop&w=300&h=250&q=60"></div>
+<div class="span3">54<img src="https://images.unsplash.com/photo-1461533278846-61f54cf9c4b6?fit=crop&w=150&h=250&q=60"></div>
+<div class="span6">55<img src="https://images.unsplash.com/photo-1460134234108-3445b1a930e9?fit=crop&w=300&h=250&q=60"></div>
+<div class="span7">56<img src="https://images.unsplash.com/photo-1470440840614-a2a8bae7dd98?fit=crop&w=350&h=250&q=60"></div>
+<div class="span7">57<img src="https://images.unsplash.com/photo-1471683676709-bfb2078111ad?fit=crop&w=350&h=250&q=60"></div>
+<div class="span8">58<img src="https://images.unsplash.com/photo-1473281690626-fe52415bad27?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">59<img src="https://images.unsplash.com/photo-1467118719110-8d44c07d918f?fit=crop&w=300&h=250&q=60"></div>
+<div class="span7">60<img src="https://images.unsplash.com/photo-1472808597096-f8b50e3bc1ee?fit=crop&w=350&h=250&q=60"></div>
+<div class="span6">61<img src="https://images.unsplash.com/photo-1463316493949-26e71dfa441e?fit=crop&w=300&h=250&q=60"></div>
+<div class="span8">62<img src="https://images.unsplash.com/photo-1469730268873-dc89e712948a?fit=crop&w=400&h=250&q=60"></div>
+<div class="span5">63<img src="https://images.unsplash.com/photo-1455070303949-032fe792e37f?fit=crop&w=250&h=250&q=60"></div>
+<div class="span3">64<img src="https://images.unsplash.com/photo-1469810731752-4b055c919983?fit=crop&w=150&h=250&q=60"></div>
+<div class="span7">65<img src="https://images.unsplash.com/photo-1468259275383-c4f1b88d5772?fit=crop&w=350&h=250&q=60"></div>
+<div class="span7">66<img src="https://images.unsplash.com/photo-1470261155706-dc67072f8921?fit=crop&w=350&h=250&q=60"></div>
+<div class="span6">67<img src="https://images.unsplash.com/photo-1464672737497-fb5327f77347?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">68<img src="https://images.unsplash.com/photo-1461887046916-c7426e65460d?fit=crop&w=300&h=250&q=60"></div>
+<div class="span7">69<img src="https://images.unsplash.com/photo-1469719847081-4757697d117a?fit=crop&w=350&h=250&q=60"></div>
+<div class="span6">70<img src="https://images.unsplash.com/photo-1455612693675-112974d4880b?fit=crop&w=300&h=250&q=60"></div>
+<div class="span3">71<img src="https://images.unsplash.com/photo-1467539957844-0612a71dddf9?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">72<img src="https://images.unsplash.com/photo-1467405078941-9aa05e3b1fa4?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">73<img src="https://images.unsplash.com/photo-1458267106549-e974cb124b03?fit=crop&w=300&h=250&q=60"></div>
+<div class="span3">74<img src="https://images.unsplash.com/photo-1439337153520-7082a56a81f4?fit=crop&w=150&h=250&q=60"></div>
+<div class="span3">75<img src="https://images.unsplash.com/photo-1467663866014-9deac30d0369?fit=crop&w=150&h=250&q=60"></div>
+<div class="span8">76<img src="https://images.unsplash.com/photo-1469340436015-6f008e5b54b4?fit=crop&w=400&h=250&q=60"></div>
+<div class="span7">77<img src="https://images.unsplash.com/photo-1469225727963-c963c6a94bc3?fit=crop&w=350&h=250&q=60"></div>
+<div class="span4">78<img src="https://images.unsplash.com/photo-1468233748640-b31327627610?fit=crop&w=200&h=250&q=60"></div>
+<div class="span7">79<img src="https://images.unsplash.com/photo-1467663802424-21ff675548c4?fit=crop&w=350&h=250&q=60"></div>
+<div class="span6">80<img src="https://images.unsplash.com/photo-1467071114456-dddb1d7b4842?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">81<img src="https://images.unsplash.com/photo-1466298239352-3294d44f25a7?fit=crop&w=300&h=250&q=60"></div>
+<div class="span5">82<img src="https://images.unsplash.com/photo-1450704848565-241de943f1b3?fit=crop&w=250&h=250&q=60"></div>
+<div class="span3">83<img src="https://images.unsplash.com/photo-1462743708072-4ed3a4a860be?fit=crop&w=150&h=250&q=60"></div>
+<div class="span5">84<img src="https://images.unsplash.com/photo-1450704944629-6a65f6810cf2?fit=crop&w=250&h=250&q=60"></div>
+<div class="span6">85<img src="https://images.unsplash.com/photo-1462516795961-d4c90d77564a?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">86<img src="https://images.unsplash.com/photo-1461998570988-d0c4afd3d26e?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">87<img src="https://images.unsplash.com/photo-1464673074034-7c6b3f8eac3b?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">88<img src="https://images.unsplash.com/photo-1459807866623-f1456edbe8da?fit=crop&w=300&h=250&q=60"></div>
+<div class="span8">89<img src="https://images.unsplash.com/photo-1451140534274-f6e389bfb9a6?fit=crop&w=400&h=250&q=60"></div>
+<div class="span5">90<img src="https://images.unsplash.com/photo-1445104502647-588bfab8be23?fit=crop&w=250&h=250&q=60"></div>
+<div class="span5">91<img src="https://images.unsplash.com/photo-1439903234889-870b7cb8b599?fit=crop&w=250&h=250&q=60"></div>
+<div class="span5">92<img src="https://images.unsplash.com/photo-1449329083577-af97dec7413d?fit=crop&w=250&h=250&q=60"></div>
+<div class="span8">93<img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?fit=crop&w=400&h=250&q=60"></div>
+<div class="span6">94<img src="https://images.unsplash.com/photo-1461559446908-562a45393aeb?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">95<img src="https://images.unsplash.com/photo-1461831402920-90e36acc8160?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">96<img src="https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?fit=crop&w=300&h=250&q=60"></div>
+<div class="span6">97<img src="https://images.unsplash.com/photo-1461559430931-2665c427c321?fit=crop&w=300&h=250&q=60"></div>
+<div class="span5">98<img src="https://images.unsplash.com/photo-1449328724899-c75f274b324d?fit=crop&w=250&h=250&q=60"></div>
+<div class="span4">99<img src="https://images.unsplash.com/photo-1461198492885-b1854f9a47c9?fit=crop&w=200&h=250&q=60"></div>
+<div class="span5">100<img src="https://images.unsplash.com/photo-1446508375197-e212f1ec77b1?fit=crop&w=250&h=250&q=60"></div>
+</div>
+      </main>
+      <footer>
+        <p>
+        -
+        <br>Copyright &copy; <script>document.write(new Date().getFullYear());</script> William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
+        </p>
+<script type="text/javascript">
+f = document.getElementById('grid');
+f.onwheel = function(e){ 
+  console.log(e.deltaY);
+  f.scrollLeft += e.deltaY;
+}
+</script>
+
+      </footer>
+    </div>
+  </body>
+</html>
+
+
