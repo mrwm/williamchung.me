@@ -155,6 +155,11 @@ fieldset legend{
 img, video{
   width: calc(50em - 25rem);
   max-width: 476px;
+  max-height: 476px;
+}
+
+p{
+  padding: .5rem;
 }
 @media only screen and (max-width: 960px){
   img, video{
