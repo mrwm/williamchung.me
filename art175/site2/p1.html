@@ -8,24 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scroll</title>
 
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link href="../css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+    <!-- Use the selected colors -->
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Split CSS for a modular approach to styling -->
     <link href="./css/p1.css" rel="stylesheet" type="text/css" media="screen">
 
-  <!--
-  Horizontal layout
-  https://codepen.io/profhobbs/pen/rReMqr
-  -->
+    <!--
+    Horizontal layout
+    https://codepen.io/profhobbs/pen/rReMqr
+    -->
 
-  <!--
-  Horizontal Scrolling
-  https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
-  -->
+    <!--
+    Horizontal Scrolling
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
+    -->
 
   </head>
   <body>
     <main>
       <section id="grid">
+        <!-- Create skeleton for the JS to generate content later -->
         <div class="item">0</div>
         <div class="item">1</div>
         <div class="item">2</div>
@@ -67,58 +71,11 @@
         <div class="item">38</div>
         <div class="item">39</div>
         <div class="item">40</div>
-        <div class="item">41</div>
-        <div class="item">42</div>
-        <div class="item">43</div>
-        <div class="item">44</div>
-        <div class="item">45</div>
-        <div class="item">46</div>
-        <div class="item">47</div>
-        <div class="item">48</div>
-        <div class="item">49</div>
-        <div class="item">50</div>
-        <div class="item">51</div>
-        <div class="item">52</div>
-        <div class="item">53</div>
-        <div class="item">54</div>
-        <div class="item">55</div>
-        <div class="item">56</div>
-        <div class="item">57</div>
-        <div class="item">58</div>
-        <div class="item">59</div>
       </section>
+      <div class="header"></div>
     </main>
     <footer>
-      <script type="text/javascript">
-        
-        //click code
-        document.addEventListener('click', function (event) {
-          //console.log(event.target.className)
-          if (event.target.className.includes("item")){
-            event.target.style = "display: none;"}
-        }, false);
-
-        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-        function getRandomInt(max) {
-          return (Math.floor(Math.random() * Math.floor(max)) + 1);
-        }
-
-        //side scroll
-        f = document.getElementById('grid');
-        f.onwheel = function(e){ 
-          //console.log(e.deltaY);
-          f.scrollLeft += e.deltaY * Math.abs(e.deltaY);
-        }
-        for (var i = 0; f.children.length; i++){
-          //console.log(f.children[i]);
-          var nameOfClass = "span"+getRandomInt(10);
-          var spanAmount = "grid-column-end: span "+getRandomInt(2)+" ;";
-          f.children[i].classList.add(nameOfClass);
-          f.children[i].style = spanAmount;
-          //console.log(spanAmount);
-        }
-
-      </script>
+      <script src="js/p1.js" type="text/javascript"></script>
     </footer>
   </body>
 </html>

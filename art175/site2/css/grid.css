@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/*------------
+ Site2 index Page
+--------------*/
+
+.gridify{
+  padding: 0;
+  margin: 0.5rem 0;
+  width: 100%;
+  /* Let's use inline grid because I don't exactly like blocks */
+  display: inline-grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1rem;
+}
+
+.grid-block{
+  /* Creates a flexbox within the grids for easier element placement */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: #cccccc55 0 5px 10px;
+}
+.grid-block:hover{
+  transform: scale(1.05);
+  box-shadow: rgba(154,160,185,.09) 0 5px 10px, rgba(166,173,201,.5) 0 15px 40px;;
+}
+
+.grid-block *{
+  /* center everything including lists */
+  list-style: square;
+  margin: auto;
+}
+button{
+  background: #888a85;
+  width: 100%;
+  border-color: #2e3436;
+}
+
+/* limit how much the photo container can grow and crop when necessary */
+.photo{
+  max-height: 280px;
+  overflow: hidden;
+  margin: 0;
+}
+.photo img:hover{ cursor: pointer; }
+.photo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.grid-header{
+  grid-column: span 3;
+}
+
+@media only screen and (max-width: 640px){
+  .grid-header{
+    grid-column: span 1;
+  }
+}
+	

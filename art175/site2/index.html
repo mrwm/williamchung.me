@@ -6,21 +6,26 @@
     <meta name="author" content="William Chung" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>- | William Chung</title>
+    <title>Halloween products</title>
 
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link href="../css/colors.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../css/grid.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../css/imageModal.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+    <!-- separate/split the CSS up for a modular approach in styling (layout vs coloring & other things) -->
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/grid.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/imageModal.css" rel="stylesheet" type="text/css" media="screen">
 
   </head>
   <body>
+    <!-- keep things centered -->
     <div id="taco">
       <header>
-        <h1>-</h1>
+        <h1>Halloween products</h1>
       </header>
+      <!-- Continuation of the old navigation -->
       <section class="stickMeTop">
+        <!-- Navigation shown on the desktop. Hidden when the screen gets too small -->
         <nav class="desktop">
           <a class="" href="../index.html">Home</a>
           <a class="currentNav" href="../site2/">Site 2</a>
@@ -28,6 +33,7 @@
           <a class="" href="../index.html">Photography</a>
           <a class="" href="../contact.html">Contact</a>
         </nav>
+        <!-- Mobile dropdown navigation bar (uses details tag as opposed to a mess of divs) -->
         <details class="mobile"><summary>Menu</summary>
           <nav class="">
             <a class="" href="../index.html">Home</a>
@@ -38,186 +44,154 @@
         </details>
       </section>
       <main>
+        <!-- Use a separate grid to make a hero image -->
         <section class="gridify">
-          <div class="grid-block">
+          <div class="grid-block grid-header">
             <div class="photo">
-              <img alt="Portal Park sign board"
-                      title="Portal Park"
-                      src="./img/webp/IMG_20150404_074805.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20150404_074805.jpg'"
+              <img alt="Corgi pikaboo"
+                      title="Corgi pikaboo"
+                      src="./img/pikaboo.gif"
+                      onerror="this.onerror=null; this.src='./img/pikaboo.gif'"
                       onclick="imageThis(this)">
             </div>
           </div>
+        </section>
+        <!-- Make every element card-like with grids -->
+        <section class="gridify">
+          <!-- Pumpkin -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Grass and creek in Alviso Park"
-                      title="Grass and creek in Alviso Park"
-                      src="./img/webp/IMG_20160704_172417040_HDR.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20160704_172417040_HDR.jpg'"
+              <img alt="Happy Pumpkin"
+                      title="Happy Pumpkin"
+                      src="./img/webp/pumpkin.webp"
+                      onerror="this.onerror=null; this.src='./img/pumpkin.jpg'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Round</li>
+              <li>Brightens your day</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Ghost -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Poppy Flower in grass patch"
-                      title="Poppy Flower in grass patch"
-                      src="./img/webp/IMG_20190420_130656.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20190420_130656.jpg'"
+              <img alt="Happy Ghost"
+                      title="Happy Ghost"
+                      src="./img/webp/ghost.webp"
+                      onerror="this.onerror=null; this.src='./img/ghost.png'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Lightweight</li>
+              <li>Non-obtrusive</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Skeleton -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Purple flower patch"
-                      title="Purple flower patch"
-                      src="./img/webp/IMG_20190420_131713-EFFECTS.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20190420_131713-EFFECTS.jpg'"
+              <img alt="Happy Skeleton"
+                      title="Happy Skeleton"
+                      src="./img/webp/skeleton.webp"
+                      onerror="this.onerror=null; this.src='./img/skeleton.png'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Sturdy</li>
+              <li>Humerus personality</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Bat -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Scenic overlook of San Jose"
-                      title="Scenic overlook of San Jose"
-                      src="./img/webp/IMG_20190420_133720.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20190420_133720.jpg'"
+              <img alt="Happy Bat"
+                      title="Happy Bat"
+                      src="./img/webp/bat.webp"
+                      onerror="this.onerror=null; this.src='./img/bat.png'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Fast</li>
+              <li>Takes care of flying pests</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Candy -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Cows grazing on hillside"
-                      title="Cows grazing on hillside"
-                      src="./img/webp/IMG_20190420_134157.webp"
-                      onerror="this.onerror=null; this.src='./img/IMG_20190420_134157.jpg'"
+              <img alt="Candy Cone"
+                      title="Inedible candy cone"
+                      src="./img/candy.svg"
+                      onerror="this.onerror=null; this.src='./img/candy.png'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Crunchy & indedible</li>
+              <li>Permanently fills stomache</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Spider -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="View of a bridge from a bridge"
-                      title="View of a bridge from a bridge"
-                      src="./img/webp/MVIMG_20190617_162631.webp"
-                      onerror="this.onerror=null; this.src='./img/MVIMG_20190617_162631.jpg'"
+              <img alt="Happy Spider"
+                      title="Happy Spider"
+                      src="./img/spider.svg"
+                      onerror="this.onerror=null; this.src='./img/spider.png'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Friendly</li>
+              <li>Takes care of crawling pests</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Hat -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="Mini waterfall"
-                      title="Mini waterfall"
-                      src="./img/webp/MVIMG_20190617_163144-EFFECTS.webp"
-                      onerror="this.onerror=null; this.src='./img/MVIMG_20190617_163144-EFFECTS.jpg'"
+              <img alt="Witch Hat"
+                      title="Witch Hat"
+                      src="./img/webp/hat.webp"
+                      onerror="this.onerror=null; this.src='./img/hat.jpg'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Large</li>
+              <li>Covers face under the moon</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Web -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="A white bridge"
-                      title="A white bridge"
-                      src="./img/webp/MVIMG_20190617_163409.webp"
-                      onerror="this.onerror=null; this.src='./img/MVIMG_20190617_163409.jpg'"
+              <img alt="Spider Web"
+                      title="Spider Web"
+                      src="./img/webp/web.webp"
+                      onerror="this.onerror=null; this.src='./img/web.jpg'"
                       onclick="imageThis(this)">
             </div>
+            <ul>
+              <li>Sticky</li>
+              <li>Gets all over the place</li>
+            </ul>
+            <button>Buy</button>
           </div>
+          <!-- Broom -->
           <div class="grid-block">
             <div class="photo">
-              <img alt="A tomato"
-                      title="A tomato"
-                      src="./img/webp/P_20160710_195958.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20160710_195958.jpg'"
+              <img alt="Broom"
+                      title="Broom"
+                      src="./img/webp/broom.webp"
+                      onerror="this.onerror=null; this.src='./img/broom.jpg'"
                       onclick="imageThis(this)">
             </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="A flowery tree"
-                      title="A flowery tree"
-                      src="./img/webp/P_20170409_144117.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20170409_144117.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Alum Rock Park Entrance"
-                      title="Alum Rock Park Entrance"
-                      src="./img/webp/P_20170722_161121.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20170722_161121.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Moth on a hand"
-                      title="Moth on a hand"
-                      src="./img/webp/P_20180420_163039.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20180420_163039.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Rock in middle of trail"
-                      title="Rock in middle of trail"
-                      src="./img/webp/P_20190101_134656.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190101_134656.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Bridge in Alum Rock Park"
-                      title="Bridge in Alum Rock Park"
-                      src="./img/webp/P_20190107_154208.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190107_154208.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Blue ocean and blue sky"
-                      title="Blue ocean and blue sky"
-                      src="./img/webp/P_20190119_164549_HDR.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190119_164549_HDR.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Sunset at Santa Cruz Beach"
-                      title="Sunset at Santa Cruz Beach"
-                      src="./img/webp/P_20190119_165925_HDR-EFFECTS.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190119_165925_HDR-EFFECTS.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Blue sky at the beach"
-                      title="Blue sky at the beach"
-                      src="./img/webp/P_20190405_123746-EFFECTS.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190405_123746-EFFECTS.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Penitencia Kirk Ponds"
-                      title="Penitencia Kirk Ponds"
-                      src="./img/webp/P_20190606_155227-EFFECTS.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190606_155227-EFFECTS.jpg'"
-                      onclick="imageThis(this)">
-            </div>
-          </div>
-          <div class="grid-block">
-            <div class="photo">
-              <img alt="Little bonsai tree"
-                      title="Little bonsai tree"
-                      src="./img/webp/P_20190617_160048_007.webp"
-                      onerror="this.onerror=null; this.src='./img/P_20190617_160048_007.jpg'"
-                      onclick="imageThis(this)">
-            </div>
+            <ul>
+              <li>Long</li>
+              <li>Sturdy enough to smack people with</li>
+            </ul>
+            <button>Buy</button>
           </div>
         </section>
         <!-- The Modal -->

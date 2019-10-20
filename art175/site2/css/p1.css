@@ -12,18 +12,20 @@
  Base page layout
 ------------------*/
 body {
-  background-color: #374046;
   margin: 0;
   font-family: 'Roboto Slab', serif;
   font-size: 4vh;
   line-height: 5.5vh;
-  color: #ffffff;
 }
+
+/*Make the images fill the container*/
 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+
+/* Make the grid span the screen and create a horizontal scroll bar while at it */
 #grid {
   width: 100vw;
   height: 100vh;
@@ -35,8 +37,10 @@ img {
   grid-template-columns: repeat(5, 17.6vh);
   grid-auto-flow: row;
   text-align: center;
+  background: var(--bg-color);
 }
 
+/* crop the picture if it is attempting to break out */
 #grid > div {
   overflow: hidden;
 }
@@ -63,7 +67,6 @@ img {
 .span6{
   background-color: #ff9800;
   grid-row-end: span 8; 
-  grid-column-end: span 2;
 }
 .span7{
   background-color: #ff9800;

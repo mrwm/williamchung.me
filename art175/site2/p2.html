@@ -6,96 +6,77 @@
     <meta name="author" content="William Chung" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>-</title>
+    <title>Dino site</title>
 
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link href="../css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
     <link href="./css/p2.css" rel="stylesheet" type="text/css" media="screen">
 
-  <!--
-  Horizontal layout
-  https://codepen.io/profhobbs/pen/rReMqr
-  -->
+    <!--
+    inspiration + some code from here:
+    https://codepen.io/profhobbs/pen/GeZjyg?editors=1100
+    -->
 
-  <!--
-  Horizontal Scrolling
-  https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft
-  -->
-
+    <!--
+    CSS clip path taken and mofified from here:
+    https://codepen.io/profhobbs/pen/EMKgqM?editors=1100
+    -->
   </head>
   <body>
     <main>
-      <section id="grid">
-        <div class="item">0</div>
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
-        <div class="item">10</div>
-        <div class="item">11</div>
-        <div class="item">12</div>
-        <div class="item">13</div>
-        <div class="item">14</div>
-        <div class="item">15</div>
-        <div class="item">16</div>
-        <div class="item">17</div>
-        <div class="item">18</div>
-        <div class="item">19</div>
-        <div class="item">20</div>
-        <div class="item">21</div>
-        <div class="item">22</div>
-        <div class="item">23</div>
-        <div class="item">24</div>
-        <div class="item">25</div>
-        <div class="item">26</div>
-        <div class="item">27</div>
-        <div class="item">28</div>
-        <div class="item">29</div>
-        <div class="item">30</div>
-        <div class="item">31</div>
-        <div class="item">32</div>
-        <div class="item">33</div>
-        <div class="item">34</div>
-        <div class="item">35</div>
-        <div class="item">36</div>
-        <div class="item">37</div>
-        <div class="item">38</div>
-        <div class="item">39</div>
+      <section class="container">
+
+        <div class="grid">
+          <div class=" item-a">
+          <!--title-->
+            <p class="title">Dino site</p>
+          </div>
+          <div class="item item-b">
+            <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327253258&color=%23093951&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          </div>
+          <div class="item item-c">
+            <img alt="Dino Head"
+                    title="Dino head"
+                    src="./img/webp/dino-struggle.webp"
+                    onerror="this.onerror=null; this.src='./img/dino-struggle.png'"
+                    onclick="imageThis(this)">
+          </div>
+          <div class="item item-d">
+          AAAAAAAAAAAAAAHHH >
+          </div>
+          <div class="item item-e">
+            <img alt="Dino Head"
+                    title="Dino head"
+                    src="./img/webp/dino-head.webp"
+                    onerror="this.onerror=null; this.src='./img/dino-head.png'"
+                    onclick="imageThis(this)">
+          </div>
+          <div class="item item-f">
+            <img alt="Candy Cone"
+                    title="Candy Cone"
+                    src="./img/webp/candy.webp"
+                    onerror="this.onerror=null; this.src='./img/candy.png'"
+                    onclick="imageThis(this)">
+          </div>
+          <div class="item item-g">
+            <p>RRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWRRRRRRRRRRR</p>
+          </div>
+          <div class="item item-h">
+            <iframe src="https://www.youtube-nocookie.com/embed/5KPq_6nXDu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="item item-i">
+            <img alt="Witch Hat"
+                    title="Witch Hat"
+                    src="./img/webp/hat.webp"
+                    onerror="this.onerror=null; this.src='./img/hat.jpg'"
+                    onclick="imageThis(this)">
+          </div>
+        <!--end grid-->
+        </div>
+      <!--end container-->
       </section>
     </main>
     <footer>
-      <script type="text/javascript">
-        
-        //click code
-        document.addEventListener('click', function (event) {
-          //console.log(event.target.className)
-          if (event.target.className.includes("item")){
-            event.target.style = "display: none;"}
-        }, false);
-
-        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-        function getRandomInt(max) {
-          return (Math.floor(Math.random() * Math.floor(max)) + 1);
-        }
-        
-        
-        f = document.getElementById('grid');
-        f.onwheel = function(e){ 
-          //console.log(e.deltaY);
-          f.scrollLeft += e.deltaY * Math.abs(e.deltaY);
-        }
-        for (var i = 0; f.children.length; i++){
-          //console.log(f.children[i]);
-          var nameOfClass = "span"+getRandomInt(10);
-          f.children[i].classList.add(nameOfClass);
-        }
-
-      </script>
     </footer>
   </body>
 </html>
