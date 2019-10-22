@@ -1,3 +1,12 @@
+/*
+
+This js file assigns a random class to the grid elements and adds a random 
+column span. It also allows users to scroll horizontally with the vertical 
+scroll wheel. Lastly, it makes the page expand infinitely as long as the user 
+continues to scroll
+
+*/
+
 
 var items = 40;
 

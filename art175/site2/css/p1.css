@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
 /*----------------------
+
+This is only part of the css for the page
+There are parts of the page styled dynamically with JS...
+The JS shuffles the class + adds different colum spans, while
+making the mage go on forever (as long as the user keeps scrolling).
+
+
   Variables 
   Usage: var(--varName)
   ----------------------*/

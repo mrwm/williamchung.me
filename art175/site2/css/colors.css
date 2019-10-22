@@ -5,10 +5,34 @@
  This CSS file holds the colors used across the site
 -----------------------------------------------------*/
 
+/* -----------------
+    CSS Explanation
+   -----------------
+
+So from a programming standpoint, I like to organize my file by what they do to
+make things more interchangeable. For example, I'm using grid.css for my
+photography page. This made it easier for me to reuse the file (in this case, 
+copy/paste + modify) for this assignment. If I had unified everything to a
+common css, there would be some css conflicts if I had same elements or tags but
+ want.different styling.
 
 
-/*
-  Colors:
+So in the end, my css is kinda split in three ways:
+
+-common color css
+-common layout css (in this case, the navigation)
+-unique/specific css
+
+Note: everything here is essentially the same from the previous assignment,
+except for the colors
+
+*/
+
+/* --------
+    Colors
+   --------
+
+  Text: #fcf9ea
 
   Blacks:
   #ffffff
@@ -23,6 +47,7 @@
   #16161d - Eigengrau
 
 */
+
 
 :root{
   /* Usage: var(--varName) */

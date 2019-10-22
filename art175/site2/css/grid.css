@@ -24,6 +24,7 @@
   box-shadow: #cccccc55 0 5px 10px;
 }
 .grid-block:hover{
+/* create the hover effect while making a drop shadow */
   transform: scale(1.05);
   box-shadow: rgba(154,160,185,.09) 0 5px 10px, rgba(166,173,201,.5) 0 15px 40px;;
 }
@@ -34,6 +35,7 @@
   margin: auto;
 }
 button{
+/* make the button prettier than the default style*/
   background: #888a85;
   width: 100%;
   border-color: #2e3436;
@@ -54,6 +56,7 @@ button{
 }
 
 .grid-header{
+/*span the grid out when it's the header*/
   grid-column: span 3;
 }
 
