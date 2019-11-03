@@ -161,9 +161,17 @@ img, video{
 p{
   padding: .5rem;
 }
+
+iframe{
+  width: 400px;
+}
+
 @media only screen and (max-width: 960px){
   img, video{
     width: calc(50em - 35rem);
+  }
+  iframe{
+    width: 230px;
   }
   .sticky-container a::before{
     content: "Proj. "
@@ -175,6 +183,9 @@ p{
   }
   img, video{
     width: calc(50em - 25rem);
+  }
+  iframe{
+    width: 150px;
   }
   .grid-block *{
     font-size: 0.7rem;
