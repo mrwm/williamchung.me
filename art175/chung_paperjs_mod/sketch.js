@@ -1,4 +1,6 @@
-var mousePoint = null;//view.center;
+//inspired by
+//http://paperjs.org/examples/rounded-rectangles/
+
 var amount = 100;
 var colors = ['red', 'white', 'blue', 'white'];
 var increment = 0.1;
