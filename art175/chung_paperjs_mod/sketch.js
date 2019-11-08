@@ -7,7 +7,7 @@ var increment = 0.1;
 
 function setup(){
   rectMode(CENTER);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth/2, windowHeight/2);
   colorMode(HSB);
 }
 
