@@ -1,0 +1,62 @@
+{
+  "comment": "source: https://en.wikipedia.org/wiki/List_of_largest_cities_of_U.S._states_and_territories_by_population",
+
+  "population": [
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    },
+    {
+      "land":"state",
+      "landName":"California",
+      "population":39557045,
+      "popCityName":"Los Angeles",
+      "popCityPop":3990456
+    },
+    {
+      "land":"state",
+      "landName":"Illinois",
+      "population":12741080,
+      "popCityName":"Chicago",
+      "popCityPop":2705994
+    },
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    }
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    }
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    }
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    }
+    {
+      "land":"state",
+      "landName":"New York",
+      "population":19542209,
+      "popCityName":"New York City",
+      "popCityPop":8398748
+    }
+  ]
+}
