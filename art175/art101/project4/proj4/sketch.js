@@ -8,9 +8,9 @@ YEAR |  LEAST   |  MOST
 2015 |  586107  |  39144818
 2016 |  585501  |  39250017
 2017 |  579315  |  39536653
-2018 | #577737  | #39557045
+2018 | *577737  | *39557045
 
-# - extremeties
+* - extremeties
 */
 
 //hold all population data from 2015 to 2018 in an array
@@ -65,7 +65,7 @@ function colorTheData(sort){
           jColorMap = (255/i)/i;//map(currentPop, 0, 72, 0, 255);
           jAlphaMap = map(currentPop, 0, 72, 255, 0);
           break;
-        default: //can't sort by state, so only population or state number.
+        default: //can't sort by state name, so only population or state number.
           popHeight = map(currentPop, 0, 39557045, 0, height);
           jColorMap = map(currentPop, 0, 39557045, 0, 255);
           jAlphaMap = map(currentPop, 0, 39557045, 255, 0);
@@ -97,7 +97,7 @@ function sortPopulationData(sort){
         case 2: 
           sortNum = 2;
           break;
-        default: //can't sort by state, so only population or state number.
+        default: //can't sort by state name, so only population or state number.
           sortNum = 1;
           break;
       }
