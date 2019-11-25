@@ -23,10 +23,15 @@
     
   </div>
     <!--note: change the callback domain + link below after uploading to server-->
-    <div onclick="this.remove()" style="cursor: pointer">[x]
-    <a href="http://www.strava.com/oauth/authorize?client_id=40946&response_type=code&redirect_uri=http://localhost:8000/project4/proj4/index.php&exchange_token&approval_prompt=force&scope=activity:read_all" rel="noopener">Click here to authenticate & get 2018-2019 strava data</a>
+    <div onclick="this.remove()" style="cursor: pointer" id="dataReq">[x]
+    <a href="http://www.strava.com/oauth/authorize?client_id=40946&response_type=code&redirect_uri=http://dma.sjsu.edu/art101/w_chung/project4/proj4/index.html&exchange_token&approval_prompt=force&scope=activity:read_all" rel="noopener">Click here to authenticate & get 2018-2019 strava data</a>
     </div>
   </body>
+  <script type="text/javascript">
+    //remove the authorization prompt when we have the auth code in the URL
+    if (Object.keys(strava).length > 1)
+      document.getElementById("dataReq").remove();
+  </script>
 </html>
 
 
