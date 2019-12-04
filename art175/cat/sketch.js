@@ -1,22 +1,10 @@
-/*
-  Shorthand method of writing conditionals.
-  This...
-      if (condition)
-        run code; //the semicolon acts like the closing curled bracket
-  Is the same thing as this...
-      if (condition){
-        run code;
-      }
-  The only downside is that it's only limited to one line.
-*/
-
 // Circle code taken and modified from here:
 // https://editor.p5js.org/coloringchaos/sketches/SkZVaxF0-
 
 /* ----- Main character ----- */
-let cat;                         // Cat image
+let cat, catf, catSt, catStF;    // Cat image + sitting image + flipped
 let eatCount = 0;                // Amount of food eaten
-let xpos, ypos;                  // Position of the cat
+let faceLeft = true;
 
 /* ----- Sound ----- */
 let noteC, noteE, noteG, meow;
@@ -31,6 +19,8 @@ let a, b, g;                     // Accelerometer variables
 /* ----- Environment ----- */
 let bgColor = '#d1d1d1';         // Background color
 let circles = [];                // Hold the spawned circles.
+let rectDim = 20;                // Catfood size (rectangle)
+let catFud;                      // Catfood image variable
 
 /* ----- Food properties ----- */
 let arrayN = 5;                  // Total of food to spawn
@@ -40,7 +30,11 @@ let foodH = new Array(arrayN);   // Store color value of food
 
 // Preparation for external files
 function preload() {
-  cat = loadImage('img/cat.svg'); // Spawn the cat!
+  cat = loadAnimation('img/cat-0.png', 'img/cat-1.png', 'img/cat-2.png', 'img/cat-3.png', 'img/cat-4.png');
+  catf = loadAnimation('img/cat-f0.png', 'img/cat-f1.png', 'img/cat-f2.png', 'img/cat-f3.png', 'img/cat-f4.png');
+  catSt = loadAnimation('img/cat-sit.png');
+  catStF = loadAnimation('img/cat-sit-f.png');
+  catFud = loadImage('img/crouton.png');
   noteC = loadSound('sound/C.mp3');
   noteE = loadSound('sound/E.mp3');
   noteG = loadSound('sound/G.mp3');
@@ -66,10 +60,6 @@ function setup() {
   b = 0;
   g = 0;
 
-  // Initial position of the cat
-  xpos = 0;
-  ypos = 0;
-
   // Initialize the catfood
   catFood();
 }
@@ -84,30 +74,24 @@ function draw() {
   mX = pmouseX - cat.width;      // Offset the cat position to center
   mY = pmouseY - cat.height;     // Offset cat position to center
 
-  // Taken and modified from the kadenze code
-  let easing = 0.5;
-  let diffX, diffY;
-  if (!gyro){ // Use cursor position if gyroscope isn't enabled.
-    diffX = (mX) - xpos;
-    diffY = (mY) - ypos;
-  }
-  else{                          // Use gyroscope if checked
-    diffX = g - xpos;
-    diffY = b - ypos;
-  }
-  xpos += diffX * easing;
-  ypos += diffY * easing;
+    if(mouseX>pmouseX)
+      faceLeft = true;
+    else if(mouseX<pmouseX)
+      faceLeft = false;
 
-
-  // The code for moving the cat around
-  push();
-    translate(xpos,ypos);
-    image(cat, cat.width/2, cat.height/2); // Offset the cat to be centered
+    // Animation logic
+    if(faceLeft && (pmouseX == mouseX))
+      animation(catSt, pmouseX, pmouseY);
+    else if(!faceLeft && (pmouseX == mouseX))
+      animation(catStF, pmouseX, pmouseY);
+    else if(!faceLeft && (pmouseX != mouseX))
+      animation(catf, pmouseX, pmouseY);
+    else if(faceLeft && (pmouseX != mouseX))
+      animation(cat, pmouseX, pmouseY);
 
     // For visual debugging the collision detection
     //fill(50,0.5);
-    //rect(cat.width/2, cat.height/2,cat.width,cat.height)
-  pop();
+    //rect(pmouseX-(cat.getWidth()/2),pmouseY-(cat.getHeight()/2),cat.getWidth(),cat.getHeight());
 
   // Update and display our circles everytime draw loops
   for(var i= 0; i<circles.length; i++){
@@ -132,32 +116,31 @@ function catFood(){
     foodY[i] = round( random(20, height-20) ); // too close to the border
     foodH[i] = (random(0, 255)); // Set a random color
     fill(foodH[i], 100, 100);
-    let rectDim = 20;            // Setup rectangle dimentions
+    noStroke();
     rect(foodX[i],foodY[i],rectDim,rectDim); // Draw cat food
+    image(catFud,foodX[i],foodY[i],rectDim,rectDim); // Draw cat food
   }
 }
 
 // Spawn the cat food (constantly runs)
-let rectDim = 20; // We can declare the same variable because of the variable scope using 'let'
 function catFoodShow(){
   for (let i=0; i < arrayN; i++) {
     fill(foodH[i], 100, 100);
+    noStroke();
     rect(foodX[i],foodY[i],rectDim,rectDim);
+    image(catFud,foodX[i],foodY[i],rectDim,rectDim); // Draw cat food
   }
 }
 
 
 // Make sure the cat is able to eat
 function catEat(){
-  // Setup an offset 'coz rectmode is in the corner and cursor is in the center
-  let detectX = xpos + cat.width;
-  let detectY = ypos + cat.height;
 
   for (var i=0; i < arrayN; i++) {
     // Oh boy, the logic below gave me a headache... pseudo detecting the
     // overlapping rectangle of the cat and cat food was annoying to write
-    if ( (detectX+cat.width/2>foodX[i]) && (detectX-cat.width/2<(foodX[i]+rectDim)) &&
-         (detectY+cat.height/2>foodY[i]) && (detectY-cat.height/2<(foodY[i]+rectDim))
+    if ( (pmouseX+(cat.getWidth()/2)>foodX[i]) && (pmouseX-(cat.getWidth()/2)<(foodX[i]+rectDim)) &&
+         (pmouseY+(cat.getHeight()/2)>foodY[i]) && (pmouseY-(cat.getHeight()/2)<(foodY[i]+rectDim))
        ){
 
       // Assign a new position once eaten
@@ -169,7 +152,7 @@ function catEat(){
 
 
       // For visual debugging
-      //rect(detectX-cat.width/2,detectY-cat.height/2,cat.width,cat.height);
+      //rect(pmouseX-(cat.getWidth()/2),pmouseY-(cat.getHeight()/2),cat.getWidth(),cat.getHeight());
       //console.log("chomp");
 
       // Show circles at where the food spawns
@@ -181,9 +164,9 @@ function catEat(){
 
       // Play the note according to order of divisible by round(random(7, 10)), 2, 3, 1
       if (eatCount % round(random(7, 10)) == 0){
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(7, 15), foodH[i]));
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(22, 28), foodH[i]));
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(36, 43), foodH[i]));
+        circles.push(new Circle(pmouseX, pmouseY, random(7, 15), foodH[i]));
+        circles.push(new Circle(pmouseX, pmouseY, random(22, 28), foodH[i]));
+        circles.push(new Circle(pmouseX, pmouseY, random(36, 43), foodH[i]));
         meow.play()
       }
       else if (eatCount % 2 == 0){
@@ -231,23 +214,3 @@ function Circle(x, y, s, h){
     this.lifespan--;
   }
 }
-
-
-// https://coursescript.com/notes/interactivecomputing/mobile/gyroscope/
-// Gyroscope Data
-window.addEventListener('deviceorientation', function(e) 
-{
-  // Use the gyroscope by default if detected
-  if ((e.alpha!=null) && (e.beta!=null) && (e.gamma!=null))
-    gyro = true;
-
-  // Map the tilt degree so we don't go too far into the rotation
-  if (e.alpha!=null)
-    a = map(e.alpha, -180, 180, -90, 90); // Probably rotation counter/clockwise?
-
-  // Over compensate to be able to reach the screen edges without flipping the phone upside down
-  if (e.beta!=null)
-    b = map(e.beta, -180, 180, -height/2, height+(height/4)); // Face phone (up/down)
-  if (e.gamma!=null)
-    g = map(e.gamma, -180, 180, -width/2, width+(width/4)); // Face phone (tilt left/right)
-});
