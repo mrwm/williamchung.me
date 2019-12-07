@@ -10,6 +10,10 @@
   The only downside is that it's only limited to one line.
 */
 
+
+
+//play / lead to song / color -> note
+
 // Circle code taken and modified from here:
 // https://editor.p5js.org/coloringchaos/sketches/SkZVaxF0-
 
@@ -40,7 +44,8 @@ let foodH = new Array(arrayN);   // Store color value of food
 
 // Preparation for external files
 function preload() {
-  cat = loadImage('img/cat.svg'); // Spawn the cat!
+//  cat = loadImage('img/cat.svg'); // Spawn the cat!
+  cat = "cat";                      // Spawn the cat!
   noteC = loadSound('sound/C.mp3');
   noteE = loadSound('sound/E.mp3');
   noteG = loadSound('sound/G.mp3');
@@ -100,14 +105,16 @@ function draw() {
 
 
   // The code for moving the cat around
-  push();
-    translate(xpos,ypos);
-    image(cat, cat.width/2, cat.height/2); // Offset the cat to be centered
+  //push();
+    //translate(xpos,ypos);
+    //image(cat, cat.width/2, cat.height/2); // Offset the cat to be centered
+    //text(cat, xpos, ypos); // Offset the cat to be centered
+    text('cat', xpos, ypos); // Offset the cat to be centered
 
     // For visual debugging the collision detection
     //fill(50,0.5);
     //rect(cat.width/2, cat.height/2,cat.width,cat.height)
-  pop();
+  //pop();
 
   // Update and display our circles everytime draw loops
   for(var i= 0; i<circles.length; i++){
@@ -150,14 +157,17 @@ function catFoodShow(){
 // Make sure the cat is able to eat
 function catEat(){
   // Setup an offset 'coz rectmode is in the corner and cursor is in the center
-  let detectX = xpos + cat.width;
-  let detectY = ypos + cat.height;
+  let detectX = xpos + 0;//cat.width;
+  let detectY = ypos + 0;//cat.height;
 
   for (var i=0; i < arrayN; i++) {
     // Oh boy, the logic below gave me a headache... pseudo detecting the
     // overlapping rectangle of the cat and cat food was annoying to write
-    if ( (detectX+cat.width/2>foodX[i]) && (detectX-cat.width/2<(foodX[i]+rectDim)) &&
-         (detectY+cat.height/2>foodY[i]) && (detectY-cat.height/2<(foodY[i]+rectDim))
+//    if ( (detectX+cat.width/2>foodX[i]) && (detectX-cat.width/2<(foodX[i]+rectDim)) &&
+//         (detectY+cat.height/2>foodY[i]) && (detectY-cat.height/2<(foodY[i]+rectDim))
+//       ){
+    if ( (detectX+0/2>foodX[i]) && (detectX-0/2<(foodX[i]+rectDim)) &&
+         (detectY+0/2>foodY[i]) && (detectY-0/2<(foodY[i]+rectDim))
        ){
 
       // Assign a new position once eaten
@@ -181,9 +191,9 @@ function catEat(){
 
       // Play the note according to order of divisible by round(random(7, 10)), 2, 3, 1
       if (eatCount % round(random(7, 10)) == 0){
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(7, 15), foodH[i]));
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(22, 28), foodH[i]));
-        circles.push(new Circle(xpos + cat.width, ypos + cat.height, random(36, 43), foodH[i]));
+        circles.push(new Circle(xpos + 0, ypos + 0, random(7, 15), foodH[i]));
+        circles.push(new Circle(xpos + 0, ypos + 0, random(22, 28), foodH[i]));
+        circles.push(new Circle(xpos + 0, ypos + 0, random(36, 43), foodH[i]));
         meow.play()
       }
       else if (eatCount % 2 == 0){
