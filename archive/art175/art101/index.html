@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ART101 | William Chung</title>
+
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link href="./css/colors.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/layout.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/art101.css" rel="stylesheet" type="text/css" media="screen">
+
+    <script type="text/javascript">
+      function projectPage(_this){
+        var e =  document.getElementsByClassName("sticky-container");
+        for (var i = 0; i < e.length; i++) { //Traverse thru the list of sticky containers
+          var childList = e[i].children;
+          for (var j = 0; j < childList.length; j++) { //Traverse thru the list of elements in the container
+            if ((childList[j].tagName == "a") || (childList[j].tagName == "A")){
+              //remove all other links with the currentNav class
+              childList[j].classList.remove("currentNav");
+            }
+          }
+        }
+        document.getElementById("project").checked = true;
+        _this.classList.add("currentNav");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- TODO: make side nav for readings -->
+    <aside>
+      <div class="sticky-spacer">&nbsp;</div>
+      <div class="sticky-container">
+        <a class="currentNav" href="#P1" onclick="projectPage(this)">1</a>
+        <a class="" href="#P2" onclick="projectPage(this)">2</a>
+        <a class="" href="#P3" onclick="projectPage(this)">3</a>
+        <a class="" href="#P4" onclick="projectPage(this)">4</a>
+        <a class="" href="#P5" onclick="projectPage(this)">5</a>
+      </div>
+    </aside>
+    <div id="taco">
+      <header>
+        <h1>ART 101 | William Chung</h1>
+      </header>
+      <section class="stickMeTop">
+        <nav class="desktop">
+          <a class="" href="https://www.williamchung.me/art175/">Home</a>
+          <a class="currentNav" href="./index.html">ART 101</a>
+          <a class="" href="https://www.williamchung.me/art175/photography/">Photography</a>
+          <a class="" href="https://www.williamchung.me/art175/contact.html">Contact</a>
+        </nav>
+        <details class="mobile"><summary>Menu</summary>
+          <nav class="">
+            <a class="" href="https://www.williamchung.me/art175/">Home</a>
+            <a class="currentNav" href="./index.html">ART 101</a>
+            <a class="" href="https://www.williamchung.me/art175/photography.html">Photography</a>
+            <a class="" href="https://www.williamchung.me/art175/contact.html">Contact</a>
+          </nav>
+        </details>
+      </section>
+      <main>
+        <!-- Use the same names to create radio groups -->
+        <!-- Remove the whitespace nodes from inline w/ comment tags -->
+        <input id="project" type="radio" name="projects" checked="checked"><!--
+        --><label for="project">Projects</label><!--
+        --><input id="reading" type="radio" name="projects"><!--
+        --><label for="reading">Readings</label>
+        <!-- Articles are going to have ID's going be P# where # is the Project number -->
+        <article class="projects" id="P1">
+          <fieldset class="gridify">
+            <legend>Project 1</legend>
+              <p class="grid-block">
+                <!--<img src="project1/exercise1/frames/line-000003.png" alt="exercise 1" title="exercise 1">-->
+                <video controls poster="project1/exercise1/frames/line-000003.png">
+                  <source src="project1/exercise1/frames/test-o.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 1</h3>
+                <p>In this exercise, I leaned to use sine wave function (which I used in oscillating the width of the red ellipse), nested for loops, and other functions within processing.
+                </p>
+                <p>Code <a href="project1/exercise1/Ex1.txt">here</a></p>
+              </div>
+              <p class="grid-block">
+                <!--<img src="project1/exercise2/frames/line-000169.png" alt="exercise 2" title="exercise 2">-->
+                <video controls poster="project1/exercise2/frames/line-002356.png">
+                  <source src="project1/exercise2/frames/outt.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 2</h3>
+                <p>For this exercise, I created custom wrapper functions that changed how the user 'draws' on the canvas, incorperated text, and also added images to the processing sketch.
+                </p>
+                <p>Code <a href="project1/exercise2/Ex2.txt">here</a></p>
+              </div>
+              <p class="grid-block">
+                <video controls poster="project1/proj1/frames/line-000001.png">
+                  <source src="project1/proj1/frames/test-o.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Project 1</h3>
+                <p>I used my prior programming language that I learned from other classes to create custom functions, logical statements, and algorithms to create this monochromatic drawing tool. I wasn't successful in making an artistic creation with any of my drawings, so I hope I could improve on that in other ways.</p>
+                <p>Code <a href="project1/proj1/proj1.txt">here</a></p>
+              </div>
+          </fieldset>
+        </article>
+        <article class="projects" id="P2">
+          <fieldset class="gridify">
+            <legend>Project 2</legend>
+              <p class="grid-block">
+                <!--<img src="project1/exercise1/frames/line-000003.png" alt="exercise 1" title="exercise 1">-->
+                <video controls poster="project2/Ex3/frames/line-000051.png">
+                  <source src="project2/Ex3/frames/outt.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 3</h3>
+                <p>In this example, I learned to impliment wrap-around code along with flipping directions of variables. This is also paired with the use of arrays.<br>
+                </p>
+                <p>Code <a href="project2/Ex3/Ex3.txt">here</a></p>
+              </div>
+              <p class="grid-block">
+                <!--<img src="project1/exercise2/frames/line-000169.png" alt="exercise 2" title="exercise 2">-->
+                <video controls poster="project2/Ex4/frames/out.000054.png">
+                  <source src="project2/Ex4/frames/outt.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 4</h3>
+                <p>For this exercise, I implimented object oriented programming along with push matrix in order to move things around the canvas.
+                </p>
+                <p>Code <a href="project2/Ex4/Ex4.txt">here</a></p>
+              </div>
+              <p class="grid-block">
+                <video controls poster="project2/Proj2/frames/out.000010.png">
+                  <source src="project2/Proj2/frames/outt.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+              </p>
+              <div class="grid-block">
+                <h3>Project 2</h3>
+                <p>I used object oriented programming and created a blob which crashed my computer. The algorithm used in the program was the noise function and it was used to determine the position of the individual rectangles.</p>
+                <p>Code <a href="project2/Proj2/Proj2.txt">here</a></p>
+              </div>
+          </fieldset>
+        </article>
+
+        <article class="projects" id="P3">
+          <fieldset class="gridify">
+            <legend>Project 3</legend>
+              <p class="grid-block">
+                <img src="project1/exercise2/frames/line-002356.png" alt="exercise 5a" title="exercise 5">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 5a</h3>
+                <p>In this exercise, I modified my code from exercise 2 to run within the browser using P5.js. I also cleaned up the code to make things easier to read.<br>
+                </p>
+                <p>Play exercise <a href="project3/Ex5a/">here</a></p>
+                <p>Code <a href="project3/Ex5a/sketch.js">here</a></p>
+              </div>
+              <p class="grid-block">
+                <img src="project2/Ex3/frames/line-000051.png" alt="exercise 5" title="exercise 5">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 5b</h3>
+                <p>Similar to the previous exercise, I modified the code that I have for exercise 3 and made it able to run inside the browser with P5.JS.
+                </p>
+                <p>Play exercise <a href="project3/Ex5b/">here</a></p>
+                <p>Code <a href="project3/Ex5b/sketch.js">here</a></p>
+              </div>
+              <p class="grid-block">
+                <img src="project3/proj3/2am.png" alt="2am" title="2am"><br>(2am)<br><br><br><br>
+                <img src="project3/proj3/2pm.png" alt="2pm" title="2pm"><br>(2pm)<br>
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Project 3</h3>
+                <p>The P5 clock has seconds denoted by the two bars extending from the top left of the screen, the minutes extending from the top right, and the hours extending from the left wide of the screen. AM and PM is denoted by the orientation of the hours represented. Hours would extend downwards during the mornings and would start extending upwards during the afternoon.
+                </p>
+                <p>Play exercise <a href="project3/proj3/">here</a></p>
+                <p>Code <a href="project3/proj3/sketch.js">here</a></p>
+              </div>
+          </fieldset>
+        </article>
+
+        <article class="projects" id="P4">
+          <fieldset class="gridify">
+            <legend>Project 4</legend>
+              <p class="grid-block">
+                <img src="project4/Ex6/image.png" alt="exercise 6" title="exercise 6">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 6</h3>
+                <p>In this exercise, I learned to use 2D arrays and also how to manipulate them.<br>
+                </p>
+                <p>Play exercise <a href="project4/Ex6/">here</a></p>
+                <p>Code <a href="project4/Ex6/sketch.js">here</a></p>
+              </div>
+              <p class="grid-block">
+                <img src="project4/Ex7/image.png" alt="exercise 7" title="exercise 7">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 7</h3>
+                <p>In this exercise, I learned to use use JSON and apply them to my p5.js sketch.<br>
+                </p>
+                <p>Play exercise <a href="project4/Ex7/">here</a></p>
+                <p>Code <a href="project4/Ex7/sketch.js">here</a></p>
+              </div>
+              <p class="grid-block">
+                <img src="project4/proj4/screenshot.png" alt="project 4" title="project 4">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Project 4</h3>
+                <p>I learned how to use the strava api and paired with P5.js.<br>
+                </p>
+                <p>Play exercise <a href="project4/proj4/">here</a></p>
+                <p>Code <a href="project4/proj4/sketch.js">here</a></p>
+              </div>
+          </fieldset>
+        </article>
+
+        <article class="projects" id="P5">
+          <fieldset class="gridify">
+            <legend>Project 5</legend>
+              <p class="grid-block">
+                <img src="project5/Ex8/image.png" alt="exercise 8" title="exercise 8">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Exercise 8</h3>
+                <p>Something like a stepping stone for the upcoming project 5, sketch 8 is a demonstration of the combination of P5 play, P5 sound, and P5 itself.<br>
+                </p>
+                <p>Play exercise <a href="project5/Ex8/">here</a></p>
+                <p>Code <a href="project5/Ex8/sketch.js">here</a></p>
+              </div>
+              <p class="grid-block">
+                <img src="project5/proj5/img/cat.png" alt="cat" title="cat">
+                <!--
+                <video controls poster="#">
+                  <source src="#" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video>
+                -->
+              </p>
+              <div class="grid-block">
+                <h3>Project 5</h3>
+                <p>I learned how to use P5 scene manager paired with P5.js.<br>
+                </p>
+                <p>Play exercise <a href="project5/proj5/">here</a></p>
+                <p>Code <a href="project5/proj5/cat.js">here</a></p>
+              </div>
+          </fieldset>
+        </article>
+
+        <article class="readings">
+          <fieldset>
+            <legend>Reading 1</legend>
+            <p>1. I have  no idea what a good definition of how any kind of artist can use algorithms in their art, but I think most artists use some form of algorithm though.</p>
+            <p>2. Some examples in where I might have already used algorithms in my art  work include putting down a pen and drawing a line or shape.</p>
+            <p>3. I think that Harold Cohen and AAron's art is in the abstract outcomes and the unpredictability of outcomes. I believe that the outcome of the tree is also a form of art. The next artist, Miguel Nobrega's Super Fiscie. I think his art is in the progra,. Lastly, I also think that the art is in the program in the pentametron.</p>
+            <p>4. A well known artist I consider to have an iconic style would be Tim Burten and his Gothic Style. As described, his style has a gothic look mixed with a hint of modernism.</p>
+            <p>5. The Rock Paper Scissor Spock Lizard article is pretty straight foward and has few steps explaining how the game works. The articles about brushing teeth and making pizza, however, are detailed and concise at the same time. Lastly, the articles about making a plane and making instructions are pretty short and not extremely detailed.</p>
+          </fieldset>
+          <fieldset>
+            <legend>Reading 2</legend>
+            <p>1. To sum up the differences when given the Wikipedia definitions of data and information, data is to value, while information is to knowledge.</p>
+            <p>2. The difference between visualization and mapping is that visualization is the process of data while the mapping is the organization of the data that is currently available.</p>
+            <p>3. Manovich is referring to how visualization is something that is not subliminal and that there could be many different aspects to the processing of visualization. Yes, I agree with his notion.</p>
+            <p>4. Feltron is a graphic designer that worked with data that pertained to location and user-generated information. Felton created posters, yarn compositions, and other things that represented the information that he has collected. </p>
+            <p>5. Feltron is a graphic designer that worked with data that pertained to location and user-generated information. Felton created posters, yarn compositions, and other things that represented the information that he has collected. </p>
+            <p>6.
+            <div >
+              <div class="grid-block">
+                <img src="img/workshop1.jpg" alt="workshop1" title="workshop1">
+                <img src="img/workshop1b.jpg" alt="workshop1 work" title="workshop1 work">
+                <img src="img/workshop2a.jpg" alt="The almighty Steve" title="The almighty Steve">
+                <img src="img/workshop2b.jpg" alt="workshop1 work" title="workshop1 work">
+                <img src="img/workshop2c.jpg" alt="workshop1 work" title="workshop1 work">
+                <p>For workshop 1, I used my pencil and symbolic representation to display my data.</p>
+                <p>For workshop 2, I think the exercise could be improved with changing the coin to a dice, which would have more outcomes possible as opposed to just a binary outcome from a coin.</p>
+              <div>
+              </div>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Reading 3</legend>
+            <p>1. One of the obvious pieces of technology is the computer and car. Despite being traditionally used in offices and work, computers are also used to perform other tasks such as running street lights and such. Cars, on the other hand, are also on the trend of changing from a transportation vehicle to a sort of luxury experience.</p>
+            <p>2. Gesamtkunstwerk is a term used to describe the use of the sense of sight, sound, touch, and along with a hint of taste. The term is used to describe the use of the properties tied with the product being mentioned.</p>
+            <p>3. Sound design is something like making the things that people don’t think about. It’s something about making the feedback that has interaction with people and user inputs. I would relate this back to the idea of theatre and performance as in sound effects. Something like how when a balloon pops, the sound engineer would play the boom sound.</p>
+            <p>4. Skeuomorphism is something that tried to emulate an object that is in real life. Something like imitation crab and its counterpart, but in the design aspect. Flat design, on the other hand, is similar to skeuomorphism where it tries to emulate the paper like properties, but upon a digital screen. The tow designs follow up on the theatrics and performance where the things on the screen try to create something similar, despite not being the thing that they are trying to emulate.</p>
+          </fieldset>
+        </article>
+      </main>
+      <footer>
+        <br>Copyright &copy; <script>document.write(new Date().getFullYear());</script> William Chung | <a href="mailto:william.chung@sjsu.edu">william.chung@sjsu.edu</a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+

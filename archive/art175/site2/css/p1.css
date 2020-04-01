@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/*----------------------
+
+This is only part of the css for the page
+There are parts of the page styled dynamically with JS...
+The JS shuffles the class + adds different colum spans, while
+making the mage go on forever (as long as the user keeps scrolling).
+
+
+  Variables 
+  Usage: var(--varName)
+  ----------------------*/
+:root{
+  --grid-gap: calc(1rem / 2);
+}
+
+/*----------------
+ Base page layout
+------------------*/
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 4vh;
+  line-height: 5.5vh;
+}
+
+/*Make the images fill the container*/
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Make the grid span the screen and create a horizontal scroll bar while at it */
+#grid {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  writing-mode: vertical-lr;
+  display: grid;
+  grid-gap: var(--grid-gap); 
+  grid-auto-rows: 1.52vh;
+  grid-template-columns: repeat(5, 17.6vh);
+  grid-auto-flow: row;
+  text-align: center;
+  background: var(--bg-color);
+}
+
+/* crop the picture if it is attempting to break out */
+#grid > div {
+  overflow: hidden;
+}
+.span1{
+  background-color: #ff9800;
+  grid-row-end: span 3; 
+}
+.span2{
+  background-color: #ff9800;
+  grid-row-end: span 4; 
+}
+.span3{
+  background-color: #ff9800;
+  grid-row-end: span 5; 
+}
+.span4{
+  background-color: #ff9800;
+  grid-row-end: span 6; 
+}
+.span5{
+  background-color: #ff9800;
+  grid-row-end: span 7; 
+}
+.span6{
+  background-color: #ff9800;
+  grid-row-end: span 8; 
+}
+.span7{
+  background-color: #ff9800;
+  grid-row-end: span 9; 
+}
+.span8{
+  background-color: #ff9800;
+  grid-row-end: span 10; 
+}
+.span9{
+  background-color: #ff9800;
+  grid-row-end: span 11; 
+}
+.span10{
+  background-color: #ff9800;
+  grid-row-end: span 12; 
+}
+
+

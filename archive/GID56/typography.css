@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Blocked_ */
+@font-face {
+  font-family: 'Blocked_';
+  font-style: normal;
+  src: local('Blocked_'), local('Blocked_'), url('fonts/Blocked_.woff') format('woff');
+  unicode-range: U+0020-007E;
+}
+@font-face {
+font-family: "Blocked_";
+src: url("fonts/Blocked_.eot");
+src: url("fonts/Blocked_.woff") format("woff"),
+url("fonts/Blocked_.otf") format("opentype"),
+}
+/* Colors:
+
+  Tanish
+  #786344 - Olive Wood
+  #ceae6a - Putty
+  #cfcb93 - Martini Olive
+
+  Bluish
+  #acdabc - Mountain Mint
+  #8ce1db - Island Oasis
+  #accdd6 - Sonata
+
+  Yellows:
+  #ffffff
+  #fff1e0
+  #fff3e0
+  #ffe7c0
+  #ffdba1
+  #ffd082
+  #ffc462
+  #ffb93f
+  #ffae00
+  
+  Blacks:
+  #ffffff
+  #d6d6d6
+  #afafaf
+  #898989
+  #656565
+  #434343
+  #242424
+  #000000
+
+*/
+
+#sub-title {
+  display: inline-block;
+}
+.sub-title a, h1 {
+  margin-bottom: -0.1em;
+  color: #242424;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 50;
+  /*text-align: center;*/
+}
+.sub-title{
+  padding-bottom: 1em;
+  width: 100%;
+}
+.section-title {
+  text-align: center;
+  border-bottom: 3px solid #242424;
+  font-size: 1.5em;
+  text-transform: none;
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+#myName{
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+#profile {
+  float:left;
+  width: 10em;
+  margin-right: 12px;
+}
+
+
+/*effects a lot of stuff*/
+html{
+  font-family: "Blocked_", "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+button{
+  font-family: "Blocked_", "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+body {
+  margin: 0px;
+  color: #242424;
+  font-size: calc(14px + 2vh);
+  background-color: #d6d6d6;
+/*  overflow-x: hidden;*/
+  width:100%;
+}
+
+header{
+/*  width: 75%;*/
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.taco {
+  min-width: 600px;
+  max-width:960px;
+  margin: 1em auto 1.5em auto;
+  display: block;
+  /*padding: 0.5em;
+/*  box-shadow: 10px 5px 5px #ccc;*/
+}
+
+wrap {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Just for the paragraphs*/
+p {
+  clear: left;
+  text-indent: 1em;
+/*  padding: 12px 12px;*/
+}
+
+/* Grid! */
+.gridify{
+  width: 100%;
+  display: inline-grid;
+  align-items: center;
+  align-content: space-evenly;
+  grid-template-columns: 30% 30% 30%; /*Make the grid smaller than the container*/
+/*  grid-template-areas:*/
+/*    'one two three'*/
+/*    'four five six';*/
+  grid-gap: 1em;
+/*  padding: 10px;*/
+  align-items: center;
+  justify-content: center;
+  background: #898989;
+  padding: 0 1em 0 1em;
+  margin: .5em 0;
+  border-radius: 1em;
+}
+.gridify > * p{
+  position: relative;
+  margin: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  top: 5%;
+  padding: .5em .5em;
+}
+.gridify > *{
+  background: #d6d6d6; /*ffdba1;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;/*
+  align-items: center;*/
+}
+.gridify > *, .gridify > * *{
+  border-radius: 1em;
+}
+.photo{
+/*  text-align: center;*/
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+}
+.two{
+    grid-column: span 2;
+}
+.three{
+  grid-column: span 3;
+}
+.down{
+  grid-row: span 2;
+}
+.photDescB{
+  position: relative;
+  bottom: 50%;
+  text-align: center;
+  font-size: small;
+/*  margin-top: -1.3em;*/
+  background: #00000000; /*Transparent background*/
+}
+.photDescT{
+  text-align: center;
+  font-size: small;
+  padding-top: 1em;
+/*  margin-bottom: -.7em;*/
+  background: #00000000; /*Transparent background*/
+}
+
+a {
+  color: #242424;
+  text-decoration: underline;
+}
+
+img {
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+img:hover {
+  opacity: 0.9;
+}
+
+/*Horizontal Nav*/
+nav{
+  background-color: inherit;
+  /*margin-top: 0.5em; /*adds distance from header*/
+  width: 100%;
+  display: table; /*makes the nav act like a table</table>*/
+  border-collapse: collapse;
+  border: none;
+  line-height: 2em;
+  border-collapse: separate; border-spacing: 0.2em;
+  text-transform: uppercase;
+}
+nav *{
+  border: 0.1em solid black;
+  transition: 0.3s;
+  margin: 0;
+  border-radius: 1em;
+  background-color: inherit; /*will take precedence over the background-color*/
+  display: table-cell; /*makes the li act like a table-cell<td>*/
+  color: #242424;
+  text-decoration: none;
+
+  list-style-type: none;
+  /*display: table-row; /*makes the ul act like a table-row <tr>*/
+  text-align: center;
+  background-color: #afafaf;
+  cursor: pointer;
+}
+nav a:link{
+  color: #242424;
+  text-decoration: none;
+}
+nav a:hover{
+  background: #434343; /*#ffd082;*/
+  color: #fff;
+/*  text-decoration: underline;*/
+}
+nav .currentNav {
+  background-color: #656565;
+  margin: 0;
+  border-radius: 1em;
+  color: #fff;
+}
+
+/* Dropdown menu */
+.dropbtn {
+  background-color: #00000000;
+  border: none;
+  text-align: center;
+  display: inline-block;
+}
+.dropDown button{
+  width: 100%;
+  font-size: inherit;
+}
+.dropDown button:hover{ color: #fff;
+}
+.dropContent{
+  display: none;
+  position: absolute; /* This makes other nav elements stay height-wise */
+  background-color: #00000000;
+  min-width: 160px;
+  z-index: 1;
+  margin: auto;
+  width: 100%;
+  border: none;
+}
+.dropContent a{
+  padding: 0 .5em;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 100%;
+  text-decoration: none;
+  display: block;
+}
+.dropContent a:not(.currentNav){ background-color: #656565; }
+.dropContent a:hover {
+  background-color: #434343; 
+  color: #fff;
+}
+.dropDown:hover .dropContent{
+  display: block;
+  border: none;
+}
+.dropDown *{
+  padding: 0;
+  width: auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+.dropDown:hover{
+  background-color: #434343;
+}
+
+/*Footer*/
+footer{/*
+  position: absolute;
+  bottom: 0px;
+  left:50%;
+  transform: translate(-50%, 0);*/
+  width: 80%;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+footer nav{
+  line-height: 1em;
+}
+
+.footText{
+  /*margin-bottom: -1.5em;*/
+  text-align: center;
+}
+
+details {
+  background-color: inherit;
+  border: 1.5px solid black;
+  border-radius: 1em;
+  margin: 0.5em;
+  margin-top: 1em;
+  padding: 0.5em;
+  box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+}
+details:hover {
+  cursor: pointer;
+  background-color: #ffd082;
+/*  border: 1.5px solid black;*/
+/*  border-radius: 1em;*/
+/*  margin: 0.5em;*/
+/*  padding: 0.5em;*/
+}
+
+
+fieldset{
+  font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.5em;
+}
+fieldset span{
+  font-family: "Georgia", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.5em;
+}
+fieldset div{
+  font-style: normal;
+  font-weight: 300;/*
+  font-size: 0.5em;*/
+  background: #ffffffee;
+  padding: 0.5em;
+  font-family: "Courier New", Monospace;
+}
+

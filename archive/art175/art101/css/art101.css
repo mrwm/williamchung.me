@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/*{border:0.5px solid red;}*/
+/*--------------------
+ Index page of art101
+----------------------*/
+
+body{
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "aside taco none";
+}
+#taco{
+  width: 100%;
+  padding: 2em 0;
+  grid-area: taco;
+}
+
+/* Hide everything at first */
+.readings{
+  display: none;
+}
+.projects{
+  display: none;
+}
+
+label{
+  box-sizing: border-box;
+  display: inline-block;
+  position: sticky;
+  top: 1.80em;
+  width: 50%;
+  text-align: center;
+  border: 2px solid var(--bg-color);
+  box-shadow: #999999cc 0 5px 10px 1px, #00000033 0 15px 40px 1px;
+  background: var(--bg-color);
+}
+label:hover{
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
+}
+
+/*---------------------------------------------------------
+ Make the checkbox + labels pretty under the main nav bar.
+ Also show/hide what is (not) selected.?
+-----------------------------------------------------------*/
+aside{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  grid-area: aside;
+}
+.sticky-spacer{
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin: 0 0 8.95rem 0;
+  visibility: hidden;
+}
+.sticky-container{
+  position: sticky;
+  top: 1.8em;
+}
+.sticky-container .currentNav{
+  border-bottom: 2px solid;
+}
+
+.sticky-container a::before{
+  content: "Project "
+}
+.sticky-container a{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--bg-color);
+  box-shadow: #999999cc 0 5px 10px 1px, #00000033 0 15px 40px 1px;
+  background: var(--bg-color);
+}
+.sticky-container a:hover{
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  box-shadow: #fde75a00 0 5px 10px, #fde75a33 0 15px 40px;
+}
+/*
+input[type=checkbox]{
+  opacity: 0;
+  /*display: none;*
+  z-index: -1;
+  position: absolute;
+  left: -9999999px;
+}
+input[type=checkbox]:checked + label{
+  border-bottom: 2px solid;
+  z-index: 1;
+}
+input[type=checkbox]:focus + label{
+  border: 2px solid var(--accent);
+  border-bottom: 2px solid;
+  background: var(--accent);
+  z-index: 1;
+}
+*/
+
+/*-----------------------------------------------------
+ Make the radio buttons pretty under the main nav bar.
+ Also show/hide what is (not) selected.
+-------------------------------------------------------*/
+input[type=radio]{
+  opacity: 0;
+  /*display: none;*/
+  z-index: -1;
+  position: absolute;
+  left: -9999999px;
+}
+input[type=radio]:checked + label{
+  border-bottom: 2px solid;
+  z-index: 1;
+}
+input[type=radio]:focus + label{
+  border: 2px solid var(--accent);
+  border-bottom: 2px solid;
+  background: var(--accent);
+  z-index: 1;
+}
+
+/* Show what was selected */
+#reading:checked ~ .readings{
+  display: block;
+}
+#project:checked ~ .projects{
+  display: block;
+}
+
+/* Styles each fieldset to be readable instead of clumped together */
+.gridify{
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-block{
+  /*width: 100%; Kinda useless w/ grid */
+}
+
+fieldset legend{
+  font-size: 2em;
+  padding: 0.5rem;
+}
+
+/* Limit the size of media */
+img, video{
+  width: calc(50em - 25rem);
+  max-width: 476px;
+  max-height: 476px;
+}
+
+p{
+  padding: .5rem;
+}
+
+iframe{
+  width: 400px;
+}
+
+@media only screen and (max-width: 960px){
+  img, video{
+    width: calc(50em - 35rem);
+  }
+  iframe{
+    width: 230px;
+  }
+  .sticky-container a::before{
+    content: "Proj. "
+  }
+}
+@media only screen and (max-width: 640px){
+  label{
+    top: 1.45em;
+  }
+  img, video{
+    width: calc(50em - 25rem);
+  }
+  iframe{
+    width: 150px;
+  }
+  .grid-block *{
+    font-size: 0.7rem;
+  }
+  .sticky-spacer{
+    margin: 0 0 7.3rem 0;
+  }
+  .sticky-container{
+    top: 1.45em;
+  }
+  .sticky-container a{
+    font-size: 0.7em;
+  }
+  .sticky-container a::before{
+    content: "P "
+  }
+}

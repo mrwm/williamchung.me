@@ -3,27 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* Colors:
 
-  Tanish
-  #786344 - Olive Wood
-  #ceae6a - Putty
-  #cfcb93 - Martini Olive
-
-  Bluish
-  #acdabc - Mountain Mint
-  #8ce1db - Island Oasis
-  #accdd6 - Sonata
-
-  Yellows:
-  #ffffff
-  #fff1e0 - Background Color
-  #fff3e0
-  #ffe7c0
-  #ffdba1
-  #ffd082
-  #ffc462
-  #ffb93f
-  #ffae00
-
   Blacks:
   #ffffff
   #d6d6d6
@@ -36,177 +15,61 @@
 
 */
 
-#sub-title {
-  display: inline-block;
+/* Something like a reset.css */
+html {
+  box-sizing: border-box;
 }
-.sub-title a, h1, h6 {
-  margin-bottom: -0.1em;
-  color: #242424;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 50;
-  /*text-align: center;*/
-}
-.section-title {
-  text-align: center;
-  border-bottom: 3px solid #242424;
-  letter-spacing: 0.5em;
-}
-#myName{
-  font-weight: 800;
-  letter-spacing: 0.2em;
-}
-#profile {
-  float:left;
-  width: 10em;
-  margin-right: 12px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-
-/*effects a lot of stuff*/
 body {
   margin: 0px;
   color: #242424;
-  font-size: calc(12px + 1vh);
+  font-size: 1rem;
   font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-  background-color: #fff1e0;
-/*  overflow-x: hidden;*/
-  width:100%;
+  display: flex;
+  flex-flow: column wrap;
+  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
 }
 
-header{
-/*  width: 75%;*/
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
+header, footer {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }
-
-.taco {
-  width: 80%;
-  min-width: 600px;
-  max-width:960px;
-  margin: 1em auto 1.5em auto;
-  display: block;
-  padding: 0.5em;
-/*  box-shadow: 10px 5px 5px #ccc;*/
+#topNav {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: end;
 }
+#topNav a { margin: 0 1em; }
 
-wrap {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  transition: 0.3s;
+/* make things readable by limiting characters to 70/line */
+.text { max-width: 70ch; }
+
+/* Override some pre set settings*/
+.footSection *:not(h6) {
+  font-size: 0.65rem;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0.25rem 0.25rem 0;
 }
-
-/* Just for the paragraphs*/
-p {
-  text-indent: 1em;
-  padding: 0px 12px;
+.footSection h6 {
+  margin: 1em 0 auto 0;
 }
-
-.gridify{
+h1, nav { display: inline; }
+article {
   display: grid;
-  justify-content: center;
-  grid-template-columns: 90% ; /*Make the grid smaller than the container*/
-  grid-gap: 10px;
-  padding: 10px;
+  margin: 0 calc( 5% + 1vw);
+  border: 1px solid red;
+  grid-template-areas:
+  "section-title" "section-title"
+  "tContent" "tContent" "tContent"
 }
+.section-title { grid-area: section-title; }
+.tContent { grid-area: tContent; }
 
 
-a {
-  color: #242424;
-  text-decoration: none;
-  border-bottom: 3px dotted black
-}
-
-img {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-img:hover {
-  opacity: 0.9;
-}
-
-/*Horizontal Nav*/
-nav{
-  background-color: #fff1e0;
-  /*margin-top: 0.5em; /*adds distance from header*/
-  width: 100%;
-  display: table; /*makes the nav act like a table</table>*/
-  border-collapse: collapse;
-  border: none;
-  line-height: 2em;
-  border-collapse: separate; border-spacing: 0.2em;
-  text-transform: uppercase;
-}
-nav a{
-  border: 1.5px solid black;
-  transition: 0.3s;
-  margin: 0;
-  border-radius: 1em;
-  background-color: #fff1e0; /*will take precedence over the background-color*/
-  display: table-cell; /*makes the li act like a table-cell<td>*/
-  color: #242424;
-  text-decoration: none;
-
-  list-style-type: none;
-  /*display: table-row; /*makes the ul act like a table-row <tr>*/
-  text-align: center;
-  background-color: #fff3e0;
-}
-nav a:link{
-  color: #242424;
-  text-decoration: none;
-}
-nav a:hover{
-  background: #ffae00; /*#ffd082;*/
-  text-decoration: underline;
-}
-nav .currentNav {
-  background-color: #ffd082;
-  margin: 0;
-  border-radius: 1em;
-}
-
-/*Footer*/
-footer{/*
-  position: absolute;
-  bottom: 0px;
-  left:50%;
-  transform: translate(-50%, 0);*/
-  width: 80%;
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-}
-
-footer nav{
-  line-height: 1em;
-}
-
-.footText{
-  /*margin-bottom: -1.5em;*/
-  text-align: center;
-}
-
-details {
-  background-color: #fff1e0;
-  border: 1.5px solid black;
-  border-radius: 1em;
-  margin: 0.5em;
-  margin-top: 1em;
-  padding: 0.5em;
-  box-shadow: rgba(0,0,0,0.5) 0 0 10px;
-}
-details:hover {
-  cursor: pointer;
-  background-color: #ffd082;
-/*  border: 1.5px solid black;*/
-/*  border-radius: 1em;*/
-/*  margin: 0.5em;*/
-/*  padding: 0.5em;*/
-}

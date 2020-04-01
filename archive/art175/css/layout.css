@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/*----------------------
+  Variables 
+  Usage: var(--varName)
+  ----------------------*/
+:root{
+  --border-radius: 1rem;
+}
+
+/*----------------
+ Base page layout
+------------------*/
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: ease-in 0.1s;
+}
+
+body{
+  min-width: 360px;
+  display: grid;
+}
+
+/* div wrapper */
+#taco{
+  position: relative;
+  margin: 1.5em auto;
+  width: 80%;
+  max-width: 960px;
+  padding: 2em 1em;
+}
+
+/* Header stuff at the top of the page */
+header{
+  text-align: center;
+}
+header h1{
+  border-style: none none none none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3em;
+}
+
+/* Site navigation */
+nav{
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+nav *:not(summary){
+  padding: 0.25rem;
+  width: calc(100% / 5);
+  text-decoration: none;
+  text-align: center;
+}
+nav *:not(summary):first-child, nav *:not(summary):last-child{
+  padding: 0.25rem 0;
+}
+nav details a{ border: none; }
+nav details{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* This styles the mobile dropdown menu */
+details{
+  text-align: center;
+  display: flex;
+}
+details:hover{ cursor: pointer; }
+details[open] summary{
+  padding: 0;
+  margin: 0;/*
+  border-bottom: 2px solid;*/
+}
+
+.currentNav{ border-bottom: 2px solid; }
+
+/* Stick the navigation at the top */
+.stickMeTop{
+  position: sticky;
+  top: 0;
+  /*border-bottom: 2px solid;*/
+  margin: 0 0.25rem;
+  z-index: 2; /* prevent popups covering the sticky */
+}
+
+/* CSS below hides the arrow on the details element */
+details summary::-webkit-details-marker { display:none; }
+details > summary:first-of-type { list-style-type: none; }
+summary{ border: none; }
+
+/* The meat of the site */
+main{
+  padding: 1rem 0.25rem;
+}
+main p{
+  text-indent: 1em;
+}
+
+/* Supposed to be the last portion of the site */
+footer{
+  font-size: 0.7em;
+  line-height: 1em;
+  position: absolute;
+  bottom: 0;
+  padding: 0 0.25rem;
+}
+
+/* Hide this for mobile screens later */
+.mobile{
+  display: none;
+}
+/* Styling for mobile navigation */
+.mobile nav{
+  flex-direction: column;
+  margin: 0;
+}
+.mobile nav a{
+  width: 100%;
+  padding: 0;
+  margin: 0 0;
+  border: none;
+}
+.mobile nav a:last-child{ border: none; }
+
+
+/* Hide stuff that is supposed to be hidden */
+.hidden{
+  display: none;
+}
+
+/*-------------------------
+ Base page layout (mobile)
+---------------------------*/
+@media only screen and (max-width: 640px){
+  /* Some adjustment to already existing elements */
+  header h1{
+    border-style: none none none none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2em;
+  }
+  .stickMeTop{
+    border: 2px solid;
+  }
+  footer{
+    font-size: 0.7em;
+    line-height: 1em;
+    position: absolute;
+    bottom: 0;
+  }
+  .mobile{ display: block; }
+  .desktop{ display: none; }
+
+}
+

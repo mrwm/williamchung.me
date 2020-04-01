@@ -1,0 +1,59 @@
+float rand = 0;
+int xWidth = width / 5;
+int yHeight = height / 5;
+float a = 0.0;
+float inc = TWO_PI/150.0;
+
+boolean recToggle = false;
+
+void setup() {
+  size(720, 600);
+  background(127);
+  noStroke();
+  for (int i=0; i < height; i+=20) {
+    fill(0);
+    rect(0, i, width, 10);
+    fill(255);
+    rect(i, 0, 10, height);
+  }
+}
+void draw() {
+  delay(100);
+  for (int i = 0; i < width; i += 20) {
+    for (int j = 0; j < height; j += 20) {
+      //println(rand);
+      fill(0,0,rand);
+      rect( i, j, xWidth, yHeight );
+      if (overRect(i,j,xWidth, yHeight)){
+        rand = random(1,255);
+        fill(255-rand,0,0);
+        ellipse( i-xWidth, j-yHeight, sin(a)*90.0, yHeight*2 );
+      }
+    line(width/2, mouseY, i, mouseY+sin(a)*90.0);
+    a += inc;
+    }
+    
+  }
+  //if(recToggle){
+    saveFrame("frames/line-######.png");
+    if (frameCount > 200){exit();}
+  //}
+}
+
+void keyPressed() {
+  if ( key == 'w' || key == 'W' ) {
+    wcRecToggle();
+  }
+}
+void wcRecToggle(){
+  recToggle = !recToggle;
+}
+
+boolean overRect(int x, int y, int width, int height) {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
+}

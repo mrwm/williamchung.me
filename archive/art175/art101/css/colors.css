@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*
+  Colors:
+
+  #fcf9ea - pastel yellow
+  #badfdb - lighter teal
+  #49beb7 - teal
+  #ff8a5c - orange-ish brown.
+
+  https://colorhunt.co/palette/154142
+  https://refactoringui.com/previews/building-your-color-palette/
+
+  Tanish
+  #786344 - Olive Wood
+  #ceae6a - Putty
+  #cfcb93 - Martini Olive
+
+  Bluish
+  #acdabc - Mountain Mint
+  #8ce1db - Island Oasis
+  #accdd6 - Sonata
+
+  Blacks:
+  #ffffff
+  #d6d6d6
+  #afafaf
+  #898989
+  #656565
+  #434343
+  #242424
+  #000000
+
+  #16161d - Eigengrau
+
+*/
+
+:root{
+  /* Usage: var(--varName) */
+  --bg-color: #fcf9ea;
+  --tanish: #f8f2cb;
+  --accent: #fde75a;
+  --sky: #badfdb; /* not used */
+  --water: #49beb7; /* not used */
+  --coffee-cake: #ff8a5c; /* not used */
+
+  --white: #fff;
+}
+
+*{
+  color: #16161d;
+}
+
+body{
+  background: var(--bg-color);
+}
+
+#taco{
+  background: inherit /*var(--tanish)*/;
+}
+
+nav *:hover{
+  background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
+*:focus{
+  background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
+.currentNav:focus{
+  background: var(--accent);
+  box-shadow: rgba(154,160,185,.08) 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
+
+.currentNav{
+  background: var(--bg-color);
+}
+
+.stickMeTop{
+  background: var(--bg-color);
+  box-shadow: #999999cc 0 5px 10px, rgba(166,173,201,.2) 0 15px 40px;
+}
+
+@media only screen and (max-width: 640px){
+  details{
+    /*background-color: var(--coffee-cake);*/
+  }
+  details:hover{
+    background-color: var(--accent);
+  }
+  details[open]{
+    background-color: var(--bg-color);
+  }
+  details[open]:hover{
+    background-color: var(--bg-color);
+  }
+}
+

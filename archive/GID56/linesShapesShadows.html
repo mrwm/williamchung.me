@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./main.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../image.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- override the properties provided in main.css -->
+    <link href="./linesShapesShadows.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <title>GID56 &mdash; CR-10</title>
+
+  </head>
+
+  <style type="text/css" media="screen">
+    .listSpec{
+      list-style-type: none;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 2em;
+    }
+  </style>
+  
+
+  <div class="taco">
+    <header>
+      <div class="sub-title">
+        <a href="index.html"><h1 id="myName">William Chung</h1></a>
+        <span>GID56 &ndash; CR-10</span>
+      </div>
+    </header>
+    <nav id="mainnav">
+      <a class="" href="./index.html">Home</a>
+      <a class="" href="./gridTheory.html" title="Alum Rock Park">Alum Rock</a>
+      <a class="" href="./images.html" title="Penitencia Creek Park">Penitencia</a>
+      <a class="" href="./gridTheoryExtra.html">Photography</a>
+      <div class="dropDown currentNav">
+        <button class="dropbtn" onclick="toggleMenu(this)">3D Printers</button>
+        <div class="dropContent">
+          <a class="" href="./colorTheory.html">Tronxy XY100</a>
+          <a class="" href="./colorPalette.html">Tronxy XY100 (recolored)</a>
+          <a class="currentNav" href="./linesShapesShadows.html">CR-10</a>
+        </div>
+      </div>
+      <a class="" href="./typography.html">Blocked_</a>
+    </nav>
+    <body>
+      <wrap>
+        <div class="sub-title">
+          <a href="#"><h1 class="section-title">CR-10</h1></a>
+          <!--<span> </span>-->
+        </div>
+        <div class="gridify">
+          <div class="photDescB three pattern">
+            <!--<span class="cOne"></span>-->
+            <!--<span class="cTwo"></span>-->
+            <!--<span class="cThree"></span>-->
+            <!--<span class="cFour"></span>-->
+          </div>
+          <div class="photo three clearBG">
+            <img alt="CR-10 with control box upgrade"
+                    title="CR-10 with control box upgrade"
+                    onclick="imageThis(this)"
+                    src="./img/webp/P_20190726_142124.webp"
+                    onerror="this.onerror=null; this.src='./img/P_20190726_142124.jpg'"
+                    class="blob1">
+          </div>
+          <div class="three clearBG underline">
+          </div>
+          <div class="three clearBG">
+            <p>I got myself a new 3D printer! As the title suggests, the new printer that I got is the CR-10. I got this printer as an upgrade from my previous printer, which was the Tronxy XY100. The CR-10 is much larger, but comes with the downside of being louder. In order to reduce the sound, I plan to install dampeners on the motors in order to reduce the vibrations. For the specs of this printer, it has a bed size of 300mm (X) &times; 300mm (Y) &times; 400mm (Z), a heated bed, and a spool holder attachable to the control box.<br>
+            &nbsp;&nbsp;&nbsp;So far, the only things that I have printed are the upgraded feet for the control box [upgrade found <a title="CR-10 Control Box Fan Mod" href="https://www.thingiverse.com/thing:2767439" target="_blank" rel="noopener">here</a>] and the demo file that came preloaded in the included mini SD card. Besides using the CR-10 to print upgrades for itself, I also took apart the control box and flashed the unified firmware that can be found <a title="TH3D Unified Firmware Package" href="https://www.th3dstudio.com/knowledgebase/th3d-unified-firmware-package/" target="_blank" rel="noopener">here</a>. I plan to print some more upgrades to the printer before I start printing other things with this.</p>
+          </div>
+          <div class="three clearBG underline">
+          </div>
+          <div class="photDescB three">
+            <span class="cOne"></span>
+            <span class="cTwo"></span>
+            <span class="cThree"></span>
+            <span class="cFour"></span>
+          </div>
+        <!-- end gridify -->
+        </div>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
+          <span id="closeBtn">&times;</span>
+          <span id="closeScreen"> </span>
+          <img class="modal-content" id="imgMod">
+          <div id="caption"></div>
+        </div>
+        <footer>
+        </footer>
+      </wrap>
+    </body>
+  <!-- end taco -->
+  </div>
+  <script type="text/javascript" src="../siteFunctions.js"></script>
+</html>
+
+  
+
+
+
+

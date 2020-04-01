@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Description" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="author" content="William Chung" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proj4</title>
+
+    <style> body {padding: 0; margin: 0; overflow: hidden; } </style>
+
+    <script src="api-secret.js" type="text/javascript"></script>
+    <script src="stravaToken.js" type="text/javascript"></script>
+    <script src="stravaData.js" type="text/javascript"></script>
+
+    <script src="../../p5/p5/p5.min.js"></script>
+    <script src="../../p5/p5/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+  <div id="text">
+    
+  </div>
+    <!--note: change the callback domain + link below after uploading to server-->
+    <div onclick="this.remove()" style="cursor: pointer" id="dataReq">[x]
+    <a href="http://www.strava.com/oauth/authorize?client_id=40946&response_type=code&redirect_uri=http://dma.sjsu.edu/art101/w_chung/project4/proj4/index.html&exchange_token&approval_prompt=force&scope=activity:read_all" rel="noopener">Click here to authenticate & get 2018-2019 strava data</a>
+    </div>
+  </body>
+  <script type="text/javascript">
+    //remove the authorization prompt when we have the auth code in the URL
+    if (Object.keys(strava).length > 1)
+      document.getElementById("dataReq").remove();
+  </script>
+</html>
+
+
