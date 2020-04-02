@@ -116,29 +116,24 @@ h1, nav { display: inline; }
 /* Make the article easier to organize */
 article {
   display: grid;
-  margin: 0 calc( 5% + 1vw);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 45%));
+  /*
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;*/
+  margin: 1vh calc( 5% + 1vw);
   max-width: 1280px;
-  grid-template-areas:
-  "section-title"
-  "tContent0"
-  "tContent1"
-  "tContent2"
-  "tContent3"
-  "tContent4"
-  "tContent5"
-  "tContent6"
+  grid-gap: 1rem;
 }
-
-/* assigning classes grid names */
-.section-title { grid-area: section-title; }
-.tContent0 { grid-area: tContent0; }
-.tContent1 { grid-area: tContent1; }
-.tContent2 { grid-area: tContent2; }
-.tContent3 { grid-area: tContent3; }
-.tContent4 { grid-area: tContent4; }
-.tContent5 { grid-area: tContent5; }
-.tContent6 { grid-area: tContent6; }
-.tContent7 { grid-area: tContent7; }
+.cSpan2 { grid-column: span 2; }
+.cSpan3 { grid-column: span 3; }
+.rSpan2 { grid-row: span 2; }
+.rSpan3 { grid-row: span 3; }
+picture { width: 100%; }
+picture img {
+  width: 100%;
+  max-width: 300px;
+}
 
 /* Lets make things prettier for wide screen devices */
 /*@media only screen and (min-width: 1440px){*/ /* ok. never mind, I like it this way*/
@@ -151,3 +146,9 @@ article {
     padding-right: 1rem;
   }
 /*}*/
+
+/* Making this look pretty on mobile >:( */
+@media only screen and (max-width: 600px){
+  picture:not(.content){display: none;}
+  article { grid-template-columns: 1fr; }
+}
