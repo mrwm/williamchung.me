@@ -14,38 +14,45 @@
   </head>
 
   <body>
-    <header>
-      <a href="index.html"><h1>William Chung</h1></a>
-      <nav id="topNav">
-        <a class="" href="animations.html">Animations</a>
-        <a class="" href="photography0.html">Photography</a>
-        <a class="" href="contact.html">Contact</a>
-      </nav>
-    </header>
-    <article>
-      <h1 class="section-title">About Me</h1>
-      <p class="text tContent">Hi, My name is William! I’m currently a third year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank" rel="noopener">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
-    </article>
-    <footer>
-      <div class="footSection">
-        <h6>Site Map</h6>
-        <nav>
-          <a class="" href="index.html">Index</a>
-          <a class="" href="index.html">Contact</a>
+    <div class="container">
+      <header>
+        <a href="index.html"><img src="favicon-32x32.png" alt="W icon"></a>
+        <nav id="topNav">
+          <a class="" href="contact.html">Contact</a>
         </nav>
-      </div>
-      <div class="footSection">
-        <h6>Previous iterations of this site</h6>
-        <nav>
-          <a class="" href="archive/index.html">Old Site</a>
-          <a class="" href="archive/art175/index.html">ART175</a>
-          <a class="" href="archive/DSGD63/index.html">DSGD63</a>
-          <a class="" href="archive/GID56/index.html">GID56</a>
-        </nav>
-      </div>
-    </footer>
+      </header>
+      <article>
+        <h1 class="section-title">Graphic Designer</h1>
+        <p class="text tContent0">Hello, My name is William Chung! I’m currently a third year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank" rel="noopener">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
+      </article>
+      <footer>
+        <div class="footSection">
+          <h6>Site Map</h6>
+          <nav>
+            <a class="" href="index.html">Index</a>
+            <a class="" href="index.html">Contact</a>
+          </nav>
+        </div>
+        <div class="footSection">
+          <h6>Previous iterations of this site</h6>
+          <nav>
+            <a class="" href="archive/index.html">Initial design</a>
+            <a class="" href="archive/art175/index.html">ART175</a>
+            <a class="" href="archive/DSGD63/index.html">DSGD63</a>
+            <a class="" href="archive/GID56/index.html">GID56</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
   </body>
-
+  <!-- Dynamically change the height of the padding for the footer-->
+  <script type="text/javascript">
+    // We only have one container, so grab the first one.
+    let footer = document.getElementsByClassName('container')[0];
+    // Create the padding for the footer to be located within.
+    footer.style.paddingBottom = footer.clientHeight/8 + "px";
+    // No idea why I need to divide by 8. Any lower would be too much padding
+  </script>
 </html>
 
   

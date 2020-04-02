@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* Colors:
 
+
+  #f96d15
+  #45969b
+  #50b6bb
+  #bfffffff
+  #f8f8f8
+
   Blacks:
   #ffffff
   #d6d6d6
@@ -23,9 +30,24 @@ html {
   box-sizing: inherit;
 }
 
+/* variables */
+:root{
+  --bg-color: #f8f8f8;
+  --primary: #bfffff;
+  --secondary: #80d9ffff;
+  --tertiary: #45969b;
+  --c2a: #f96d15; /* call to action */
+  --textColor: #242424;
+  --colorTransition: 2vh;
+}
+
+/* Set the font, color, and layout */
 body {
+  position: relative;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--textColor);
   margin: 0px;
-  color: #242424;
   font-size: 1rem;
   font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
   display: flex;
@@ -34,42 +56,98 @@ body {
   /*flex-wrap: wrap;*/
 }
 
+.container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+/* Align the footer and header horizontally */
 header, footer {
+  background: var(--secondary);
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+  padding: 0.5rem;
 }
+header { border-bottom: var(--colorTransition) solid var(--primary); }
+header * {
+  color: var(--textColor);
+  text-decoration: none;
+}
+/* Make the navigation bar links horizontal */
 #topNav {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  align-items: end;
+  align-items: center;
 }
+/* Separate the links within the navigation */
 #topNav a { margin: 0 1em; }
-
-/* make things readable by limiting characters to 70/line */
-.text { max-width: 70ch; }
-
-/* Override some pre set settings*/
+/* make the footer stay at the bottom */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: var(--colorTransition) solid var(--primary);
+}
+/* Make the footer links smaller */
 .footSection *:not(h6) {
   font-size: 0.65rem;
   display: flex;
   flex-flow: column wrap;
   margin: 0.25rem 0.25rem 0;
+  width: 100%;
 }
+/* Make the footer section titles stand out */
 .footSection h6 {
   margin: 1em 0 auto 0;
+  border-bottom: 2px solid var(--textColor);
 }
+/* Don't make the links and title take up the whole width */
 h1, nav { display: inline; }
+
+/* make things readable by limiting characters to 70/line */
+.text {
+  max-width: 70ch;
+}
+
+/* Make the article easier to organize */
 article {
   display: grid;
   margin: 0 calc( 5% + 1vw);
-  border: 1px solid red;
+  max-width: 1280px;
   grid-template-areas:
-  "section-title" "section-title"
-  "tContent" "tContent" "tContent"
+  "section-title"
+  "tContent0"
+  "tContent1"
+  "tContent2"
+  "tContent3"
+  "tContent4"
+  "tContent5"
+  "tContent6"
 }
+
+/* assigning classes grid names */
 .section-title { grid-area: section-title; }
-.tContent { grid-area: tContent; }
+.tContent0 { grid-area: tContent0; }
+.tContent1 { grid-area: tContent1; }
+.tContent2 { grid-area: tContent2; }
+.tContent3 { grid-area: tContent3; }
+.tContent4 { grid-area: tContent4; }
+.tContent5 { grid-area: tContent5; }
+.tContent6 { grid-area: tContent6; }
+.tContent7 { grid-area: tContent7; }
 
-
+/* Lets make things prettier for wide screen devices */
+/*@media only screen and (min-width: 1440px){*/ /* ok. never mind, I like it this way*/
+  header > a {
+    margin-right: auto;
+    padding-left: 5vw;
+  }
+  header nav{
+    margin-left: auto;
+    padding-right: 1rem;
+  }
+/*}*/
