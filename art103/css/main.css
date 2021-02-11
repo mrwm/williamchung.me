@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*----------------------
+  Variables 
+  Usage: var(--varName)
+  ----------------------*/
+:root{
+  --max-width: 17in;
+  --button-pad: 0.5em;
+  --font-size: 1.5em;
+
+  /*Change to the # of header links*/
+  --nav-num: calc(100% / 4)
+}
+
+/*----------------
+ Page layout
+------------------*/
+body{
+  max-width: var(--max-width);
+  display: block;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-content: stretch;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+nav a {
+  padding: var(--button-pad);
+  min-width: 7.5em;
+  width: calc(var(--nav-num) - var(--button-pad)*2);
+  margin: 0 auto;
+  font-size: var(--font-size);
+  color: #ccc;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover {
+  color: #000;
+}
+.title{
+  text-align: start;
+}
+nav .currentNav {
+  color: #000;
+}
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: var(--max-width);
+  height: calc(100vh - var(--font-size)*2.5);
+  border: 0;
+}
+@media only screen and (max-width: 11in){
+  iframe {
+    width: 100vw;
+  }
+}
+
