@@ -16,14 +16,15 @@
     <nav>
       <!-- copy paste the a tags for each page
            Don't forget to set currentNav for the current page -->
-      <a class="title currentNav" href="index.html">Art103</a>
-      <a class="" href="oblique-strategies">Oblique Strategies</a>
+      <a class="title" href="index.html">Art103</a>
+      <a class="currentNav" href="oblique-strategies">Oblique Strategies</a>
       <a class="" href="reading-1">Reading #1</a>
       <a class="" href="#">4</a>
       <a class="" href="#">5</a>
     </nav>
+    </nav>
     <article>
-      <h1>This is William Chung's ART103 Home page</h1>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vROtkArryPdhjb8y29kLv2U4bkA50-j5L8oB6LWLLHWXBWLzKXQhb4BHopTfag-CqnG5ZdCvUVHALHR/pub?embedded=true"></iframe>
     </article>
     <script src="js/script.js"></script>
   </body>
