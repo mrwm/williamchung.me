@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Art103 | Oblique Strategies</title>
+    <title>Art103 | Tessellation</title>
     <meta name="description" content="The description">
     <meta name="author" content="William Chung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,13 +22,12 @@
       <!-- copy paste the a tags for each page
            Don't forget to set currentNav for the current page -->
       <a class="title" href="index.html">Art103</a>
-      <a class="currentNav" href="oblique-strategies">Oblique Strategies</a>
+      <a class="" href="oblique-strategies">Oblique Strategies</a>
       <a class="" href="reading-1">Reading #1</a>
-      <a class="" href="tessle">Tessellation</a>
-    </nav>
+      <a class="currentNav" href="tessle">Tessellation</a>
     </nav>
     <article>
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vROtkArryPdhjb8y29kLv2U4bkA50-j5L8oB6LWLLHWXBWLzKXQhb4BHopTfag-CqnG5ZdCvUVHALHR/pub?embedded=true"></iframe>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ_Jh3vuOVIvn4sLLypf6ZRBGWbzBXDtqyoY4puPqVwU6PZr1mxFsP5VfT1sKl1xFrKPN6yUh-1Xtw-/pub?embedded=true"></iframe>
     </article>
     <script src="js/script.js"></script>
   </body>

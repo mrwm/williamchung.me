@@ -3,10 +3,15 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Art103</title>
+    <title>Art103 | Reading 1</title>
     <meta name="description" content="The description">
     <meta name="author" content="William Chung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Disable html cache for this site -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -19,8 +24,7 @@
       <a class="title" href="index.html">Art103</a>
       <a class="" href="oblique-strategies">Oblique Strategies</a>
       <a class="currentNav" href="reading-1">Reading #1</a>
-      <a class="" href="#">4</a>
-      <a class="" href="#">5</a>
+      <a class="" href="tessle">Tessellation</a>
     </nav>
     <article>
       <iframe src="https://docs.google.com/document/d/e/2PACX-1vTZ17fHypkO-UfLQcB1qvqsmg2CZeI8caZ6Dszkf3c98cTo3_G1SGp92-DduA-hC3cPSj1zG27Os1hU/pub?embedded=true"></iframe>
