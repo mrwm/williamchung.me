@@ -10,7 +10,7 @@
   --font-size: 1.5em;
 
   /* Change to the # of header links */
-  --nav-num: calc(100% / 4);
+  --nav-num: calc(100% / 5);
 }
 
 /*----------------
