@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Art103 | Tessellation</title>
+    <title>Art103 | Reading 1</title>
     <meta name="description" content="The description">
     <meta name="author" content="William Chung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,11 +25,11 @@
       <a class="" href="oblique-strategies">Oblique Strategies</a>
       <a class="" href="reading-1">Reading #1</a>
       <a class="" href="tessle">Tessellation</a>
-      <a class="currentNav" href="cad">CAD Fun</a>
-      <a class="" href="reading-2">Reading #2</a>
+      <a class="" href="cad">CAD Fun</a>
+      <a class="currentNav" href="reading-2">Reading #2</a>
     </nav>
     <article>
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vSZksBqBl6vThp2JbtW3AMPnJlkuu3CUeAyGxrBT5R5hPip-4C9ghV1fRKwLoysDlj2oybmxyw9s3Mt/pub?embedded=true"></iframe>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQUUCfq3-FNqE_xZ6AOJj24QDFbTcX2EAGp5KFGrWbDyOSlNBGQ1_Iua3AdHJxeqiVN__4oi_6y3_O3/pub?embedded=true"></iframe>
     </article>
     <script src="js/script.js"></script>
   </body>
