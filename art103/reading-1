@@ -21,12 +21,15 @@
     <nav>
       <!-- copy paste the a tags for each page
            Don't forget to set currentNav for the current page -->
-      <a class="title" href="index.html">Art103</a>
-      <a class="" href="oblique-strategies">Oblique Strategies</a>
-      <a class="currentNav" href="reading-1">Reading #1</a>
-      <a class="" href="tessle">Tessellation</a>
-      <a class="" href="cad">CAD Fun</a>
-      <a class="" href="reading-2">Reading #2</a>
+      <details>
+        <summary class="">Art103</summary>
+        <a class="" href="index.html">Home</a>
+        <a class="" href="oblique-strategies">Oblique Strategies</a>
+        <a class="currentNav" href="reading-1">Reading #1</a>
+        <a class="" href="tessle">Tessellation</a>
+        <a class="" href="cad">CAD Fun</a>
+        <a class="" href="reading-2">Reading #2</a>
+      </details>
     </nav>
     <article>
       <iframe src="https://docs.google.com/document/d/e/2PACX-1vTZ17fHypkO-UfLQcB1qvqsmg2CZeI8caZ6Dszkf3c98cTo3_G1SGp92-DduA-hC3cPSj1zG27Os1hU/pub?embedded=true"></iframe>

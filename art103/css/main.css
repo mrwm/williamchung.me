@@ -6,7 +6,8 @@
   ----------------------*/
 :root{
   --max-width: 17in;
-  --button-pad: 0.5em;
+  --min-width: 12em;
+  --pad: 0.5em;
   --font-size: 1.5em;
 
   /* Change to the # of header links */
@@ -16,35 +17,85 @@
 /*----------------
  Page layout
 ------------------*/
+*{
+  transform: 1s;
+}
+
 body{
   max-width: var(--max-width);
   display: block;
   margin: 0 auto;
 }
-nav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+
+/*----------------
+ Navigation bar
+------------------*/
+
+/* hide the details tag triangle */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  display: block;
+  font-size: var(--font-size);
+  padding: var(--pad);
+}
+details[open] > summary::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  padding-right: var(--pad);
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-image: url('x.svg');
+
+  transform: rotate(90deg);
+  transform-origin: var(--pad) var(--pad);
+  transition: .25s transform ease;
+}
+details > summary::before {
+  content: '';
+  display: inline-block;
+  height: 0.75em;
+  width: 1em;
+  padding-right: var(--pad);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('burger.svg');
+
+  transform: rotate(0deg);
+  transform-origin: var(--pad) var(--pad);
+  transition: .25s transform ease;
+}
+details > summary:hover {
+  cursor: pointer;
+}
+details {
   width: 100%;
   border-bottom: 1px solid black;
 }
-nav a {
-  padding: var(--button-pad);
-  min-width: 12em;
-  width: calc(var(--nav-num) - var(--button-pad)*2);
+details a {
+  display: block;
+  padding: var(--pad);
   font-size: var(--font-size);
   color: #ccc;
   text-decoration: none;
   text-align: center;
 }
-nav a:hover {
+details a:hover {
   color: #000;
 }
-.title{
-  text-align: start;
-}
-nav .currentNav {
+.currentNav, summary {
   color: #000;
+}
+
+/*----------------
+ Page content
+------------------*/
+article *:not(iframe) {
+  padding: var(--pad);
 }
 iframe{
   display: block;
@@ -57,9 +108,6 @@ iframe{
 @media only screen and (max-width: 11in){
   iframe{
     width: 100vw;
-  }
-  .title{
-    min-width: 100%;
   }
 }
 
