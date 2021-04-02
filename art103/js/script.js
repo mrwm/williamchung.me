@@ -5,6 +5,7 @@ let pageDict = {
   "Tessellation":       3,
   "CAD Fun":            4,
   "Reading #2":         5,
+  "Signs":              6,
 };
 
 function page(x){
