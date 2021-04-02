@@ -18,7 +18,7 @@
  Page layout
 ------------------*/
 *{
-  transform: 1s;
+  transition: 0.5s;
 }
 
 body{
@@ -94,6 +94,13 @@ details a:hover {
 /*----------------
  Page content
 ------------------*/
+.content {
+  display: initial;
+}
+.hidden {
+  display: none;
+}
+
 article *:not(iframe) {
   padding: var(--pad);
 }
