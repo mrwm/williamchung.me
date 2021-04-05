@@ -75,8 +75,13 @@ function page(x){
     init.classList.remove("hidden");
   }
 
+  // Enlargen the details tag after clicking the link
+  detailOpen(true);
   // Close the details tag
   document.getElementsByTagName("details")[0].removeAttribute("open");
+
+  // Force reload the page to clear cache... hope this works?
+  //location.reload(true);
 }
 
 function initialize(){
@@ -89,10 +94,35 @@ function initialize(){
   let pageHash = window.location.hash.substr(1);
 
   // Set the value to null if there's no hash
-  if (pageHash.length == 0){
+  if (pageHash.length == 0)
     pageHash = 0;
-  }
+
   // Load the page selected in the hash
   page(pageHash);
 }
 
+// Update the page when the hash changes 
+window.onhashchange = initialize;
+
+function detailOpen(stat){
+  /*
+    This function counts the number of links and subtracts the combined
+    height of those links from the frame height to keep the ifram in view
+  */
+
+  // Grab the iframe
+  let frame = document.getElementById("frame");
+
+  // Get the number of links available
+  let aCount = document.getElementsByTagName("a").length;
+
+  // Stat is only passed when passed from the header links,
+  // so only shorten the iframe when the details tag is open.
+  if (!document.getElementsByTagName("details")[0].hasAttribute("open") && stat == undefined){
+    frame.style.height = "calc(100vh - var(--font-size) * (2.6 * " + aCount + ")";
+  }
+  else {
+//    frame.style.height = "calc(100vh - " + fontSizeFloat + "em)";
+    frame.style.height = "calc(100vh - var(--font-size) * 2.5";
+  }
+}
