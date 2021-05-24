@@ -7,14 +7,12 @@
   to the number that corresponds to the dictionary.
 */
 let pageDict = { // Compare the text within the anchor tags to link index's
-  "Main":               1,
-  "Portfolio":          1,
-  "Resume":             2,
+  "Portfolio":          0,
+  "Resume":             1,
 };
 let linkDict = { // then use the index to grab the iframe link
-  0: "#",
-  1: "https://docs.google.com/document/d/e/2PACX-1vTMD6Gq-1vUf08oe4Ne9xhj-q2qgnei__JpT6_5MSVJAFxFeoPBwrGlBCiO_zm4lF2M8OpTcSCnW5DI/pub?embedded=true",
-  2: "https://docs.google.com/document/d/e/2PACX-1vRLZVevLyyjMT3rQdcrPZm8eOx3P5-TG1LsP_EjfP5FggyBL-OU-VHwMhOFJ9MHB-PsXkEZsfCgCqne/pub?embedded=true",
+  0: "https://docs.google.com/document/d/e/2PACX-1vTMD6Gq-1vUf08oe4Ne9xhj-q2qgnei__JpT6_5MSVJAFxFeoPBwrGlBCiO_zm4lF2M8OpTcSCnW5DI/pub?embedded=true",
+  1: "https://docs.google.com/document/d/e/2PACX-1vRLZVevLyyjMT3rQdcrPZm8eOx3P5-TG1LsP_EjfP5FggyBL-OU-VHwMhOFJ9MHB-PsXkEZsfCgCqne/pub?embedded=true",
 };
 function page(x){
   /*
