@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <title>Art103</title>
-    <meta name="description" content="The description">
+    <meta name="description" content="Art103 classwork">
     <meta name="author" content="William Chung">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +13,8 @@
     <meta http-equiv="expires" content="timestamp">
     <meta http-equiv='pragma' content='no-cache'>
 
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="page.js"></script>
 
   </head>
 
@@ -24,13 +24,23 @@
            Don't forget to set currentNav for the current page -->
       <details>
         <summary class="" onclick="detailOpen()">Art103</summary>
-        <a id="0" class="currentNav" href="#0" onclick="page(this)">Home</a>
-        <a id="1" class="" href="#1" onclick="page(this)">Oblique Strategies</a>
-        <a id="2" class="" href="#2" onclick="page(this)">Reading #1</a>
-        <a id="3" class="" href="#3" onclick="page(this)">Tessellation</a>
-        <a id="4" class="" href="#4" onclick="page(this)">CAD Fun</a>
-        <a id="5" class="" href="#5" onclick="page(this)">Reading #2</a>
-        <a id="6" class="" href="#6" onclick="page(this)">Signs</a>
+        <!--
+          Note:
+
+          - Make sure to increment the id value each time you add a new link below
+          - Also make sure that the href text is the same as the text inside the <a> tags
+          - Don't forget to update page.js dictionaries with the text inside the href/a tag
+          
+        -->
+        <a id="0" class="currentNav" href="#Home" onclick="page(this)">Home</a>
+        <a id="1" class="" href="#Oblique Strategies" onclick="page(this)">Oblique Strategies</a>
+        <a id="2" class="" href="#Reading 1" onclick="page(this)">Reading 1</a>
+        <a id="3" class="" href="#Tessellation" onclick="page(this)">Tessellation</a>
+        <a id="4" class="" href="#CAD Fun" onclick="page(this)">CAD Fun</a>
+        <a id="5" class="" href="#Reading 2" onclick="page(this)">Reading 2</a>
+        <a id="6" class="" href="#Signs" onclick="page(this)">Signs</a>
+        <a id="7" class="" href="#Reading 3" onclick="page(this)">Reading 3</a>
+        <a id="8" class="" href="#Artifact" onclick="page(this)">Artifact</a>
       </details>
     </nav>
     <article>
