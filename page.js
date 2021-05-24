@@ -89,8 +89,8 @@ function initialize(){
   let pageHash = window.location.hash.substr(1);
 
   // Set the value to null if there's no hash
-  if (pageHash.length == 0)
-    pageHash = 0;
+  if (pageHash.length == 0 || isNaN(pageDict[pageHash]))
+    pageHash = "Portfolio";
 
   // Load the page selected in the hash
   page(pageHash);
