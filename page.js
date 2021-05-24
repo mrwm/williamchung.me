@@ -7,7 +7,7 @@
   to the number that corresponds to the dictionary.
 */
 let pageDict = { // Compare the text within the anchor tags to link index's
-  "Main":               0,
+  "Main":               1,
   "Portfolio":          1,
   "Resume":             2,
 };
@@ -56,17 +56,17 @@ function page(x){
   // Setup the frame text
   frame.src = linkDict[targetID];
 
-  // hide the homepage text and show frame if home page is not selected
-  if (targetID != 0){
-    init.classList.add("hidden");
-    frame.classList.remove("hidden");
-  }
-  // otherwise, hide the frame and show the home page
-  else {
+  //// hide the homepage text and show frame if home page is not selected
+  //if (targetID != 0){
+  //  init.classList.add("hidden");
+  //  frame.classList.remove("hidden");
+  //}
+  //// otherwise, hide the frame and show the home page
+  //else {
     frame.src = linkDict[targetID];
     frame.classList.add("hidden");
-    init.classList.remove("hidden");
-  }
+  //  init.classList.remove("hidden");
+  //}
 
   // Enlargen the details tag after clicking the link
   detailOpen(true);
