@@ -1,83 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-<!--    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />-->
-    <meta name="description" content="William's Web Portfolio" />
-    <meta name="keywords" content="portfolio, web, job" />
-    <meta name="author" content="William Chung" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta charset="utf-8">
 
     <title>William Chung</title>
+    <meta name="description" content="William Chung's online portfolio">
+    <meta name="author" content="William Chung">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Disable html cache for this site -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="expires" content="timestamp">
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="page.js"></script>
+
   </head>
 
-  <body>
-    <div class="container">
-      <header>
-        <a href="index.html"><img src="favicon-32x32.png" alt="W icon"></a>
-        <nav id="topNav">
-          <a href="Chung_William_Design_Resume.pdf">Resume</a>
-        </nav>
-      </header>
-      <article>
-        <picture>
-          <source srcset="img/DSC09275.webp" type="image/webp">
-          <img src="img/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
-        </picture>
-        <div class="">
-          <h1>Graphic Designer</h1>
-          <p class="text">Hello, My name is William Chung! I’m currently a fourth year student studying in the Graphic Design BA Program at San Jose State University. </p>
-        </div>
-        <picture class="content">
-          <source srcset="img/poster/webp/rework_6.svg.png.webp" type="image/webp">
-          <img src="img/poster/25/rework_6.svg.png" alt="Poster for Mechanical Keyboard" title="Poster for Mechanical Keyboard" >
-        </picture>
-        <picture class="content">
-          <source srcset="img/poster/webp/Poster_1e-page001.svgz.png.webp" type="image/webp">
-          <img src="img/poster/Poster_1e-page001.svgz.png" alt="Poster for Poster for Data Privacy" title="Poster for Data Privacy" >
-        </picture>
+  <body onload="initialize()">
+    <nav>
+      <!-- copy paste the a tags for each page
+           Don't forget to set currentNav for the current page -->
+      <details>
+        <summary class="" onclick="detailOpen()">William Chung</summary>
+        <!--
+          Note:
 
-<!--
-         From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>-->
-        
-      </article>
-      <footer>
-        <div class="footSection">
-          <h6>Contact</h6>
-          <nav>
-            <a href="mailto:william.chung@sjsu.edu?subject=Feedback&body=Hello!">william.chung@sjsu.edu</a>
-            <a href="tel:408-641-0963">(408) 641 0963</a>
-            <a href="https://www.instagram.com/toastedpopsicle/">Instagram @toastedpopsicle</a>
-            <a href="https://github.com/mrwm/">GitHub @mrwm</a>
-            <a href="https://www.youtube.com/channel/UCs1p8xBEkCDcGDR_-BCHGlA">YouTube</a>
-          </nav>
-        </div>
-        <div class="footSection">
-          <h6>Previous iterations of this site</h6>
-          <nav>
-            <a href="archive/index.html">Initial design</a>
-            <a href="archive/GID56/index.html">Second iteration (GID56)</a>
-            <a href="archive/art175/index.html">Tertiary (ART175)</a>
-          </nav>
-        </div>
-      </footer>
-    </div>
+          - Make sure to increment the id value each time you add a new link below
+          - Also make sure that the href text is the same as the text inside the <a> tags
+          - Don't forget to update page.js dictionaries with the text inside the href/a tag
+          
+        -->
+        <a id="0" class="currentNav" href="#Home" onclick="page(this)">Main</a>
+        <a id="1" class="" href="#Portfolio" onclick="page(this)">Portfolio</a>
+        <a id="2" class="" href="#Resume" onclick="page(this)">Resume</a>
+      </details>
+    </nav>
+    <article>
+      <h1 id="init" class="content">Welcome to William's portfolio page. Click the header links above to explore around!</h1>
+      <iframe id="frame" class="content hidden" src="#"></iframe>
+    </article>
   </body>
-  <!-- Dynamically change the height of the padding for the footer-->
-  <script type="text/javascript">
-    // We only have one container, so grab the first one.
-    let container = document.getElementsByClassName('container')[0];
-    // We only have one footer, so grab the first one.
-    let footer = document.getElementsByTagName('footer')[0];
-    // Create the padding for the footer to be located within.
-    container.style.paddingBottom = footer.clientHeight + "px";
-  </script>
 </html>
-
-  
-
-
-
-

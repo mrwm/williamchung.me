@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="William's Web Portfolio" />
+    <meta name="keywords" content="portfolio, web, job" />
+    <meta name="author" content="William Chung" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="main.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="image.css" rel="stylesheet" type="text/css" media="screen">
+
+
+    <title>William Chung</title>
+    <style>
+      picture *{
+        margin: 0.5em;
+      }
+      #stayBottom{
+        position: absolute;
+        bottom:0px;
+        left:50%;
+        transform: translate(-50%, 0);
+      }
+    </style>
+
+  </head>
+
+  <div class="taco">
+    <header>
+    <!--<img src="" alt="null picture">-->
+    </header>
+    <div class="sub-title">
+      <a href="index.html"><h1 id="myName">William Chung</h1></a>
+      <!--<span>-</span>-->
+    </div>
+    <nav id="mainnav">
+      <a class="currentNav" href="index.html">Home</a>
+      <a class="" href="animations.html">Animations</a>
+      <a class="" href="photography0.html">Photography</a>
+      <a class="" href="contact.html">Contact</a>
+    </nav>
+    <body>
+      <wrap>
+        <div class="sub-title">
+          <a href="index.html"><h1 class="section-title">About Me</h1></a>
+          <!--<span> </span>-->
+        </div>
+        <!-- Learning another way to implement images -->
+        <picture onclick="imageThisP(this)">
+          <source srcset="img/webp/DSC09275.webp" type="image/webp">
+          <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
+        </picture>
+        <p>Hi, My name is William! I’m currently a second year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank" rel="noopener">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
+        <!-- Image Modal -->
+        <div id="imgModal" class="modal">
+          <span id="closeBtn">&times;</span>
+          <span id="closeScreen"> </span>
+          <img class="modal-content" id="imgMod">
+          <div id="caption"></div>
+        </div>
+        <footer id="stayBottom">
+          <div class="sub-title footText">
+            <h6>Class Links</h6>
+          </div>
+          <nav>
+            <a class="" href="DSGD63/index.html">DSGD63</a>
+            <a class="" href="GID56/index.html">GID56</a>
+          </nav>
+        </footer>
+      </wrap>
+    </body>
+  </div>
+  <script type="text/javascript" src="siteFunctions.js"></script>
+
+</html>
+
+  
+
+
+
+

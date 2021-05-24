@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<!--    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />-->
     <meta name="description" content="William's Web Portfolio" />
     <meta name="keywords" content="portfolio, web, job" />
     <meta name="author" content="William Chung" />
@@ -9,71 +9,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="main.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="image.css" rel="stylesheet" type="text/css" media="screen">
-
 
     <title>William Chung</title>
-    <style>
-      picture *{
-        margin: 0.5em;
-      }
-      #stayBottom{
-        position: absolute;
-        bottom:0px;
-        left:50%;
-        transform: translate(-50%, 0);
-      }
-    </style>
-
   </head>
 
-  <div class="taco">
-    <header>
-    <!--<img src="" alt="null picture">-->
-    </header>
-    <div class="sub-title">
-      <a href="index.html"><h1 id="myName">William Chung</h1></a>
-      <!--<span>-</span>-->
-    </div>
-    <nav id="mainnav">
-      <a class="currentNav" href="index.html">Home</a>
-      <a class="" href="animations.html">Animations</a>
-      <a class="" href="photography0.html">Photography</a>
-      <a class="" href="contact.html">Contact</a>
-    </nav>
-    <body>
-      <wrap>
-        <div class="sub-title">
-          <a href="index.html"><h1 class="section-title">About Me</h1></a>
-          <!--<span> </span>-->
-        </div>
-        <!-- Learning another way to implement images -->
-        <picture onclick="imageThisP(this)">
-          <source srcset="img/webp/DSC09275.webp" type="image/webp">
-          <img id="profile" src="img/jpg/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
+  <body>
+    <div class="container">
+      <header>
+        <a href="index.html"><img src="favicon-32x32.png" alt="W icon"></a>
+        <nav id="topNav">
+          <a href="Chung_William_Design_Resume.pdf">Resume</a>
+        </nav>
+      </header>
+      <article>
+        <picture>
+          <source srcset="img/DSC09275.webp" type="image/webp">
+          <img src="img/DSC09275.jpg" alt="Picture of William" title="Picture of William" >
         </picture>
-        <p>Hi, My name is William! I’m currently a second year student studying Graphic Design at San Jose State University. From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a>, <a title="Woof" href="https://youtu.be/8K12atna3wc" target="_blank" rel="noopener">Woof</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>
-        <!-- Image Modal -->
-        <div id="imgModal" class="modal">
-          <span id="closeBtn">&times;</span>
-          <span id="closeScreen"> </span>
-          <img class="modal-content" id="imgMod">
-          <div id="caption"></div>
+        <div class="">
+          <h1>Graphic Designer</h1>
+          <p class="text">Hello, My name is William Chung! I’m currently a fourth year student studying in the Graphic Design BA Program at San Jose State University. </p>
         </div>
-        <footer id="stayBottom">
-          <div class="sub-title footText">
-            <h6>Class Links</h6>
-          </div>
-          <nav>
-            <a class="" href="DSGD63/index.html">DSGD63</a>
-            <a class="" href="GID56/index.html">GID56</a>
-          </nav>
-        </footer>
-      </wrap>
-    </body>
-  </div>
-  <script type="text/javascript" src="siteFunctions.js"></script>
+        <picture class="content">
+          <source srcset="img/poster/webp/rework_6.svg.png.webp" type="image/webp">
+          <img src="img/poster/25/rework_6.svg.png" alt="Poster for Mechanical Keyboard" title="Poster for Mechanical Keyboard" >
+        </picture>
+        <picture class="content">
+          <source srcset="img/poster/webp/Poster_1e-page001.svgz.png.webp" type="image/webp">
+          <img src="img/poster/Poster_1e-page001.svgz.png" alt="Poster for Poster for Data Privacy" title="Poster for Data Privacy" >
+        </picture>
 
+<!--
+         From time to time, I like to work on small side projects. <a title="fishies.me" href="https://fishies.me" target="_blank" rel="noopener">Fishies.me</a>, <a title="Doggo Bar" href="https://chrome.google.com/webstore/detail/doggo-bar/jcpkamjdbelgcadjpljdljkelglhkbcg" target="_blank" rel="noopener">Doggo Bar</a>, <a title="Beluga on my Desk" href="https://youtu.be/-Q2aOfKdMvM" target="_blank" rel="noopener">Beluga on my Desk</a> are among the many projects I have created! I’m open for new opportunities for making and discovering new ideas.</p>-->
+        
+      </article>
+      <footer>
+        <div class="footSection">
+          <h6>Contact</h6>
+          <nav>
+            <a href="mailto:william.chung@sjsu.edu?subject=Feedback&body=Hello!">william.chung@sjsu.edu</a>
+            <a href="tel:408-641-0963">(408) 641 0963</a>
+            <a href="https://www.instagram.com/toastedpopsicle/">Instagram @toastedpopsicle</a>
+            <a href="https://github.com/mrwm/">GitHub @mrwm</a>
+            <a href="https://www.youtube.com/channel/UCs1p8xBEkCDcGDR_-BCHGlA">YouTube</a>
+          </nav>
+        </div>
+        <div class="footSection">
+          <h6>Previous iterations of this site</h6>
+          <nav>
+            <a href="archive/index.html">Initial design</a>
+            <a href="archive/GID56/index.html">Second iteration (GID56)</a>
+            <a href="archive/art175/index.html">Tertiary (ART175)</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!-- Dynamically change the height of the padding for the footer-->
+  <script type="text/javascript">
+    // We only have one container, so grab the first one.
+    let container = document.getElementsByClassName('container')[0];
+    // We only have one footer, so grab the first one.
+    let footer = document.getElementsByTagName('footer')[0];
+    // Create the padding for the footer to be located within.
+    container.style.paddingBottom = footer.clientHeight + "px";
+  </script>
 </html>
 
   

@@ -3,26 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* Colors:
 
-  Tanish
-  #786344 - Olive Wood
-  #ceae6a - Putty
-  #cfcb93 - Martini Olive
 
-  Bluish
-  #acdabc - Mountain Mint
-  #8ce1db - Island Oasis
-  #accdd6 - Sonata
-
-  Yellows:
-  #ffffff
-  #fff1e0 - Background Color
-  #fff3e0
-  #ffe7c0
-  #ffdba1
-  #ffd082
-  #ffc462
-  #ffb93f
-  #ffae00
+  #f96d15
+  #45969b
+  #50b6bb
+  #bfffffff
+  #f8f8f8
 
   Blacks:
   #ffffff
@@ -36,177 +22,133 @@
 
 */
 
-#sub-title {
-  display: inline-block;
+/* Something like a reset.css */
+html {
+  box-sizing: border-box;
 }
-.sub-title a, h1, h6 {
-  margin-bottom: -0.1em;
-  color: #242424;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 50;
-  /*text-align: center;*/
-}
-.section-title {
-  text-align: center;
-  border-bottom: 3px solid #242424;
-  letter-spacing: 0.5em;
-}
-#myName{
-  font-weight: 800;
-  letter-spacing: 0.2em;
-}
-#profile {
-  float:left;
-  width: 10em;
-  margin-right: 12px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
+/* variables */
+:root{
+  --bg-color: #f8f8f8;
+  --primary: #bfffff;
+  --secondary: #80d9ffff;
+  --tertiary: #45969b;
+  --c2a: #f96d15; /* call to action */
+  --textColor: #242424;
+  --colorTransition: 2vh;
+}
 
-/*effects a lot of stuff*/
+/* Set the font, color, and layout */
 body {
+  position: relative;
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--textColor);
   margin: 0px;
-  color: #242424;
-  font-size: calc(12px + 1vh);
+  font-size: 1rem;
   font-family: "Open Sans", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-  background-color: #fff1e0;
-/*  overflow-x: hidden;*/
-  width:100%;
+  display: flex;
+  flex-flow: column wrap;
+  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
 }
 
-header{
-/*  width: 75%;*/
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
+.container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
   display: block;
+  position: relative;
 }
 
-.taco {
-  width: 80%;
-  min-width: 600px;
-  max-width:960px;
-  margin: 1em auto 1.5em auto;
-  display: block;
-  padding: 0.5em;
-/*  box-shadow: 10px 5px 5px #ccc;*/
+/* Align the footer and header horizontally */
+header, footer {
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  padding: 0.5rem;
 }
-
-wrap {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  transition: 0.3s;
-}
-
-/* Just for the paragraphs*/
-p {
-  text-indent: 1em;
-  padding: 0px 12px;
-}
-
-.gridify{
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 90% ; /*Make the grid smaller than the container*/
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-
-a {
-  color: #242424;
-  text-decoration: none;
-  border-bottom: 3px dotted black
-}
-
-img {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-img:hover {
-  opacity: 0.9;
-}
-
-/*Horizontal Nav*/
-nav{
-  background-color: #fff1e0;
-  /*margin-top: 0.5em; /*adds distance from header*/
-  width: 100%;
-  display: table; /*makes the nav act like a table</table>*/
-  border-collapse: collapse;
-  border: none;
-  line-height: 2em;
-  border-collapse: separate; border-spacing: 0.2em;
-  text-transform: uppercase;
-}
-nav a{
-  border: 1.5px solid black;
-  transition: 0.3s;
-  margin: 0;
-  border-radius: 1em;
-  background-color: #fff1e0; /*will take precedence over the background-color*/
-  display: table-cell; /*makes the li act like a table-cell<td>*/
-  color: #242424;
-  text-decoration: none;
-
-  list-style-type: none;
-  /*display: table-row; /*makes the ul act like a table-row <tr>*/
-  text-align: center;
-  background-color: #fff3e0;
-}
-nav a:link{
-  color: #242424;
+header { border-bottom: var(--colorTransition) solid var(--primary); }
+header * {
+  color: var(--textColor);
   text-decoration: none;
 }
-nav a:hover{
-  background: #ffae00; /*#ffd082;*/
-  text-decoration: underline;
+/* Make the navigation bar links horizontal */
+#topNav {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
 }
-nav .currentNav {
-  background-color: #ffd082;
-  margin: 0;
-  border-radius: 1em;
-}
-
-/*Footer*/
-footer{/*
+/* Separate the links within the navigation */
+#topNav a { margin: 0 1em; }
+/* make the footer stay at the bottom */
+footer {
   position: absolute;
-  bottom: 0px;
-  left:50%;
-  transform: translate(-50%, 0);*/
-  width: 80%;
-  min-width: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
+  bottom: 0;
+  width: 100%;
+  border-top: var(--colorTransition) solid var(--primary);
+}
+/* Make the footer links smaller */
+.footSection *:not(h6) {
+  font-size: 0.65rem;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0.25rem 0.25rem 0;
+  width: 100%;
+}
+/* Make the footer section titles stand out */
+.footSection h6 {
+  margin: 1em 0 auto 0;
+  border-bottom: 2px solid var(--textColor);
+}
+/* Don't make the links and title take up the whole width */
+h1, nav { display: inline; }
+
+/* make things readable by limiting characters to 70/line */
+.text {
+  max-width: 70ch;
 }
 
-footer nav{
-  line-height: 1em;
+/* Make the article easier to organize */
+article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 45%));
+  /*
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;*/
+  margin: 1vh calc( 5% + 1vw);
+  max-width: 1280px;
+  grid-gap: 1rem;
+}
+.cSpan2 { grid-column: span 2; }
+.cSpan3 { grid-column: span 3; }
+.rSpan2 { grid-row: span 2; }
+.rSpan3 { grid-row: span 3; }
+picture { width: 100%; }
+picture img {
+  width: 100%;
+  max-width: 300px;
 }
 
-.footText{
-  /*margin-bottom: -1.5em;*/
-  text-align: center;
-}
+/* Lets make things prettier for wide screen devices */
+/*@media only screen and (min-width: 1440px){*/ /* ok. never mind, I like it this way*/
+  header > a {
+    margin-right: auto;
+    padding-left: 5vw;
+  }
+  header nav{
+    margin-left: auto;
+    padding-right: 1rem;
+  }
+/*}*/
 
-details {
-  background-color: #fff1e0;
-  border: 1.5px solid black;
-  border-radius: 1em;
-  margin: 0.5em;
-  margin-top: 1em;
-  padding: 0.5em;
-  box-shadow: rgba(0,0,0,0.5) 0 0 10px;
-}
-details:hover {
-  cursor: pointer;
-  background-color: #ffd082;
-/*  border: 1.5px solid black;*/
-/*  border-radius: 1em;*/
-/*  margin: 0.5em;*/
-/*  padding: 0.5em;*/
+/* Making this look pretty on mobile >:( */
+@media only screen and (max-width: 600px){
+  picture:not(.content){display: none;}
+  article { grid-template-columns: 1fr; }
 }
