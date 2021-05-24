@@ -59,12 +59,12 @@ function page(x){
   //// hide the homepage text and show frame if home page is not selected
   //if (targetID != 0){
   //  init.classList.add("hidden");
-  //  frame.classList.remove("hidden");
+    frame.classList.remove("hidden");
   //}
   //// otherwise, hide the frame and show the home page
   //else {
-    frame.src = linkDict[targetID];
-    frame.classList.add("hidden");
+  //  frame.src = linkDict[targetID];
+  //  frame.classList.add("hidden");
   //  init.classList.remove("hidden");
   //}
 
